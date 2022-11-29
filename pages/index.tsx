@@ -21,35 +21,27 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="" className={styles.card}>
+          <div className={styles.card}>
             <h2>Self-soveriegn data</h2>
             <p>Data is private, encrypted, and owned by the user</p>
-          </a>
+          </div>
 
-          <a href="" className={styles.card}>
+          <div className={styles.card}>
             <h2>Serverless APIs</h2>
             <p>Get started in minutes with auto-generated APIs, and scale effortlessly</p>
-          </a>
+          </div>
 
-          <a
-            href=""
-            className={styles.card}
-          >
+          <div className={styles.card}>
             <h2>Composable</h2>
             <p>Build open protocols, and let data flow easily between apps</p>
-          </a>
+          </div>
 
-          <a
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
+          <div className={styles.card}>
             <h2>Open Source</h2>
             <p>
               Open ecosystem with clients to integrate and deploy anywhere
             </p>
-          </a>
+          </div>
         </div>
       </main>
     {/* 
