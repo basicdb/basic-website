@@ -13,17 +13,21 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Basic
+          Basic Network
         </h1>
 
         <p className={styles.description}>
-          a web3 database for self-sovereign data
+          a decentralized database network, for the user-owned web
         </p>
+
+        {/* <button className="button-6" role="button">Button 6</button> */}
+
+
 
         <div className={styles.grid}>
           <div className={styles.card}>
             <h2>Self-soveriegn data</h2>
-            <p>Data is private, encrypted, and owned by the user</p>
+            <p>Data is always private, encrypted, and owned by the user</p>
           </div>
 
           <div className={styles.card}>
