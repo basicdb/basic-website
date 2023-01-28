@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -18,9 +19,19 @@ export default function Home() {
 
         <p className={styles.description}>
           a decentralized database network, for the user-owned web
+        <br/>
+     
+
         </p>
 
-        {/* <button className="button-6" role="button">Button 6</button> */}
+        <a href="https://airtable.com/shr5ALU6Ha9uBzErA" target="_blank" rel="noreferrer" style={{
+
+          color: 'white', 
+          fontSize: 20,
+          backgroundColor: '#0070f3',
+          padding: 10, 
+          borderRadius: 10,
+        }}>Early Access</a>
 
 
 
