@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/faq"
+  to = "https://razberry.notion.site/Basic-Product-Market-10e3b0ea3ad74366ae094e5904815bd8"
+  status = 302
+  force = true
