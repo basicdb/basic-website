@@ -66,7 +66,7 @@ const HeroSection = () => {
         <div className="relative px-8">
           <div className="max-w-3xl text-center lg:text-left">
             <div className="max-w-xl mx-auto text-center lg:p-10 lg:text-left">
-              <div><p className="text-2xl font-medium font-mono tracking-tight  sm:text-4xl">
+              <div><p className="text-2xl font-medium font-mono tracking-tight text-white sm:text-4xl">
                 the database for user-owned data
               </p>
                 <p className="max-w-xl mt-4 text-base tracking-tight text-gray-400">
