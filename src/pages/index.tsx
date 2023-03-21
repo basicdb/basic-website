@@ -61,7 +61,7 @@ export default function Home() {
 const HeroSection = () => {
   return (
 
-    <section className=''>
+    <section className='bg-black'>
       <div className="py-24 flex flex-col justify-center min-h-screen ">
         <div className="relative px-8">
           <div className="max-w-3xl text-center lg:text-left">
