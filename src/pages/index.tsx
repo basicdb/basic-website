@@ -75,8 +75,8 @@ const HeroSection = () => {
               </div>
 
               <div className="flex flex-col items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
-              <button className="btn glass">Request Early Access</button>
 
+              <a href="https://airtable.com/shr5ALU6Ha9uBzErA" target="_blank" rel="noreferrer" className="btn glass" >Request Early Access</a>
               
               </div>
             </div>
