@@ -11,3 +11,10 @@
   force = true
 
   
+[[redirects]]
+  from = "/careers"
+  to = "https://razberry.notion.site/Work-at-Basic-Founding-Engineer-bec34ab27ae649269cd702e5887440ce"
+  status = 302
+  force = true
+
+  
