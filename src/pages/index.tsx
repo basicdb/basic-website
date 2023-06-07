@@ -72,11 +72,11 @@ const NavBar = () => {
         <Image alt="twitter" width={50} height={50} src="/logo.png" className="h-6 w-6 mr-4" />
         Basic</a>
       </div>
-      <div className="flex-none">
-        <ul className="menu menu-horizontal px-1">
+      <div className="flex-none text-white">
+        <ul className="menu menu-horizontal px-1 ">
 
           <li>
-            <a className="btn btn-ghost" href='https://twitter.com/basic_db' target="_blank" rel="noreferrer" >
+            <a className="btn btn-ghost " href='https://twitter.com/basic_db' target="_blank" rel="noreferrer" >
               {/* <Image alt="twitter" width={50} height={50} src="https://img.icons8.com/ios/50/000000/twitter--v1.png" className="h-6 w-6" /> */}
               <Image alt="twitter" width={25} height={25} src="/icons/twitter.png" className="h-6 w-6" />
               Say hi :)
