@@ -94,7 +94,7 @@ const NavBar = () => {
 const HeroSection = () => {
   return (
 
-    <section className='bg-black ' style={{ backgroundImage: `url('/bg1.png')` }}>
+    <section className='bg-black ' style={{ backgroundImage: `url('/bg.png')` }}>
 
 
       <div className="py-24 flex flex-col justify-center min-h-screen ">
