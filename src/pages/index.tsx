@@ -58,11 +58,49 @@ export default function Home() {
   )
 }
 
+const NavBar = () => {
+  return (
+    //background image
+    <div className="navbar bg-opacity-20 top-0 absolute" > 
+    
+      
+
+      <div className="flex-1">
+      {/* <Image alt="twitter" width={50} height={50} src="/icons/twitter.png" className="h-6 w-6" /> */}
+
+        <a className="btn btn-ghost normal-case text-xl"> 
+        <Image alt="twitter" width={50} height={50} src="/logo.png" className="h-6 w-6 mr-4" />
+        Basic</a>
+      </div>
+      <div className="flex-none">
+        <ul className="menu menu-horizontal px-1">
+
+          <li>
+            <a className="btn btn-ghost" href='https://twitter.com/basic_db' target="_blank" rel="noreferrer" >
+              {/* <Image alt="twitter" width={50} height={50} src="https://img.icons8.com/ios/50/000000/twitter--v1.png" className="h-6 w-6" /> */}
+              <Image alt="twitter" width={25} height={25} src="/icons/twitter.png" className="h-6 w-6" />
+              Say hi :)
+            </a>
+          </li>
+          <li>
+            <a href="https://basic.tech/careers" target="_blank" rel="noreferrer" className="btn btn-ghost ">Careers<span className="indicator-item badge badge-secondary ">2</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  )
+}
+
 const HeroSection = () => {
   return (
 
-    <section className='bg-black'>
+    <section className='bg-black ' style={{ backgroundImage: `url('/bg1.png')` }}>
+
+
       <div className="py-24 flex flex-col justify-center min-h-screen ">
+
+        <NavBar />
+
         <div className="relative px-8">
           <div className="max-w-3xl text-center lg:text-left">
             <div className="max-w-xl mx-auto text-center lg:p-10 lg:text-left">
@@ -70,15 +108,25 @@ const HeroSection = () => {
                 the database for user-owned data
               </p>
                 <p className="max-w-xl mt-4 text-base tracking-tight text-gray-400">
-                Basic is a serverless database, purpose built for securely storing user data. It's a simple, fast, and scales automatically, so you can focus on your building your app.
+                  Basic is a serverless database, purpose built for securely storing user data. It's a simple, fast, and scales automatically, so you can focus on your building your app.
                 </p>
               </div>
 
               <div className="flex flex-col items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
 
-              <a href="https://airtable.com/shr5ALU6Ha9uBzErA" target="_blank" rel="noreferrer" className="btn glass" >Request Early Access</a>
-              
+                <a href="https://airtable.com/shr5ALU6Ha9uBzErA" target="_blank" rel="noreferrer" className="btn glass" >Request Early Access</a>
+
+                <a href="https://basic.tech/careers" target="_blank" rel="noreferrer" className="btn btn-secondary ">We're Hiring! Join our team :) </a>
+
               </div>
+
+              {/* <div className="alert shadow-lg bg-success">
+                <div>
+                  <h3 className="font-bold">We're Hiring!</h3>
+                  <div className="text-xs">You have 1 unread message</div>
+                </div>
+              </div> */}
+
             </div>
           </div>
         </div>
