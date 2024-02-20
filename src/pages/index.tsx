@@ -112,35 +112,6 @@ const HeroSection = () => {
   )
 }
 
-const DeveloperFeatureSedction = () => {
-  return (
-    <section aria-labelledby="features" id="feature-five" className="overflow-y-auto bg-slate-900 p-20">
-      <h1 className='text-2xl font-mono pb-6'> Benefits </h1>
-      <div className="px-8 py-12 mx-auto max-w-7xl md:px-12 lg:px-16 xl:px-36 lg:flex">
-        <ul className="grid grid-cols-3 gap-12 mt-6 lg:gap-24" role="list">
-          <li>
-            <p className="mt-5 text-lg font-medium leading-6">Privacy</p>
-            <div className="mt-2 text-base text-gray-500">
-              Users retain full ownership and control over their data - sensitive data doesn't touch your servers.
-            </div>
-          </li>
-          <li>
-            <p className="mt-5 text-lg font-medium leading-6">Interoperable data</p>
-            <div className="mt-2 text-base text-gray-500">
-              Integrate data from other apps and let apps build on top of yours - without any extra work.
-            </div>
-          </li>
-          <li>
-            <p className="mt-5 text-lg font-medium leading-6">EZ PZ</p>
-            <div className="mt-2 text-base text-gray-500">
-              No need to store or pay for user data - no more expensive cloud bills.
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-  )
-}
 
 const DeveloperFeatureSection = () => {
   return (
@@ -156,19 +127,19 @@ const DeveloperFeatureSection = () => {
             <li>
               <p className="mt-5 text-lg font-medium leading-6">Privacy</p>
               <div className="mt-2 text-base text-gray-500">
-              Users retain full ownership and control over their data - sensitive data doesn't touch your servers.
+              users retain full ownership and control over their data - sensitive data doesn't touch your servers
               </div>
             </li>
             <li>
               <p className="mt-5 text-lg font-medium leading-6">Interoperable data</p>
               <div className="mt-2 text-base text-gray-500">
-              Integrate data from other apps and let apps build on top of yours - without any extra work.
+              integrate data from other apps and let apps build on top of yours - without any extra work
               </div>
             </li>
             <li>
               <p className="mt-5 text-lg font-medium leading-6">EZ PZ</p>
               <div className="mt-2 text-base text-gray-500">
-              No need to store or pay for user data - no more expensive cloud bills.
+              no need to store or pay for user data - no more expensive cloud bills
               </div>
             </li>
           </ul>
@@ -224,9 +195,9 @@ const HowItWorks = () => {
 
       <div className='p-4 flex flex-col sm:flex-row max-w-5xl justify-center'>
 
-        <div className='flex-1 px-8 py-12 '>
-          <h1 className='text-2xl font-mono pb-12'> How it works</h1>
-          <p className='text-grey-100'>Basic creates personal data stores for every end user, which applications can access if given permission. This gives apps a fast and easy database, while letting users ultimately retain ownership over their data. </p>
+        <div className='flex-1 px-8 py-12 text-gray-200 '>
+          <h1 className='text-2xl font-mono pb-12'>How it works</h1>
+          <p className='text-gray-100'>Basic creates personal data stores for every end user, which applications can access if given permission. This gives apps a fast and easy database, while letting users ultimately retain ownership over their data. </p>
         </div>
 
         <div className="flex-1 px-8 py-12 mx-auto ">
