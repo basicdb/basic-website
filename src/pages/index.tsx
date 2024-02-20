@@ -8,6 +8,14 @@ import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const DATA = {
+  title: "Basic Database",
+  description: "The serverless database for user owned data",
+  image: "/bg.png",
+  url: "https://basic.tech"
+
+}
+
 export default function Home() {
   return (
     <>
@@ -20,39 +28,17 @@ export default function Home() {
       <main >
 
 
-        {/* <div className="flex ">
-          <div className="flex min-h-screen flex-col justify-center flex-1 px-8 py-8 md:px-12 lg:flex-none lg:px-24"
-            // add background image
-            style={{ backgroundImage: `bg.png')` }}
-          >
-            <div className="w-full mx-auto lg:max-w-6xl">
-              <div className="max-w-xl mx-auto text-center lg:p-10 lg:text-left">
-                <div>
-
-                  <p className="text-2xl font-medium font-mono tracking-tighter  sm:text-4xl">
-                    the database for user-owned data
-                  </p>
-                  <p className="max-w-xl mt-4 text-base tracking-tight text-gray-400">
-                    Basic is a serverless database, purpose built for securely storing user data. It's a simple, fast, and scales automatically, so you can focus on your building your app.
-                  </p>
-                </div>
-                <div className="flex flex-col items-center justify-center gap-3 mt-10 sm:flex-row lg:justify-start">
-                  <button className="btn glass">Request Early Access</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="relative flex-1   lg:block">
-            <div>
-            </div>
-          </div>
-        </div> */}
 
         <HeroSection />
 
-        {/* <DeveloperFeatureSection /> */}
+        <HowItWorks />
 
+        <DeveloperFeatureSection />
+
+        <UseCases />
         {/* <ZKSection /> */}
+
+        {/* <Footer /> */}
       </main>
     </>
   )
@@ -61,16 +47,13 @@ export default function Home() {
 const NavBar = () => {
   return (
     //background image
-    <div className="navbar bg-opacity-20 top-0 absolute" > 
-    
-      
-
+    <div className="navbar bg-opacity-20 top-0 absolute" >
       <div className="flex-1">
-      {/* <Image alt="twitter" width={50} height={50} src="/icons/twitter.png" className="h-6 w-6" /> */}
+        {/* <Image alt="twitter" width={50} height={50} src="/icons/twitter.png" className="h-6 w-6" /> */}
 
-        <a className="btn btn-ghost normal-case text-xl"> 
-        <Image alt="twitter" width={50} height={50} src="/logo.png" className="h-6 w-6 mr-4" />
-        Basic</a>
+        <a className="btn btn-ghost normal-case text-xl">
+          <Image alt="twitter" width={50} height={50} src="/logo.png" className="h-6 w-6 mr-4" />
+          Basic</a>
       </div>
       <div className="flex-none text-white">
         <ul className="menu menu-horizontal px-1 ">
@@ -105,10 +88,10 @@ const HeroSection = () => {
           <div className="max-w-3xl text-center lg:text-left">
             <div className="max-w-xl mx-auto text-center lg:p-10 lg:text-left">
               <div><p className="text-2xl font-medium font-mono tracking-tight text-white sm:text-4xl">
-                the database for user-owned data
+                the database for <br /> <span className='text-4xl'>user-owned data</span>
               </p>
                 <p className="max-w-xl mt-4 text-base tracking-tight text-gray-400">
-                  Basic is a serverless database, purpose built for securely storing user data. It's a simple, fast, and scales automatically, so you can focus on your building your app.
+                  Basic is the easiest way to build privacy-centric apps, by letting your users control their data.
                 </p>
               </div>
 
@@ -119,13 +102,6 @@ const HeroSection = () => {
                 <a href="https://basic.tech/careers" target="_blank" rel="noreferrer" className="btn btn-secondary ">We're Hiring! Join our team :) </a>
 
               </div>
-
-              {/* <div className="alert shadow-lg bg-success">
-                <div>
-                  <h3 className="font-bold">We're Hiring!</h3>
-                  <div className="text-xs">You have 1 unread message</div>
-                </div>
-              </div> */}
 
             </div>
           </div>
@@ -138,84 +114,103 @@ const HeroSection = () => {
 
 const DeveloperFeatureSection = () => {
   return (
-    <section aria-labelledby="feature-five" id="feature-five" className="overflow-y-auto  lg:h-screen">
-      <div className="px-8 py-24 mx-auto lg:px-16 max-w-7xl md:px-12 xl:px-36 lg:flex">
-        <div className="lg:w-1/2">
-          <div className="top-0 pt-8 pb-16 lg:sticky">
-            <div>
-              <div className="lg:pr-24 md:pr-12">
-                <div>
-
-                  <p className="text-4xl  ">
-                    the relational serverless database, of your dreams
-                  </p>
-                  <p className="max-w-xl mt-4 text-lg tracking-tight text-gray-600">
-                    Basic lets you deploy instantly, integrate anywhere, and scale effortlessly.
-                  </p>
-                </div>
-                {/* <div className="flex flex-col gap-3 mt-10 sm:flex-row">
-                <a href="#" className="items-center justify-center w-full px-6 py-3 text-center text-white duration-200 bg-black border-2 border-black nline-flex hover:bg-transparent hover:border-black rounded-xl hover:text-black focus:outline-none lg:w-auto focus-visible:outline-black focus-visible:ring-black">
-                  Get started
-                </a>
-              </div> */}
-              </div>
+    <section aria-labelledby="features" id="feature-five" className="overflow-y-auto bg-slate-900 p-20">
+      <h1 className='text-2xl font-mono pb-6'> Benefits </h1>
+      <div className="px-8 py-12 mx-auto max-w-7xl md:px-12 lg:px-16 xl:px-36 lg:flex">
+        <ul className="grid grid-cols-3 gap-12 mt-6 lg:gap-24" role="list">
+          <li>
+            <p className="mt-5 text-lg font-medium leading-6">Privacy</p>
+            <div className="mt-2 text-base text-gray-500">
+              Users retain full ownership and control over their data - sensitive data doesn't touch your servers.
             </div>
-          </div>
+          </li>
+          <li>
+            <p className="mt-5 text-lg font-medium leading-6">Interoperable data</p>
+            <div className="mt-2 text-base text-gray-500">
+              Integrate data from other apps and let apps build on top of yours - without any extra work.
+            </div>
+          </li>
+          <li>
+            <p className="mt-5 text-lg font-medium leading-6">EZ PZ</p>
+            <div className="mt-2 text-base text-gray-500">
+              No need to store or pay for user data - no more expensive cloud bills.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  )
+}
+
+const UseCases = () => {
+  return (
+    <section aria-labelledby="features" id="feature-five" className="overflow-y-auto bg-gray-900-900 p-20">
+      <h1 className='text-2xl font-mono pb-6'> Use cases </h1>
+      <div className="px-8 py-12 mx-auto max-w-7xl md:px-12 lg:px-16 xl:px-36 lg:flex">
+        <ul className="grid grid-cols-3 gap-12 mt-6 lg:gap-24" role="list">
+        <li>
+            <p className="mt-5 text-lg font-medium leading-6">Local-first</p>
+            <div className="mt-2 text-base text-gray-500">
+            offer backups, multi-device support, and collaborative features to your local-first app
+            </div>
+          </li>
+          <li>
+            <p className="mt-5 text-lg font-medium leading-6">Private apps</p>
+            <div className="mt-2 text-base text-gray-500">
+            offer data ownership and end-to-end encryption, without building anything extra
+            </div>
+          </li>
+          <li>
+            <p className="mt-5 text-lg font-medium leading-6">Decentralized</p>
+            <div className="mt-2 text-base text-gray-500">
+            store user data off-chain, while keeping it private & self sovereign, without relying on centralized providers
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  )
+}
+
+const HowItWorks = () => {
+  return (
+    <section aria-labelledby="features" id="feature-five" className="overflow-y-auto bg-[#131315] p-20 flex">
+
+      <div className='w-1/3 py-12'>
+        <h1 className='text-2xl font-mono pb-12'> How it works</h1>
+        <p className='text-grey-100'>Basic creates personal data stores for every end user, which applications can access if given permission. This gives apps a fast and easy database, while letting users ultimately retain ownership over their data. </p>
+      </div>
+
+
+      <div className="px-8 py-12 mx-auto lg:px-16 md:px-12 xl:px-36">
+        <div>
+          <h2 className='text-base text-gray-300 font-mono'>Traditional apps:</h2>
+          <img src="/traditional.png" alt="traditional apps" width={300} />
         </div>
-        <div className="lg:w-1/2">
-          <div className="flex-shrink-0">
-            <div>
-              <ul className="grid grid-cols-1 gap-12 mt-6 list-none lg:mt-0 lg:gap-24" role="list">
-                <li>
-                  <div>
-                    <div className="flex items-center justify-center w-12 h-12  bg-gray-100 rounded-xl">
-                      {/* <ion-icon className="w-5 h-5 md hydrated" name="scan-outline" role="img" aria-label="scan outline"></ion-icon> */}
-                    </div>
-                    <p className="mt-5 text-lg font-medium leading-6 ">
-                      Deploy instantly
-                    </p>
-                  </div>
-                  <div className="mt-2 text-base text-gray-500">
-                    Define your database schema using the intuitive interface, or directly in your code. Simply publish your schema and deploy automatically.
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <div className="flex items-center justify-center w-12 h-12  bg-gray-100 rounded-xl">
-                      {/* <ion-icon className="w-5 h-5 md hydrated" name="scan-outline" role="img" aria-label="scan outline"></ion-icon> */}
-                    </div>
-                    <p className="mt-5 text-lg font-medium leading-6 ">
-                      Integrate anywhere
-                    </p>
-                  </div>
-                  <div className="mt-2 text-base text-gray-500">
-                    Comes with built in REST & GraphQL API, and native SDKs for TypeScript and React. Built on web native APIs, Basic integrates with any client, server, and wherever else you want it.
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <div className="flex items-center justify-center w-12 h-12  bg-gray-100 rounded-xl">
-                      {/* <ion-icon className="w-5 h-5 md hydrated" name="scan-outline" role="img" aria-label="scan outline"></ion-icon> */}
-                    </div>
-                    <p className="mt-5 text-lg font-medium leading-6 ">
-                      Scale effortlessly
-                    </p>
-                  </div>
-                  <div className="mt-2 text-base text-gray-500">
-                    Basic scales alongside you, and will grow and shrink to your needs. Caching, indexes, read replicas, horizontal & vertical scaling - we can handle everything, so you never have to.
-                  </div>
-                </li>
 
-
-
-              </ul>
-            </div>
-          </div>
+        <div className='pt-20'>
+          <h2 className='text-base text-gray-300 font-mono'>Basic apps:</h2>
+          <img src="/traditional.png" alt="traditional apps" width={300} />
         </div>
       </div>
     </section>
   )
 }
+
+const Footer = () => {
+  return (
+    <section aria-labelledby="features" id="feature-five" className="overflow-y-auto bg-[#131315] p-20 flex">
+
+      <div className='w-1/3 py-12'>
+        <h1 className='text-2xl font-mono pb-12'> Interesed in building on Basic?</h1>
+        <p className='text-grey-100'>reach out for beta access </p>
+      </div>
+
+    
+    </section>
+  )
+}
+
 
 const ZKSection = () => {
   return (
