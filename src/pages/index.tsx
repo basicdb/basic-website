@@ -237,7 +237,7 @@ const HowItWorks = () => {
 
           <div className='pt-20'>
             <h2 className='text-base text-gray-300 font-mono'>Basic apps:</h2>
-            <img src="/traditional.png" alt="traditional apps" width={300} />
+            <img src="/diagram_2.png" alt="traditional apps" width={320} />
           </div>
         </div>
 
