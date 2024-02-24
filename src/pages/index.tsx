@@ -198,6 +198,7 @@ const HowItWorks = () => {
         <div className='flex-1 px-8 py-12 text-gray-200 '>
           <h1 className='text-2xl font-mono pb-12'>How it works</h1>
           <p className='text-gray-100'>Basic creates personal data stores for every end user, which applications can access if given permission. This gives apps a fast and easy database, while letting users ultimately retain ownership over their data. </p>
+          <a href='https://docs.basic.tech' target='_blank' className="btn btn-primary mt-8">Read the Docs</a>
         </div>
 
         <div className="flex-1 px-8 py-12 mx-auto ">
