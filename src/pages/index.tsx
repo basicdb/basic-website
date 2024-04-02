@@ -24,6 +24,8 @@ export default function Home() {
         <meta name="description" content="The serverless database for user owned data" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <script defer data-domain="basic.tech" src="https://plausible.io/js/script.js"></script>
+
       </Head>
       <main >
 
