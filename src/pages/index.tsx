@@ -90,10 +90,10 @@ const HeroSection = () => {
           <div className="max-w-3xl text-center lg:text-left">
             <div className="max-w-xl mx-auto text-center lg:p-10 lg:text-left">
               <div><p className="text-2xl font-medium font-mono tracking-tight text-white sm:text-4xl">
-                the database for <br /> <span className='text-4xl'>user-owned data</span>
+                open source infra for <br /> <span className='text-4xl'>local-first apps</span>
               </p>
                 <p className="max-w-xl mt-4 text-base tracking-tight text-gray-400">
-                  Basic is the easiest way to build privacy-centric apps, by letting your users control their data.
+                  Basic is the easiest way to add local-first sync to your app. Auth, storage, and realtime multiplayer - all built in.
                 </p>
               </div>
 
