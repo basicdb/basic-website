@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 const DATA = {
   title: "Basic Database",
-  description: "The serverless database for user owned data",
+  description: "Open source infrastructure for local-first apps",
   image: "/bg.png",
   url: "https://basic.tech"
 
@@ -21,23 +21,20 @@ export default function Home() {
     <>
       <Head>
         <title>Basic Database</title>
-        <meta name="description" content="The serverless database for user owned data" />
+        <meta name="description" content="Open source infrastructure for local-first apps" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <script defer data-domain="basic.tech" src="https://plausible.io/js/script.js"></script>
 
       </Head>
       <main >
-
-
-
         <HeroSection />
-
-        <HowItWorks />
 
         <DeveloperFeatureSection />
 
-        <UseCases />
+        <HowItWorks />
+
+        {/* <UseCases /> */}
         {/* <ZKSection /> */}
 
         {/* <Footer /> */}
@@ -90,7 +87,7 @@ const HeroSection = () => {
           <div className="max-w-3xl text-center lg:text-left">
             <div className="max-w-xl mx-auto text-center lg:p-10 lg:text-left">
               <div><p className="text-2xl font-medium font-mono tracking-tight text-white sm:text-4xl">
-                open source infra for <br /> <span className='text-4xl'>local-first apps</span>
+                Open source infrastructure for <br /> <span className='text-4xl'>local-first apps</span>
               </p>
                 <p className="max-w-xl mt-4 text-base tracking-tight text-gray-400">
                   Basic is the easiest way to add local-first sync to your app. Auth, storage, and realtime multiplayer - all built in.
@@ -99,9 +96,9 @@ const HeroSection = () => {
 
               <div className="flex flex-col items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
 
-                <a href="https://airtable.com/shr5ALU6Ha9uBzErA" target="_blank" rel="noreferrer" className="btn glass" >Request Early Access</a>
+                <a href="https://airtable.com/shr5ALU6Ha9uBzErA" target="_blank" rel="noreferrer" className="btn btn-primary" >Request Early Access</a>
 
-                <a href="https://basic.tech/careers" target="_blank" rel="noreferrer" className="btn btn-secondary ">We're Hiring! Join our team :) </a>
+                {/* <a href="https://basic.tech/careers" target="_blank" rel="noreferrer" className="btn btn-secondary ">We're Hiring! Join our team :) </a> */}
 
               </div>
 
@@ -121,27 +118,26 @@ const DeveloperFeatureSection = () => {
 
       <div className='max-w-5xl p-8'>
 
-        <h1 className='text-2xl font-mono pb-6'> Benefits </h1>
+        <h1 className='text-2xl font-mono pb-6'> Benefits with Basic</h1>
 
         <div className="py-8 mx-auto lg:flex">
-
           <ul className="grid grid-cols-1 gap-12 mt-6 lg:gap-24 sm:grid-cols-3" role="list">
             <li>
-              <p className="mt-5 text-lg font-medium leading-6">Privacy</p>
+              <p className="mt-5 text-lg font-medium leading-6">Improved app performance with local-first architecture</p>
               <div className="mt-2 text-base text-gray-500">
-              users retain full ownership and control over their data - sensitive data doesn't touch your servers
+                User data is stored on client devices, and backed-up to the cloud automatically. Startup times are fast, filters work instantly, and there are no page loads.
               </div>
             </li>
             <li>
-              <p className="mt-5 text-lg font-medium leading-6">Interoperable data</p>
+              <p className="mt-5 text-lg font-medium leading-6">Simpler architecture for better developer productivity</p>
               <div className="mt-2 text-base text-gray-500">
-              integrate data from other apps and let apps build on top of yours - without any extra work
+                Eliminate state management, conflict resolution, and error handling. Comes with built-in auth, realtime multiplayer, and offline-support.
               </div>
             </li>
             <li>
-              <p className="mt-5 text-lg font-medium leading-6">EZ PZ</p>
+              <p className="mt-5 text-lg font-medium leading-6">Built-in privacy with user-owned cloud data stores</p>
               <div className="mt-2 text-base text-gray-500">
-              no need to store or pay for user data - no more expensive cloud bills
+                Users retain full ownership and control over their data. We spin up personal data stores for each of your users so that sensitive data doesn't touch your servers.
               </div>
             </li>
           </ul>
@@ -198,9 +194,9 @@ const HowItWorks = () => {
       <div className='p-4 flex flex-col sm:flex-row max-w-5xl justify-center'>
 
         <div className='flex-1 px-8 py-12 text-gray-200 '>
-          <h1 className='text-2xl font-mono pb-12'>How it works</h1>
+          <h1 className='text-2xl font-mono pb-12'>Privacy out-of-the-box</h1>
           <p className='text-gray-100'>Basic creates personal data stores for every end user, which applications can access if given permission. This gives apps a fast and easy database, while letting users ultimately retain ownership over their data. </p>
-          <a href='https://docs.basic.tech' target='_blank' className="btn btn-primary mt-8">Read the Docs</a>
+          <a href='https://docs.basic.tech' target='_blank' className="btn btn-secondary mt-8">Read the Docs</a>
         </div>
 
         <div className="flex-1 px-8 py-12 mx-auto ">
