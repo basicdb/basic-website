@@ -4,7 +4,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import { RocketLaunchIcon } from '@heroicons/react/24/solid';
+import Benefits from '@/components/Benefits';
+import benefitsForDevelopers from '@/utils/benefitsForDevelopers';
+import benefitsForUsers from '@/utils/benefitsForUsers';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,7 +16,6 @@ const DATA = {
   description: "Open source infrastructure for local-first apps",
   image: "/bg.png",
   url: "https://basic.tech"
-
 }
 
 export default function Home() {
@@ -25,19 +27,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <script defer data-domain="basic.tech" src="https://plausible.io/js/script.js"></script>
-
       </Head>
-      <main >
-        <HeroSection />
-
-        <DeveloperFeatureSection />
-
-        <HowItWorks />
-
-        {/* <UseCases /> */}
-        {/* <ZKSection /> */}
-
-        {/* <Footer /> */}
+      <main className="flex flex-col items-center">
+        <div className="w-full max-w-7xl">
+          <HeroSection />
+          <Benefits benefits={benefitsForDevelopers} title={"Basic-ally better for developers"} />
+          <PrivacySection />
+          <Benefits benefits={benefitsForUsers} title={"Also better for users"} />
+          <Footer />
+        </div>
       </main>
     </>
   )
@@ -45,27 +43,24 @@ export default function Home() {
 
 const NavBar = () => {
   return (
-    //background image
-    <div className="navbar bg-opacity-20 top-0 absolute" >
+    <div className="navbar bg-opacity-20 absolute top-0 left-0 right-0 px-4 py-4 lg:px-8">
       <div className="flex-1">
-        {/* <Image alt="twitter" width={50} height={50} src="/icons/twitter.png" className="h-6 w-6" /> */}
-
-        <a className="btn btn-ghost normal-case text-xl">
-          <Image alt="twitter" width={50} height={50} src="/logo.png" className="h-6 w-6 mr-4" />
-          Basic</a>
+        <a className="btn btn-ghost normal-case text-xl text-white" href="/">
+          <Image alt="logo" width={32} height={32} src="/logo.png" className="mr-2" />
+          Basic
+        </a>
       </div>
-      <div className="flex-none text-white">
-        <ul className="menu menu-horizontal px-1 ">
-
+      <div className="flex-none">
+        <ul className="menu menu-horizontal px-1 text-white">
           <li>
-            <a className="btn btn-ghost " href='https://twitter.com/basic_db' target="_blank" rel="noreferrer" >
-              {/* <Image alt="twitter" width={50} height={50} src="https://img.icons8.com/ios/50/000000/twitter--v1.png" className="h-6 w-6" /> */}
-              <Image alt="twitter" width={25} height={25} src="/icons/twitter.png" className="h-6 w-6" />
-              Say hi :)
+            <a className="btn btn-ghost" href='https://twitter.com/basic_db' target="_blank" rel="noreferrer">
+              <Image alt="twitter" width={20} height={20} src="/icons/twitter.png" className="mr-2 hidden sm:inline" />
+              <span className="sm:hidden">Connect</span>
+              <span className="hidden sm:inline">Connect with us</span>
             </a>
           </li>
           <li>
-            <a href="https://basic.tech/careers" target="_blank" rel="noreferrer" className="btn btn-ghost ">Careers<span className="indicator-item badge badge-secondary ">2</span></a>
+            <a href="https://basic.tech/careers" target="_blank" rel="noreferrer" className="btn btn-ghost">Careers</a>
           </li>
         </ul>
       </div>
@@ -75,187 +70,103 @@ const NavBar = () => {
 
 const HeroSection = () => {
   return (
-
-    <section className='bg-black ' style={{ backgroundImage: `url('/bg.png')` }}>
-
-
-      <div className="py-24 flex flex-col justify-center min-h-screen ">
-
+    <section className='bg-black w-full' style={{ backgroundImage: `url('/bg.png')` }}>
+      <div className="py-24 px-4 sm:px-6 lg:px-8 flex flex-col justify-center min-h-screen">
         <NavBar />
-
-        <div className="relative px-8">
-          <div className="max-w-3xl text-center lg:text-left">
-            <div className="max-w-xl mx-auto text-center lg:p-10 lg:text-left">
-              <div><p className="text-2xl font-medium font-mono tracking-tight text-white sm:text-4xl">
-                Open source infrastructure for <br /> <span className='text-4xl'>local-first apps</span>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="text-center lg:text-left">
+            <div>
+              <p className="text-2xl font-medium font-mono tracking-tight text-white sm:text-4xl">
+                Open source infra for <br /> <span className='text-4xl'>local-first apps</span>
               </p>
-                <p className="max-w-xl mt-4 text-base tracking-tight text-gray-400">
-                  Basic is the easiest way to add local-first sync to your app. Auth, storage, and realtime multiplayer - all built in.
-                </p>
+              <h3 className="max-w-xl mx-auto lg:mx-0 mt-4 text-base tracking-tight text-gray-300" style={{ fontSize: 18 }}>
+                Deliver high-performance apps with a powerful sync engine, offline support, and user-owned data stores
+              </h3>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
+              <a
+                href="https://airtable.com/shr5ALU6Ha9uBzErA"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary inline-flex items-center justify-center bg-white text-black py-2.5 px-8 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:rotate-1 hover:bg-gray-100 hover:text-gray-900 shadow-lg hover:shadow-xl border-2 border-black hover:border-gray-900"
+              >
+                <RocketLaunchIcon className="h-7 w-7 mr-3 animate-bounce" />
+                <span className="relative flex items-center justify-center">
+                  <span className="absolute -inset-1.5 bg-black opacity-20 rounded-full blur"></span>
+                  <span className="relative">Request Early Access</span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div className="hidden lg:flex justify-center lg:justify-end">
+            <Image
+              alt="basic code snippet"
+              width={1000}
+              height={1000}
+              src="/basic_snippet.png"
+              className="w-full max-w-md h-auto object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+const PrivacySection = () => {
+  return (
+    <section className="bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="bg-[#131315] p-6 sm:p-12 rounded-lg">
+          <div className="flex flex-col sm:flex-row justify-between items-center">
+            <div className="w-full sm:w-1/2 pr-0 sm:pr-8 mb-8 sm:mb-0 flex flex-col items-center sm:items-start text-center sm:text-left">
+              <h2 className="text-2xl font-mono text-gray-200 mb-6">Privacy by default</h2>
+              <p className="text-gray-100 mb-8">
+                Basic creates personal data stores for every user, which apps can access if given permission.
+                Sensitive data never touches the developer servers, and users always own their data.
+              </p>
+              <a href="https://docs.basic.tech" target="_blank" rel="noopener noreferrer"
+                className="btn bg-gray-800 text-white border-2 border-gray-300 hover:bg-gray-700 hover:border-white transition-all duration-300 transform hover:scale-105 hover:rotate-1 shadow-md hover:shadow-lg px-6 py-2 rounded-full font-semibold">
+                Read the Docs
+              </a>
+            </div>
+            <div className="w-full sm:w-1/2 pl-0 sm:pl-8">
+              <div className="text-center mb-12">
+                <h3 className="text-base text-gray-300 font-mono mb-4">Traditional apps:</h3>
+                <img src="/traditional.png" alt="Traditional apps diagram" className="mx-auto max-w-full" width={300} />
               </div>
-
-              <div className="flex flex-col items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
-
-                <a href="https://airtable.com/shr5ALU6Ha9uBzErA" target="_blank" rel="noreferrer" className="btn btn-primary" >Request Early Access</a>
-
-                {/* <a href="https://basic.tech/careers" target="_blank" rel="noreferrer" className="btn btn-secondary ">We're Hiring! Join our team :) </a> */}
-
+              <div className="text-center">
+                <h3 className="text-base text-gray-300 font-mono mb-4">Basic apps:</h3>
+                <img src="/diagram_2.png" alt="Basic apps diagram" className="mx-auto max-w-full" width={320} />
               </div>
-
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-  )
-}
-
-
-const DeveloperFeatureSection = () => {
-  return (
-    <section aria-labelledby="features" id="feature-five" className="overflow-y-auto flex justify-center p-8">
-
-      <div className='max-w-5xl p-8'>
-
-        <h1 className='text-2xl font-mono pb-6'> Benefits with Basic</h1>
-
-        <div className="py-8 mx-auto lg:flex">
-          <ul className="grid grid-cols-1 gap-12 mt-6 lg:gap-24 sm:grid-cols-3" role="list">
-            <li>
-              <p className="mt-5 text-lg font-medium leading-6">Improved app performance with local-first architecture</p>
-              <div className="mt-2 text-base text-gray-500">
-                User data is stored on client devices, and backed-up to the cloud automatically. Startup times are fast, filters work instantly, and there are no page loads.
-              </div>
-            </li>
-            <li>
-              <p className="mt-5 text-lg font-medium leading-6">Simpler architecture for better developer productivity</p>
-              <div className="mt-2 text-base text-gray-500">
-                Eliminate state management, conflict resolution, and error handling. Comes with built-in auth, realtime multiplayer, and offline-support.
-              </div>
-            </li>
-            <li>
-              <p className="mt-5 text-lg font-medium leading-6">Built-in privacy with user-owned cloud data stores</p>
-              <div className="mt-2 text-base text-gray-500">
-                Users retain full ownership and control over their data. We spin up personal data stores for each of your users so that sensitive data doesn't touch your servers.
-              </div>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-  )
-}
-
-
-
-const UseCases = () => {
-  return (
-    <section aria-labelledby="features" id="feature-five" className="overflow-y-auto flex justify-center p-8">
-
-      <div className='max-w-5xl p-8'>
-
-        <h1 className='text-2xl font-mono pb-6'> Use cases </h1>
-
-        <div className="py-8 mx-auto lg:flex">
-
-          <ul className="grid grid-cols-1 gap-12 mt-6 lg:gap-24 sm:grid-cols-3" role="list">
-            <li>
-              <p className="mt-5 text-lg font-medium leading-6">Local-first</p>
-              <div className="mt-2 text-base text-gray-500">
-                offer backups, multi-device support, and collaborative features to your local-first app
-              </div>
-            </li>
-            <li>
-              <p className="mt-5 text-lg font-medium leading-6">Private apps</p>
-              <div className="mt-2 text-base text-gray-500">
-                offer data ownership and end-to-end encryption, without building anything extra
-              </div>
-            </li>
-            <li>
-              <p className="mt-5 text-lg font-medium leading-6">Decentralized</p>
-              <div className="mt-2 text-base text-gray-500">
-                store user data off-chain, while keeping it private & self sovereign, without relying on centralized providers
-              </div>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-  )
-}
-
-const HowItWorks = () => {
-  return (
-    <section aria-labelledby="features" id="feature-five" className="overflow-y-auto bg-[#131315] flex justify-center">
-
-      <div className='p-4 flex flex-col sm:flex-row max-w-5xl justify-center'>
-
-        <div className='flex-1 px-8 py-12 text-gray-200 '>
-          <h1 className='text-2xl font-mono pb-12'>Privacy out-of-the-box</h1>
-          <p className='text-gray-100'>Basic creates personal data stores for every end user, which applications can access if given permission. This gives apps a fast and easy database, while letting users ultimately retain ownership over their data. </p>
-          <a href='https://docs.basic.tech' target='_blank' className="btn btn-secondary mt-8">Read the Docs</a>
-        </div>
-
-        <div className="flex-1 px-8 py-12 mx-auto ">
-          <div>
-            <h2 className='text-base text-gray-300 font-mono'>Traditional apps:</h2>
-            <img src="/traditional.png" alt="traditional apps" width={300} />
-          </div>
-
-          <div className='pt-20'>
-            <h2 className='text-base text-gray-300 font-mono'>Basic apps:</h2>
-            <img src="/diagram_2.png" alt="traditional apps" width={320} />
-          </div>
-        </div>
-
-      </div>
-
     </section>
   )
 }
 
 const Footer = () => {
   return (
-    <section aria-labelledby="features" id="feature-five" className="overflow-y-auto bg-[#131315] p-20 flex">
-
-      <div className='w-1/3 py-12'>
-        <h1 className='text-2xl font-mono pb-12'> Interesed in building on Basic?</h1>
-        <p className='text-grey-100'>reach out for beta access </p>
-      </div>
-
-
-    </section>
-  )
-}
-
-
-const ZKSection = () => {
-  return (
-    <section className="relative flex items-center w-full ">
-      <div className="relative items-center w-full px-5 py-24 mx-auto md:px-12 lg:px-16 max-w-7xl">
-        <div className="relative flex-col items-start m-auto align-middle bg-slate-900 p-5 rounded-lg ">
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-24">
-            <div className="relative items-center gap-12 m-auto lg:inline-flex md:order-first">
-              <div className="max-w-xl text-center lg:text-left">
-                <div>
-
-                  <p className="text-2xl font-medium sm:text-4xl">
-                    the zero-knowledge database
-                  </p>
-                  <p className="max-w-xl mt-4 text-base tracking-tight text-gray-300">
-                    The first of its kind, Basic lets you create zero-knowledge applications so you can build data-intensive apps for your users, without needing to store anything in your database. This keeps user data private, without sacrificing functionality.                   </p>            </div>
-
-              </div>
-            </div>
-            <div className="order-first block w-full mt-12 aspect-square lg:mt-0">
-              {/* <img className="object-cover object-center w-full mx-auto bg-gray-300 lg:ml-auto " alt="hero" src="https://d33wubrfki0l68.cloudfront.net/6163c5a4083dab2763aa0f2aa9e6bded23630eb7/935d6/images/placeholders/square2.svg"> */}
-            </div>
+    <footer className="bg-white py-6">
+      <hr className="border-t border-gray-200 mb-6" />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex items-center">
+            <Image alt="logo" width={32} height={32} src="/logo.png" className="mr-2" />
+            <span className="text-xl font-semibold">Basic</span>
+          </div>
+          <div className="flex space-x-6">
+            <a href="https://twitter.com/basic_db" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-gray-900">Twitter</a>
+            <a href="https://airtable.com/shr5ALU6Ha9uBzErA" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-gray-900">Waitlist</a>
+            <a href="https://docs.basic.tech" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-gray-900">Docs</a>
+          </div>
+          <div className="text-gray-500">
+            © {new Date().getFullYear()} Basic. All rights reserved.
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   )
 }
