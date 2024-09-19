@@ -60,7 +60,7 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a href="https://basic.tech/careers" target="_blank" rel="noreferrer" className="btn btn-ghost">Careers</a>
+            <a href="https://docs.basic.tech/" target="_blank" rel="noreferrer" className="btn btn-ghost">Docs</a>
           </li>
         </ul>
       </div>
@@ -115,7 +115,7 @@ const HeroSection = () => {
 
 const PrivacySection = () => {
   return (
-    <section className="bg-white">
+    <section className="bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-[#131315] p-6 sm:p-12 rounded-lg">
           <div className="flex flex-col sm:flex-row justify-between items-center">
@@ -149,7 +149,7 @@ const PrivacySection = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-6">
+    <footer className="bg-white py-6 dark:bg-gray-900">
       <hr className="border-t border-gray-200 mb-6" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -158,9 +158,9 @@ const Footer = () => {
             <span className="text-xl font-semibold">Basic</span>
           </div>
           <div className="flex space-x-6">
-            <a href="https://twitter.com/basic_db" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-gray-900">Twitter</a>
-            <a href="https://airtable.com/shr5ALU6Ha9uBzErA" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-gray-900">Waitlist</a>
-            <a href="https://docs.basic.tech" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-gray-900">Docs</a>
+            <a href="https://twitter.com/basic_db" target="_blank" rel="noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">Twitter</a>
+            <a href="https://airtable.com/shr5ALU6Ha9uBzErA" target="_blank" rel="noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">Waitlist</a>
+            <a href="https://docs.basic.tech" target="_blank" rel="noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">Docs</a>
           </div>
           <div className="text-gray-500">
             © {new Date().getFullYear()} Basic. All rights reserved.
