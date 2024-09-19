@@ -4,6 +4,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import { RocketLaunchIcon } from '@heroicons/react/24/solid'; // Import any icon you want to use
 import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -50,7 +51,7 @@ const NavBar = () => {
       <div className="flex-1">
         {/* <Image alt="twitter" width={50} height={50} src="/icons/twitter.png" className="h-6 w-6" /> */}
 
-        <a className="btn btn-ghost normal-case text-xl">
+        <a className="btn btn-ghost normal-case text-xl" style={{ color: "white" }}>
           <Image alt="twitter" width={50} height={50} src="/logo.png" className="h-6 w-6 mr-4" />
           Basic</a>
       </div>
@@ -61,11 +62,12 @@ const NavBar = () => {
             <a className="btn btn-ghost " href='https://twitter.com/basic_db' target="_blank" rel="noreferrer" >
               {/* <Image alt="twitter" width={50} height={50} src="https://img.icons8.com/ios/50/000000/twitter--v1.png" className="h-6 w-6" /> */}
               <Image alt="twitter" width={25} height={25} src="/icons/twitter.png" className="h-6 w-6" />
-              Say hi :)
+              Connect with us
             </a>
           </li>
           <li>
-            <a href="https://basic.tech/careers" target="_blank" rel="noreferrer" className="btn btn-ghost ">Careers<span className="indicator-item badge badge-secondary ">2</span></a>
+            {/* <a href="https://basic.tech/careers" target="_blank" rel="noreferrer" className="btn btn-ghost ">Careers<span className="indicator-item badge badge-secondary ">2</span></a> */}
+            <a href="https://basic.tech/careers" target="_blank" rel="noreferrer" className="btn btn-ghost ">Careers</a>
           </li>
         </ul>
       </div>
@@ -75,39 +77,44 @@ const NavBar = () => {
 
 const HeroSection = () => {
   return (
-
-    <section className='bg-black ' style={{ backgroundImage: `url('/bg.png')` }}>
-
-
-      <div className="py-24 flex flex-col justify-center min-h-screen ">
-
+    <section className='bg-black' style={{ backgroundImage: `url('/bg.png')` }}>
+      <div className="py-24 flex flex-col justify-center min-h-screen">
         <NavBar />
-
         <div className="relative px-8">
-          <div className="max-w-3xl text-center lg:text-left">
-            <div className="max-w-xl mx-auto text-center lg:p-10 lg:text-left">
-              <div><p className="text-2xl font-medium font-mono tracking-tight text-white sm:text-4xl">
-                Open source infrastructure for <br /> <span className='text-4xl'>local-first apps</span>
-              </p>
-                <p className="max-w-xl mt-4 text-base tracking-tight text-gray-400">
-                  Basic is the easiest way to add local-first sync to your app. Auth, storage, and realtime multiplayer - all built in.
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="text-center lg:text-left">
+              <div>
+                <p className="text-2xl font-medium font-mono tracking-tight text-white sm:text-4xl">
+                  Open source infra for <br /> <span className='text-4xl'>local-first apps</span>
                 </p>
+                <h3 className="max-w-xl mx-auto lg:mx-0 mt-4 text-base tracking-tight text-gray-300" style={{ fontSize: 18 }}>
+                  Deliver high-performance apps with a powerful sync engine, offline support, and user-owned data stores
+                </h3>
               </div>
-
               <div className="flex flex-col items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
-
-                <a href="https://airtable.com/shr5ALU6Ha9uBzErA" target="_blank" rel="noreferrer" className="btn btn-primary" >Request Early Access</a>
-
-                {/* <a href="https://basic.tech/careers" target="_blank" rel="noreferrer" className="btn btn-secondary ">We're Hiring! Join our team :) </a> */}
-
+                <a
+                  href="https://airtable.com/shr5ALU6Ha9uBzErA"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-primary flex items-center justify-center bg-white text-black py-2 px-4 rounded hover:text-white"
+                >
+                  <RocketLaunchIcon className="h-5 w-5 mr-2 hover:text-white" /> Request Early Access
+                </a>
               </div>
-
+            </div>
+            <div className="hidden lg:flex justify-center lg:justify-end">
+              <Image
+                alt="basic code snippet"
+                width={1000}
+                height={1000}
+                src="/basic_snippet.png"
+                className="w-full max-w-md h-auto object-contain"
+              />
             </div>
           </div>
         </div>
       </div>
     </section>
-
   )
 }
 
