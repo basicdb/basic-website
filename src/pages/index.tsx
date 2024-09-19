@@ -44,25 +44,27 @@ export default function Home() {
 const NavBar = () => {
   return (
     <div className="navbar bg-opacity-20 absolute top-0 left-0 right-0 px-4 py-4 lg:px-8">
-      <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl text-white" href="/">
-          <Image alt="logo" width={32} height={32} src="/logo.png" className="mr-2" />
-          Basic
-        </a>
-      </div>
-      <div className="flex-none">
-        <ul className="menu menu-horizontal px-1 text-white">
-          <li>
-            <a className="btn btn-ghost" href='https://twitter.com/basic_db' target="_blank" rel="noreferrer">
-              <Image alt="twitter" width={20} height={20} src="/icons/twitter.png" className="mr-2 hidden sm:inline" />
-              <span className="sm:hidden">Connect</span>
-              <span className="hidden sm:inline">Connect with us</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://docs.basic.tech/" target="_blank" rel="noreferrer" className="btn btn-ghost">Docs</a>
-          </li>
-        </ul>
+      <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
+        <div className="flex-1">
+          <a className="btn btn-ghost normal-case text-xl text-white" href="/">
+            <Image alt="logo" width={32} height={32} src="/logo.png" className="mr-2" />
+            Basic
+          </a>
+        </div>
+        <div className="flex-none">
+          <ul className="menu menu-horizontal px-1 text-white">
+            <li>
+              <a className="btn btn-ghost" href='https://twitter.com/basic_db' target="_blank" rel="noreferrer">
+                <Image alt="twitter" width={20} height={20} src="/icons/twitter.png" className="mr-2 hidden sm:inline" />
+                <span className="sm:hidden">Connect</span>
+                <span className="hidden sm:inline">Connect with us</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://docs.basic.tech/" target="_blank" rel="noreferrer" className="btn btn-ghost">Docs</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   )
