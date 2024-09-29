@@ -31,9 +31,10 @@ export default function Home() {
       <main className="flex flex-col items-center">
         <div className="w-full max-w-7xl">
           <HeroSection />
-          <Benefits benefits={benefitsForDevelopers} title={"Basic-ally better for developers"} />
+          <WhyBasicSection />
+          <Benefits benefits={benefitsForDevelopers} title={"Basic-ally better for developers 📱"} />
           <PrivacySection />
-          <Benefits benefits={benefitsForUsers} title={"Also better for users"} />
+          <Benefits benefits={benefitsForUsers} title={"Also better for users 👯"} />
           <Footer />
         </div>
       </main>
@@ -78,8 +79,8 @@ const HeroSection = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="text-center lg:text-left">
             <div>
-              <p className="text-2xl font-medium font-mono tracking-tight text-white sm:text-4xl">
-                Open source infra for <br /> <span className='text-4xl'>local-first apps</span>
+              <p className="text-2xl font-medium font-mono tracking-tight text-white sm:text-4xl leading-relaxed">
+                Open source infra for <br /> <strong style={{ fontSize: 48, color: '#FF00FF' }}>local-first apps</strong> 🏆
               </p>
               <h3 className="max-w-xl mx-auto lg:mx-0 mt-4 text-base tracking-tight text-gray-300" style={{ fontSize: 18 }}>
                 Deliver high-performance apps with a powerful sync engine, offline support, and user-owned data stores
@@ -115,6 +116,30 @@ const HeroSection = () => {
   )
 }
 
+const WhyBasicSection = () => {
+  return (
+    <section className="bg-black">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-1 pb-24">
+        <h2 className="text-4xl font-bold text-white mb-6 mt-12 text-center font-mono leading-relaxed">
+          The most <strong style={{ color: '#FF00FF' }}>exciting</strong> ✨ database since the 80s.
+        </h2>
+        <div className="max-w-2xl mx-auto">
+          <p className="text-2xl text-white mb-8 mt-12 leading-relaxed">
+            We're a <strong style={{ color: '#FF00FF' }}>passionate team of data enthusiasts</strong> that were frustrated with <i>walled gardens</i> 🥀, <i>lack of interoperability</i> 🔗, and <i>lack of innovation</i> 🪫 in the database space.
+          </p>
+          <p className="text-2xl text-white mb-8 mt-12 leading-relaxed">
+            So we started built one from ground-up, with the perfect balance of <strong style={{ color: '#FF00FF' }}>raw power and ease of use</strong>.
+          </p>
+          <p className="text-2xl text-white mb-8 mt-12 leading-relaxed">
+            Rather than relying on unreliable p2p networks, we deploy <strong style={{ color: '#FF00FF' }}>personal data stores</strong>  for every user over distributed servers.
+            And we pair this with a <strong style={{ color: '#FF00FF' }}>state-of-the-art sync engine</strong> that lets you build the fastest and smoothest local-first apps.
+          </p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 const PrivacySection = () => {
   return (
     <section className="bg-white dark:bg-gray-900">
@@ -122,14 +147,14 @@ const PrivacySection = () => {
         <div className="bg-[#131315] p-6 sm:p-12 rounded-lg">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <div className="w-full sm:w-1/2 pr-0 sm:pr-8 mb-8 sm:mb-0 flex flex-col items-center sm:items-start text-center sm:text-left">
-              <h2 className="text-2xl font-mono text-gray-200 mb-6">Privacy by default</h2>
+              <h2 className="text-2xl font-mono text-gray-200 mb-6">🔍 Privacy by default 🔍</h2>
               <p className="text-gray-100 mb-8">
                 Basic creates personal data stores for every user, which apps can access if given permission.
                 Sensitive data never touches the developer servers, and users always own their data.
               </p>
               <a href="https://docs.basic.tech" target="_blank" rel="noopener noreferrer"
                 className="btn bg-gray-800 text-white border-2 border-gray-300 hover:bg-gray-700 hover:border-white transition-all duration-300 transform hover:scale-105 hover:rotate-1 shadow-md hover:shadow-lg px-6 py-2 rounded-full font-semibold">
-                Read the Docs
+                📖 Read the Docs
               </a>
             </div>
             <div className="w-full sm:w-1/2 pl-0 sm:pl-8">
