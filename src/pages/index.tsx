@@ -105,8 +105,8 @@ const HeroSection = () => {
           <div className="hidden lg:flex justify-center lg:justify-end">
             <Image
               alt="basic code snippet"
-              width={1000}
-              height={1000}
+              width={500}
+              height={500}
               src="/basic_snippet.png"
               className="w-full max-w-md h-auto object-contain"
             />
@@ -166,11 +166,11 @@ const PrivacySection = () => {
             <div className="w-full sm:w-1/2 pl-0 sm:pl-8">
               <div className="text-center mb-12">
                 <h3 className="text-base text-gray-300 font-mono mb-4">Traditional apps:</h3>
-                <img src="/traditional.png" alt="Traditional apps diagram" className="mx-auto max-w-full" width={300} />
+                <Image src="/traditional.png" alt="Traditional apps diagram" className="mx-auto max-w-full" width={300} height={300} />
               </div>
               <div className="text-center">
                 <h3 className="text-base text-gray-300 font-mono mb-4">Basic apps:</h3>
-                <img src="/diagram_2.png" alt="Basic apps diagram" className="mx-auto max-w-full" width={320} />
+                <Image src="/diagram_2.png" alt="Basic apps diagram" className="mx-auto max-w-full" width={320} height={320} />
               </div>
             </div>
           </div>
