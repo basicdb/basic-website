@@ -33,7 +33,7 @@ export default function Home() {
         <div className="w-full max-w-7xl">
           <HeroSection />
           <WhyBasicSection />
-          <Benefits benefits={benefitsForDevelopers} title={"Basic-ally better for developers 📱"} subheader={"Local-first apps CRUD directly to a local database on the client device (think cache on steroids), and automatically sync to the cloud in the background."} />
+          <Benefits benefits={benefitsForDevelopers} title={"Basic-ally better for developers 📱"} />
           <PrivacySection />
           <Benefits benefits={benefitsForUsers} title={"Also better for users 👯"} />
           <Footer />
@@ -122,22 +122,29 @@ const WhyBasicSection = () => {
     <section className="bg-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-1 pb-24">
         <h2 className="text-4xl font-bold text-white mb-6 mt-12 text-center font-mono leading-relaxed">
-          The most <strong style={{ color: '#FF00FF' }}>exciting</strong> ✨ database since the 80s.
+          The most <strong style={{ color: '#FF00FF' }}>exciting</strong> ✨ way to build for the internet since the 90s.
         </h2>
         <div className="max-w-2xl mx-auto">
-          <p className="text-xl text-white mb-8 mt-12 leading-relaxed">
-            We're a <strong style={{ color: '#FF00FF' }}>passionate team of data enthusiasts</strong> that were frustrated with <i>walled gardens</i> 🥀, <i>lack of interoperability</i> 🔗, and <i>lack of innovation</i> 🪫 in the database space.
+          <p className="text-2xl text-white mb-8 mt-12 leading-relaxed">
+            We&apos;re <strong style={{ color: '#FF00FF' }}>web enthusiasts</strong> who were frustrated with <i>walled gardens</i> 🥀, <i>lack of interoperability</i> 🔗, and <i>long time-to-production</i> 🕒 with existing solutions.
           </p>
-          <p className="text-xl text-white mb-8 mt-12 leading-relaxed">
-            So we started built one from ground-up, with the perfect balance of <strong style={{ color: '#FF00FF' }}>raw power and ease of use</strong>.
+          <p className="text-2xl text-white mb-8 mt-12 leading-relaxed">
+            So we built a database and protocol layer from ground-up, with a focus on <strong style={{ color: '#FF00FF' }}>privacy and ease of use</strong>.
           </p>
-          <p className="text-xl text-white mb-8 mt-12 leading-relaxed">
-            Rather than relying on unreliable p2p networks, we deploy <strong style={{ color: '#FF00FF' }}>personal data stores</strong>  for every user over distributed servers.
-            And we pair this with a <strong style={{ color: '#FF00FF' }}>state-of-the-art sync engine</strong> that lets you build the fastest and smoothest local-first apps.
+          <p className="text-2xl text-white mb-8 mt-12 leading-relaxed">
+            We deploy <strong style={{ color: '#FF00FF' }}>personal data stores</strong>  for every user over distributed servers so that sensitive data never touches the developer servers.
+            This reduces the <i>burden on developers</i> 😮‍💨 to build privacy rules into their apps, and <i>gives users control over their own data</i> 💪🏾.
+          </p>
+          <p className="text-2xl text-white mb-8 mt-12 leading-relaxed">
+            We're committed to building the best products, so we modeled our <strong style={{ color: '#FF00FF' }}>local-first sync engine</strong> after some of the best apps we found (e.g., Linear, Figma).
+            Your apps <i>CRUD directly to a local database on the client device</i> 📈 (it's like caching on steroids), and <i>automatically sync to the cloud</i> ☁️ in the background.
+          </p>
+          <p className="text-2xl text-white mb-8 mt-12 leading-relaxed">
+            Basic is our solution for a <strong style={{ color: '#FF00FF' }}>faster, user-owned</strong> web 🛜
           </p>
         </div>
       </div>
-    </section>
+    </section >
   )
 }
 
