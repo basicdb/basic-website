@@ -8,6 +8,7 @@ import { RocketLaunchIcon } from '@heroicons/react/24/solid';
 import Benefits from '@/components/Benefits';
 import benefitsForDevelopers from '@/utils/benefitsForDevelopers';
 import benefitsForUsers from '@/utils/benefitsForUsers';
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,13 +27,13 @@ export default function Home() {
         <meta name="description" content="Open source infrastructure for local-first apps" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <script defer data-domain="basic.tech" src="https://plausible.io/js/script.js"></script>
       </Head>
+      <Script strategy="afterInteractive" data-domain="basic.tech" src="https://plausible.io/js/script.js" />
       <main className="flex flex-col items-center">
         <div className="w-full max-w-7xl">
           <HeroSection />
           <WhyBasicSection />
-          <Benefits benefits={benefitsForDevelopers} title={"Basic-ally better for developers 📱"} />
+          <Benefits benefits={benefitsForDevelopers} title={"Basic-ally better for developers 📱"} subheader={"Local-first architecture refers to apps that CRUD to a local database on the client device directly (think cache on steroids), and automatically sync to the cloud in the background. With this, you get the benefits of real-time cloud collaboration and the performance of on-prem apps."} />
           <PrivacySection />
           <Benefits benefits={benefitsForUsers} title={"Also better for users 👯"} />
           <Footer />
@@ -124,13 +125,13 @@ const WhyBasicSection = () => {
           The most <strong style={{ color: '#FF00FF' }}>exciting</strong> ✨ database since the 80s.
         </h2>
         <div className="max-w-2xl mx-auto">
-          <p className="text-2xl text-white mb-8 mt-12 leading-relaxed">
+          <p className="text-xl text-white mb-8 mt-12 leading-relaxed">
             We're a <strong style={{ color: '#FF00FF' }}>passionate team of data enthusiasts</strong> that were frustrated with <i>walled gardens</i> 🥀, <i>lack of interoperability</i> 🔗, and <i>lack of innovation</i> 🪫 in the database space.
           </p>
-          <p className="text-2xl text-white mb-8 mt-12 leading-relaxed">
+          <p className="text-xl text-white mb-8 mt-12 leading-relaxed">
             So we started built one from ground-up, with the perfect balance of <strong style={{ color: '#FF00FF' }}>raw power and ease of use</strong>.
           </p>
-          <p className="text-2xl text-white mb-8 mt-12 leading-relaxed">
+          <p className="text-xl text-white mb-8 mt-12 leading-relaxed">
             Rather than relying on unreliable p2p networks, we deploy <strong style={{ color: '#FF00FF' }}>personal data stores</strong>  for every user over distributed servers.
             And we pair this with a <strong style={{ color: '#FF00FF' }}>state-of-the-art sync engine</strong> that lets you build the fastest and smoothest local-first apps.
           </p>
