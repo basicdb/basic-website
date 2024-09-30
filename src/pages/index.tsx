@@ -33,7 +33,7 @@ export default function Home() {
         <div className="w-full max-w-7xl">
           <HeroSection />
           <WhyBasicSection />
-          <Benefits benefits={benefitsForDevelopers} title={"Basic-ally better for developers 📱"} subheader={"Local-first architecture refers to apps that CRUD to a local database on the client device directly (think cache on steroids), and automatically sync to the cloud in the background. With this, you get the benefits of real-time cloud collaboration and the performance of on-prem apps."} />
+          <Benefits benefits={benefitsForDevelopers} title={"Basic-ally better for developers 📱"} subheader={"Local-first apps CRUD directly to a local database on the client device (think cache on steroids), and automatically sync to the cloud in the background."} />
           <PrivacySection />
           <Benefits benefits={benefitsForUsers} title={"Also better for users 👯"} />
           <Footer />
