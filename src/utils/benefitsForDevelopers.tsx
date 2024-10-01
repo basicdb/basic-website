@@ -17,7 +17,7 @@ const benefitsForDevelopers = [
     },
     {
         title: "🌍 Offline support + Multiplayer built-in",
-        description: "Our sync engine enables offline support and multiplayer features in your app to save you months of development time."
+        description: "Our sync engine enables multi-device offline support, and multiplayer features (coming soon) for your app to save you months of development time."
     },
     {
         title: "✍🏽 Open source",
