@@ -9,6 +9,8 @@ import Benefits from '@/components/Benefits';
 import benefitsForDevelopers from '@/utils/benefitsForDevelopers';
 import benefitsForUsers from '@/utils/benefitsForUsers';
 import Script from 'next/script'
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -125,26 +127,60 @@ const WhyBasicSection = () => {
           The most <strong style={{ color: '#FF00FF' }}>exciting</strong> ✨ way to build for the internet since the 90s.
         </h2>
         <div className="max-w-2xl mx-auto">
-          <p className="text-xl text-white mb-8 mt-12 leading-relaxed">
-            We&apos;re <strong style={{ color: '#FF00FF' }}>web enthusiasts</strong> who were frustrated with <i>walled gardens</i> 🥀, <i>lack of interoperability</i> 🔗, and <i>long time-to-production</i> 🕒 with existing solutions.
-            So we built a database and protocol layer from ground-up, with a focus on privacy and ease of use.
-          </p>
-          <p className="text-xl text-white mb-8 mt-12 leading-relaxed">
-            We deploy <strong style={{ color: '#FF00FF' }}>personal data stores</strong>  for every user over distributed servers.
-            This reduces the <i>burden on developers</i> 😮‍💨 to build privacy rules into their apps, and <i>gives users control over their own data</i> 💪🏾.
-          </p>
-          <p className="text-xl text-white mb-8 mt-12 leading-relaxed">
-            Our committed to building the best products led us to model our <strong style={{ color: '#FF00FF' }}>local-first sync engine</strong> after some of the best apps like Linear and Figma.
-            With this, your apps <i>CRUD directly to a local database on the client device</i> 📈 (it's like caching on steroids), and <i>automatically sync to the cloud</i> ☁️ in the background.
-          </p>
-          <p className="text-xl text-white mb-8 mt-12 leading-relaxed">
-            Basic is our solution for a <strong style={{ color: '#FF00FF' }}>faster, user-owned</strong> web 🛜
-          </p>
+          <FadeInParagraph>
+            {[
+              "We're <strong><u>web enthusiasts</u></strong> who were frustrated with <i>walled gardens</i> 🥀, <i>lack of interoperability</i> 🔗, and <i>long time-to-production</i> 🕒 with existing solutions.",
+              "So we built a database and protocol layer from ground-up, with a focus on privacy and ease of use."
+            ]}
+          </FadeInParagraph>
+          <FadeInParagraph>
+            {[
+              "We deploy <strong><u>personal data stores</u></strong> for every user over distributed servers.",
+              "This reduces the <i>burden on developers</i> 😮‍💨 to build privacy rules into their apps, and <i>gives users control over their own data</i> 💪🏾."
+            ]}
+          </FadeInParagraph>
+          <FadeInParagraph>
+            {[
+              "Our commitment to building the best products led us to model our <strong><u>local-first sync engine</u></strong> after some of the best apps like Linear and Figma.",
+              "With this, your apps <i>CRUD directly to a local database on the client device</i> 📈 (it's like caching on steroids), and <i>automatically sync to the cloud</i> ☁️ in the background."
+            ]}
+          </FadeInParagraph>
+          <FadeInParagraph>
+            {["Basic is our solution for a <strong><u>faster, user-owned</u></strong> web 🛜"]}
+          </FadeInParagraph>
         </div>
       </div>
-    </section >
+    </section>
   )
 }
+
+const FadeInParagraph = ({ children }: { children: Array<string> }) => {
+  return (
+    <p className="text-2xl text-white mb-8 mt-12 leading-relaxed">
+      {children.map((sentence: string, index: number) => (
+        <FadeInSentence key={index}>{sentence}</FadeInSentence>
+      ))}
+    </p>
+  );
+};
+
+const FadeInSentence = ({ children }: { children: React.ReactNode }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+    rootMargin: '10% 0px -40% 0px'
+  });
+
+  return (
+    <motion.span
+      ref={ref}
+      initial={{ opacity: 0.3 }}
+      animate={{ opacity: inView ? 1 : 0.3 }}
+      transition={{ duration: 0.3 }}
+      dangerouslySetInnerHTML={{ __html: children + ' ' }}
+    />
+  );
+};
 
 const PrivacySection = () => {
   return (
