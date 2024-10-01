@@ -129,20 +129,20 @@ const WhyBasicSection = () => {
         <div className="max-w-2xl mx-auto">
           <FadeInParagraph>
             {[
-              "We're <strong><u>web enthusiasts</u></strong> who were frustrated with <i>walled gardens</i> 🥀, <i>lack of interoperability</i> 🔗, and <i>long time-to-production</i> 🕒 with existing solutions.",
-              "So we built a database and protocol layer from ground-up, with a focus on privacy and ease of use."
+              "We're <strong><u>web enthusiasts</u></strong> who were frustrated with <i>walled gardens</i> 🥀, <i>lack of interoperability</i> 🔗, and the <i>performance bottlenecks</i> ⚡️ of existing solutions.",
+              "We set out to build a database and protocol layer from ground-up, with a focus on privacy and ease of use."
             ]}
           </FadeInParagraph>
           <FadeInParagraph>
             {[
-              "We deploy <strong><u>personal data stores</u></strong> for every user over distributed servers.",
-              "This reduces the <i>burden on developers</i> 😮‍💨 to build privacy rules into their apps, and <i>gives users control over their own data</i> 💪🏾."
+              "At the heart of Basic are <strong><u>personal data stores</u></strong> deployed for every user across distributed servers.",
+              "These reduce the <i>burden on developers</i> 😮‍💨 to build privacy rules into their apps, and give users <i>complete control over their own data</i> 💪🏾."
             ]}
           </FadeInParagraph>
           <FadeInParagraph>
             {[
-              "Our commitment to building the best products led us to model our <strong><u>local-first sync engine</u></strong> after some of the best apps like Linear and Figma.",
-              "With this, your apps <i>CRUD directly to a local database on the client device</i> 📈 (it's like caching on steroids), and <i>automatically sync to the cloud</i> ☁️ in the background."
+              "Committed to building the best products, we modeled our <strong><u>local-first sync architecture</u></strong> after some of the best apps like Linear and Figma.",
+              "Your apps <i>CRUD directly to a local database on the client device</i> 📈 while changes <i>sync automatically to the cloud</i> ☁️ in the background."
             ]}
           </FadeInParagraph>
           <FadeInParagraph>
@@ -189,7 +189,7 @@ const PrivacySection = () => {
         <div className="bg-[#131315] p-6 sm:p-12 rounded-lg">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <div className="w-full sm:w-1/2 pr-0 sm:pr-8 mb-8 sm:mb-0 flex flex-col items-center sm:items-start text-center sm:text-left">
-              <h2 className="text-2xl font-mono text-gray-200 mb-6">🔍 Privacy by default 🔍</h2>
+              <h2 className="text-2xl font-mono text-gray-200 mb-6">🔍 Secured by Basic 🔍</h2>
               <p className="text-gray-100 mb-8">
                 Basic creates personal data stores for every user, which apps can access if given permission.
                 Sensitive data never touches the developer servers, and users always own their data.
@@ -199,7 +199,7 @@ const PrivacySection = () => {
                 📖 Read the Docs
               </a>
             </div>
-            <div className="w-full sm:w-1/2 pl-0 sm:pl-8">
+            <div className="hidden sm:block w-full sm:w-1/2 pl-0 sm:pl-8">
               <div className="text-center mb-12">
                 <h3 className="text-base text-gray-300 font-mono mb-4">Traditional apps:</h3>
                 <Image src="/traditional.png" alt="Traditional apps diagram" className="mx-auto max-w-full" width={300} height={300} />
