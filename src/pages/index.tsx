@@ -86,7 +86,7 @@ const HeroSection = () => {
                 Frictionless, <br /> <strong style={{ fontSize: 48, color: '#FF00FF' }}>user-owned web</strong> 🏆
               </p>
               <h3 className="max-w-xl mx-auto lg:mx-0 mt-4 text-base tracking-tight text-gray-300" style={{ fontSize: 18 }}>
-                Build high-performance apps with a powerful sync engine, offline support, and user-owned data stores with Basic
+                Build high-performance apps that have a powerful sync engine, offline support, and user-owned data stores with Basic
               </h3>
             </div>
             <div className="flex flex-col items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
@@ -124,24 +124,24 @@ const WhyBasicSection = () => {
     <section className="bg-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-1 pb-24">
         <h2 className="text-4xl font-bold text-white mb-6 mt-12 text-center font-mono leading-relaxed">
-          The most <strong style={{ color: '#FF00FF' }}>exciting</strong> ✨ way to build for the internet since the 90s.
+          The most <strong style={{ color: '#FF00FF' }}>exciting</strong> ✨ way to build for the internet since the 90s
         </h2>
         <div className="max-w-2xl mx-auto">
           <FadeInParagraph>
             {[
-              "We're <strong><u>web enthusiasts</u></strong> who were frustrated with <i>walled gardens</i> 🥀 <i>lack of interoperability</i> 🔗 and the <i>security risks</i> 🚨 of existing solutions.",
+              "We're <strong><u>web enthusiasts</u></strong> who were frustrated with <i>walled gardens</i> 🥀 <i>lack of interoperability</i> 🔗 and the <i>security risks</i> 🚨 of existing solutions",
             ]}
           </FadeInParagraph>
           <FadeInParagraph>
             {[
               "We dreamt of an internet where everyone could take their <i>personal data wherever they went</i> 📊 and build on top of it freely.",
-              "Where developers need not worry about <i>data privacy</i> 🔐 and could build great user experiences."
+              "Where developers need not worry about <i>data privacy</i> 🔐 and could build great user experiences"
             ]}
           </FadeInParagraph>
           <FadeInParagraph>
             {[
               "Where apps were always <i>collaborative, snappy, and functional</i> 👏🏽 even with spotty internet - like Linear, Figma, or Notion.",
-              "All of your data magically <i>synced across your devices</i> ☁ to share it securely with anyone."
+              "All of your data magically <i>synced across your devices</i> ☁ to share it securely with anyone"
             ]}
           </FadeInParagraph>
           <FadeInParagraph>
