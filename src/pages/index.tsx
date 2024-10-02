@@ -146,7 +146,7 @@ const WhyBasicSection = () => {
             ]}
           </FadeInParagraph>
           <FadeInParagraph>
-            {["Basic is our solution for a <strong><u>faster, user-owned</u></strong> web 🛜"]}
+            {["Basic is our solution for a <strong><u>frictionless, user-owned web</u></strong> 🛜"]}
           </FadeInParagraph>
         </div>
       </div>
