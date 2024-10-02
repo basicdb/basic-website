@@ -16,7 +16,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 const DATA = {
   title: "Basic Database",
-  description: "Open source infrastructure for local-first apps",
+  description: "The database for a frictionless, user-owned web",
   image: "/bg.png",
   url: "https://basic.tech"
 }
@@ -26,7 +26,7 @@ export default function Home() {
     <>
       <Head>
         <title>Basic Database</title>
-        <meta name="description" content="Open source infrastructure for local-first apps" />
+        <meta name="description" content="The database for a frictionless, user-owned web" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -83,10 +83,10 @@ const HeroSection = () => {
           <div className="text-center lg:text-left">
             <div>
               <p className="text-2xl font-medium font-mono tracking-tight text-white sm:text-4xl leading-relaxed">
-                Open source infra for <br /> <strong style={{ fontSize: 48, color: '#FF00FF' }}>local-first apps</strong> 🏆
+                Frictionless, <br /> <strong style={{ fontSize: 48, color: '#FF00FF' }}>user-owned web</strong> 🏆
               </p>
               <h3 className="max-w-xl mx-auto lg:mx-0 mt-4 text-base tracking-tight text-gray-300" style={{ fontSize: 18 }}>
-                Deliver high-performance apps with a powerful sync engine, offline support, and user-owned data stores
+                Build high-performance apps with a powerful sync engine, offline support, and user-owned data stores with Basic
               </h3>
             </div>
             <div className="flex flex-col items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
@@ -129,24 +129,26 @@ const WhyBasicSection = () => {
         <div className="max-w-2xl mx-auto">
           <FadeInParagraph>
             {[
-              "We're <strong><u>web enthusiasts</u></strong> who were frustrated with <i>walled gardens</i> 🥀, <i>lack of interoperability</i> 🔗, and the <i>performance bottlenecks</i> ⚡️ of existing solutions.",
-              "We set out to build a database and protocol layer from ground-up, with a focus on privacy and ease of use."
+              "We're <strong><u>web enthusiasts</u></strong> who were frustrated with <i>walled gardens</i> 🥀 <i>lack of interoperability</i> 🔗 and the <i>security risks</i> 🚨 of existing solutions.",
             ]}
           </FadeInParagraph>
           <FadeInParagraph>
             {[
-              "At the heart of Basic are <strong><u>personal data stores</u></strong> deployed for every user across distributed servers.",
-              "These reduce the <i>burden on developers</i> 😮‍💨 to build privacy rules into their apps, and give users <i>complete control over their own data</i> 💪🏾."
+              "We dreamt of an internet where everyone could take their <i>personal data wherever they went</i> 📊 and build on top of it freely.",
+              "Where developers need not worry about <i>data privacy</i> 🔐 and could build great user experiences."
             ]}
           </FadeInParagraph>
           <FadeInParagraph>
             {[
-              "Committed to building the best products, we modeled our <strong><u>local-first sync architecture</u></strong> after some of the best apps like Linear and Figma.",
-              "Your apps <i>CRUD directly to a local database on the client device</i> 📈 while changes <i>sync automatically to the cloud</i> ☁️ in the background."
+              "Where apps were always <i>collaborative, snappy, and functional</i> 👏🏽 even with spotty internet - like Linear, Figma, or Notion.",
+              "All of your data magically <i>synced across your devices</i> ☁ to share it securely with anyone."
             ]}
           </FadeInParagraph>
           <FadeInParagraph>
-            {["Basic is our solution for a <strong><u>frictionless, user-owned web</u></strong> 🛜"]}
+            {["We dreamt of a <strong><u>frictionless, user-owned web</u></strong> 🌐"]}
+          </FadeInParagraph>
+          <FadeInParagraph>
+            {["So we built <strong><u>Basic</u></strong>."]}
           </FadeInParagraph>
         </div>
       </div>
