@@ -124,26 +124,26 @@ const WhyBasicSection = () => {
     <section className="bg-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-1 pb-24">
         <h2 className="text-4xl font-bold text-white mb-6 mt-12 text-center font-mono leading-relaxed">
-          The most <strong style={{ color: '#FF00FF' }}>exciting</strong> ✨ way to build for the internet since the 90s
+          A <strong style={{ color: '#FF00FF' }}>new</strong> ✨ way to build
         </h2>
         <div className="max-w-2xl mx-auto">
           <FadeInParagraph>
             {[
-              "We're <strong><u>web enthusiasts</u></strong> who were frustrated with <i>walled gardens</i> 🥀 <i>lack of interoperability</i> 🔗 and the <i>security risks</i> 🚨 of existing solutions",
+              "We're <strong><u>web enthusiasts</u></strong> frustrated with <i>walled gardens</i> 🥀 <i>lack of interoperability</i> 🔗 and the <i>security risks</i> 🚨 of apps today",
             ]}
           </FadeInParagraph>
           <FadeInParagraph>
             {[
-              "We dreamt of an internet where everyone could take their <i>personal data wherever they went</i> 📊 and build on top of it freely.",
-              "Where developers need not worry about <i>data privacy</i> 🔐 and could build great user experiences"
+              "We envisioned an internet with portable <i>personal data</i> 📊 that automatically <i>synced across devices</i> ☁️ and shared securely.",
+              "Where developers could easily build <i>collaborative and offline-capable apps</i> 👏🏽 without worrying about <i>data privacy</i> 🔐"
             ]}
           </FadeInParagraph>
-          <FadeInParagraph>
+          {/* <FadeInParagraph>
             {[
-              "Where apps were always <i>collaborative, snappy, and functional</i> 👏🏽 even with spotty internet - like Linear, Figma, or Notion.",
-              "All of your data magically <i>synced across your devices</i> ☁ to share it securely with anyone"
+              "Where developers could easily build <i>collaborative and offline-capable apps</i> 👏🏽",
+              "without worrying about <i>data privacy</i> 🔐"
             ]}
-          </FadeInParagraph>
+          </FadeInParagraph> */}
           <FadeInParagraph>
             {["We dreamt of a <strong><u>frictionless, user-owned web</u></strong> 🌐"]}
           </FadeInParagraph>
