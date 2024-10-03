@@ -134,7 +134,7 @@ const WhyBasicSection = () => {
           </FadeInParagraph>
           <FadeInParagraph>
             {[
-              "We envisioned an internet with portable <i>personal data</i> 📊 that automatically <i>synced across devices</i> ☁️ and shared securely.",
+              "We envisioned an internet with portable <i>personal data</i> 📊 that automatically <i>syncs across devices</i> ☁️ and shares securely.",
               "Where developers could easily build <i>collaborative and offline-capable apps</i> 👏🏽 without worrying about <i>data privacy</i> 🔐"
             ]}
           </FadeInParagraph>
