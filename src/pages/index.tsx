@@ -32,7 +32,7 @@ export default function Home() {
       </Head>
       <Script strategy="afterInteractive" data-domain="basic.tech" src="https://plausible.io/js/script.js" />
       <main className="flex flex-col items-center">
-        <div className="w-full max-w-7xl">
+        <div className="w-full">
           <HeroSection />
           <WhyBasicSection />
           <Benefits benefits={benefitsForDevelopers} title={"Basic-ally better for developers 📱"} />
