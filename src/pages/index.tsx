@@ -49,18 +49,18 @@ export default function Home() {
 
 const NavBar = () => {
   return (
-    <div className="navbar bg-opacity-20 absolute top-0 left-0 right-0 px-4 py-4 lg:px-8">
+    <div className="navbar bg-opacity-20 absolute top-0 left-0 right-0 px-8 py-4 lg:px-8">
       <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
-        <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl text-white" href="/">
+        <div className="flex-1 flex items-center">
+          <a className="btn btn-ghost normal-case text-xl text-white flex items-center" href="/">
             <Image alt="logo" width={32} height={32} src="/logo.png" className="mr-2" />
-            Basic
+            <span>Basic</span>
           </a>
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal px-1 text-white">
+          <ul className="menu menu-horizontal px-1 text-white space-x-4 flex items-center">
             <li>
-              <a className="btn btn-ghost" href='https://twitter.com/basic_db' target="_blank" rel="noreferrer">
+              <a className="btn btn-ghost flex items-center" href='https://twitter.com/basic_db' target="_blank" rel="noreferrer">
                 <Image alt="twitter" width={20} height={20} src="/icons/twitter.png" className="mr-2 hidden sm:inline" />
                 <span className="sm:hidden">Connect</span>
                 <span className="hidden sm:inline">Connect with us</span>
@@ -84,10 +84,10 @@ const HeroSection = () => {
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 items-center mt-32 lg:mt-0">
           <div className="text-center lg:text-left lg:w-1/2">
             <div>
-              <p className="text-4xl font-medium font-mono tracking-tight text-white leading-relaxed">
-                Build on a frictionless, <br /> <strong className={`${lora.className} text-5xl text-[#FF00FF]`}>user-owned cloud</strong> 🏆
+              <p className="text-4xl font-medium font-mono tracking-tight text-white-100 leading-relaxed">
+                Build on a frictionless, <br /> <strong className={`${lora.className} text-5xl text-white-500`}>user-owned cloud</strong> 🏆
               </p>
-              <h3 className="max-w-xl mx-auto lg:mx-0 mt-4 text-lg tracking-tight text-gray-300">
+              <h3 className="max-w-xl mx-auto lg:mx-0 mt-4 text-lg tracking-tight text-white">
                 Ship powerful apps with <i>built-in auth</i>, <i>realtime</i>, and <i>multi-device offline support</i> on Basic's user-owned Personal Data Stores
               </h3>
             </div>
@@ -96,7 +96,7 @@ const HeroSection = () => {
                 href="https://airtable.com/shr5ALU6Ha9uBzErA"
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn-primary inline-flex items-center justify-center bg-white text-black py-2.5 px-8 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:rotate-1 hover:bg-gray-100 hover:text-gray-900 shadow-lg hover:shadow-xl border-2 border-black hover:border-gray-900"
+                className="btn btn-primary inline-flex items-center justify-center bg-white text-black py-2.5 px-8 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:rotate-1 hover:bg-white-100 hover:text-black-800 shadow-lg hover:shadow-xl border-2 border-black hover:border-black-800"
               >
                 <RocketLaunchIcon className="h-7 w-7 mr-3 animate-bounce" />
                 <span className="relative flex items-center justify-center">
@@ -125,38 +125,38 @@ const ProductsSection = () => {
   const products = [
     {
       title: "Basic Auth",
-      icon: <LockClosedIcon className="w-12 h-12 text-red-500" />,
+      icon: <LockClosedIcon className="w-12 h-12 text-authmagenta-500" />,
       description: "With pre-built UI components, you get highly secure plug-and-play Auth and User Management via simple APIs or SDKs",
     },
     {
       title: "Basic DB",
-      icon: <CircleStackIcon className="w-12 h-12 text-blue-500" />,
+      icon: <CircleStackIcon className="w-12 h-12 text-dbblue-500" />,
       description: "Build leaner apps with enhanced privacy and interoperability on Basic's open source, user-owned Personal Data Stores",
     },
     {
       title: "Basic Sync",
-      icon: <ArrowPathIcon className="w-12 h-12 text-green-500" />,
+      icon: <ArrowPathIcon className="w-12 h-12 text-syncgreen-500" />,
       description: "Opt into Basic's local-first architecture for instant UI, offline support, and automatic multi-device sync",
     },
   ];
 
   return (
     <section className="bg-black py-4">
-      <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-white mb-12 text-center leading-relaxed`}>
-        Three <strong className={`${lora.className} text-5xl text-[#FF00FF]`}>Basic</strong> products...
+      <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-white-100 mb-12 text-center leading-relaxed`}>
+        Three <strong className={`${lora.className} text-5xl text-white-500`}>Basic</strong> products...
       </h2>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center gap-8">
           {products.map((product, index) => (
             <div
               key={index}
-              className="bg-[#131315] rounded-lg shadow-lg p-8 w-full max-w-[350px]"
+              className="bg-black-800 rounded-lg shadow-lg p-8 w-full max-w-[375px]"
             >
               <div className="flex items-center justify-center mb-6">
                 {product.icon}
               </div>
-              <h3 className="text-2xl font-semibold text-center mb-4 text-white">{product.title}</h3>
-              <p className="text-gray-300 text-center">{product.description}</p>
+              <h3 className="text-2xl font-semibold text-center mb-4 text-white-100">{product.title}</h3>
+              <p className="text-white text-center">{product.description}</p>
             </div>
           ))}
         </div>
@@ -169,8 +169,8 @@ const WhyBasicSection = () => {
   return (
     <section className="bg-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pb-24">
-        <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-white mb-6 mt-12 text-center leading-relaxed`}>
-          ...for a <strong className={`${lora.className} text-5xl text-[#FF00FF]`}>new</strong> ✨ way to build
+        <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-white-100 mb-6 mt-12 text-center leading-relaxed`}>
+          ...for a <strong className={`${lora.className} text-5xl text-white-500`}>new</strong> ✨ way to build
         </h2>
         <div className="max-w-2xl mx-auto">
           <FadeInParagraph>
@@ -184,12 +184,6 @@ const WhyBasicSection = () => {
               "Where developers could easily build <i>collaborative and offline-capable apps</i> 👏🏽 without worrying about <i>data privacy</i> 🔐"
             ]}
           </FadeInParagraph>
-          {/* <FadeInParagraph>
-            {[
-              "Where developers could easily build <i>collaborative and offline-capable apps</i> 👏🏽",
-              "without worrying about <i>data privacy</i> 🔐"
-            ]}
-          </FadeInParagraph> */}
           <FadeInParagraph>
             {["We dreamt of a <strong>frictionless, user-owned web</strong> 🌐"]}
           </FadeInParagraph>
@@ -232,28 +226,28 @@ const FadeInSentence = ({ children }: { children: React.ReactNode }) => {
 
 const PrivacySection = () => {
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="bg-[#131315] p-6 sm:p-12 rounded-lg">
+        <div className="bg-black-800 p-6 sm:p-12 rounded-lg">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <div className="w-full sm:w-1/2 pr-0 sm:pr-8 mb-8 sm:mb-0 flex flex-col items-center sm:items-start text-center sm:text-left">
-              <h2 className={`${jetbrainsMono.className} text-2xl text-gray-200 mb-6`}>🔍 Secured by Basic 🔍</h2>
-              <p className="text-gray-100 mb-8">
+              <h2 className={`${jetbrainsMono.className} text-2xl text-white-300 mb-6`}>🔍 Secured by Basic 🔍</h2>
+              <p className="text-white mb-8">
                 Basic creates personal data stores for every user, which apps can access if given permission.
                 Sensitive data never touches the developer servers, and users always own their data.
               </p>
               <a href="https://docs.basic.tech" target="_blank" rel="noopener noreferrer"
-                className="btn bg-gray-800 text-white border-2 border-gray-300 hover:bg-gray-700 hover:border-white transition-all duration-300 transform hover:scale-105 hover:rotate-1 shadow-md hover:shadow-lg px-6 py-2 rounded-full font-semibold">
+                className="btn bg-black-700 text-white border-2 border-white-300 hover:bg-black-600 hover:border-white transition-all duration-300 transform hover:scale-105 hover:rotate-1 shadow-md hover:shadow-lg px-6 py-2 rounded-full font-semibold">
                 📖 Read the Docs
               </a>
             </div>
             <div className="hidden sm:block w-full sm:w-1/2 pl-0 sm:pl-8">
               <div className="text-center mb-12">
-                <h3 className="text-base text-gray-300 font-mono mb-4">Traditional apps:</h3>
+                <h3 className="text-base text-white-300 font-mono mb-4">Traditional apps:</h3>
                 <Image src="/traditional.png" alt="Traditional apps diagram" className="mx-auto max-w-full" width={300} height={300} />
               </div>
               <div className="text-center">
-                <h3 className="text-base text-gray-300 font-mono mb-4">Basic apps:</h3>
+                <h3 className="text-base text-white-300 font-mono mb-4">Basic apps:</h3>
                 <Image src="/diagram_2.png" alt="Basic apps diagram" className="mx-auto max-w-full" width={320} height={320} />
               </div>
             </div>
@@ -266,20 +260,20 @@ const PrivacySection = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-6 dark:bg-gray-900">
-      <hr className="border-t border-gray-200 mb-6" />
+    <footer className="bg-white py-6 dark:bg-black">
+      <hr className="border-t border-white-200 mb-6" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex items-center">
             <Image alt="logo" width={32} height={32} src="/logo.png" className="mr-2" />
-            <span className="text-xl font-semibold">Basic</span>
+            <span className="text-xl font-semibold text-black dark:text-white">Basic</span>
           </div>
           <div className="flex space-x-6">
-            <a href="https://twitter.com/basic_db" target="_blank" rel="noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">Twitter</a>
-            <a href="https://airtable.com/shr5ALU6Ha9uBzErA" target="_blank" rel="noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">Waitlist</a>
-            <a href="https://docs.basic.tech" target="_blank" rel="noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">Docs</a>
+            <a href="https://twitter.com/basic_db" target="_blank" rel="noreferrer" className="text-black-600 dark:text-white-400 hover:text-black-900 dark:hover:text-white-100">Twitter</a>
+            <a href="https://airtable.com/shr5ALU6Ha9uBzErA" target="_blank" rel="noreferrer" className="text-black-600 dark:text-white-400 hover:text-black-900 dark:hover:text-white-100">Waitlist</a>
+            <a href="https://docs.basic.tech" target="_blank" rel="noreferrer" className="text-black-600 dark:text-white-400 hover:text-black-900 dark:hover:text-white-100">Docs</a>
           </div>
-          <div className="text-gray-500">
+          <div className="text-black-500 dark:text-white-500">
             © {new Date().getFullYear()} Basic. All rights reserved.
           </div>
         </div>

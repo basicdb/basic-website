@@ -1,15 +1,73 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
- 
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        black: {
+          DEFAULT: '#08080C',
+          100: '#52527A',
+          200: '#49496e',
+          300: '#414162',
+          400: '#393956',
+          500: '#313149',
+          600: '#29293d',
+          700: '#212131',
+          800: '#181825',
+          900: '#101018',
+        },
+        white: {
+          DEFAULT: '#fff3eb',
+          100: '#ffe7d6',
+          200: '#ffdac2',
+          300: '#ffcead',
+          400: '#ffc299',
+          500: '#ffb685',
+          600: '#ffa970',
+          700: '#ff9d5c',
+          800: '#ff9147',
+          900: '#ff8533',
+        },
+        syncgreen: {
+          DEFAULT: '#d6ebe3',
+          100: '#f1f8f6',
+          200: '#e4f2ec',
+          300: '#d6ebe3',
+          400: '#c8e4d9',
+          500: '#9fd0bd',
+          600: '#5bae8e',
+          700: '#3d7b63',
+          800: '#285242',
+          900: '#142921',
+        },
+        dbblue: {
+          DEFAULT: '#d9cbf6',
+          100: '#f2eefc',
+          200: '#e6dcf9',
+          300: '#d9cbf6',
+          400: '#cdbaf3',
+          500: '#9a74e7',
+          600: '#5e25d0',
+          700: '#461c9c',
+          800: '#2f1268',
+          900: '#170934',
+        },
+        authmagenta: {
+          DEFAULT: '#e7c5d9',
+          100: '#f9f1f5',
+          200: '#edd4e2',
+          300: '#e7c5d9',
+          400: '#e1b7cf',
+          500: '#c97ea9',
+          600: '#b7528d',
+          700: '#813662',
+          800: '#481e36',
+          900: '#2b1221',
+        }
+      },
+    },
   },
-  plugins: [require("daisyui")],
+  plugins: [],
 }
