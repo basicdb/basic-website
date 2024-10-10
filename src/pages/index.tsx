@@ -3,16 +3,17 @@
 
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import { RocketLaunchIcon } from '@heroicons/react/24/solid';
+import { RocketLaunchIcon, LockClosedIcon, ArrowPathIcon, CircleStackIcon } from '@heroicons/react/24/solid';
 import Benefits from '@/components/Benefits';
 import benefitsForDevelopers from '@/utils/benefitsForDevelopers';
 import benefitsForUsers from '@/utils/benefitsForUsers';
 import Script from 'next/script'
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { JetBrains_Mono, Lora } from 'next/font/google'; // Update font imports
 
-const inter = Inter({ subsets: ['latin'] })
+const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'] }); // Initialize JetBrains Mono
+const lora = Lora({ subsets: ['latin'] }); // Initialize Lora
 
 const DATA = {
   title: "Basic Database",
@@ -34,6 +35,7 @@ export default function Home() {
       <main className="flex flex-col items-center">
         <div className="w-full">
           <HeroSection />
+          <ProductsSection />
           <WhyBasicSection />
           <Benefits benefits={benefitsForDevelopers} title={"Basic-ally better for developers 📱"} />
           <PrivacySection />
@@ -77,16 +79,16 @@ const NavBar = () => {
 const HeroSection = () => {
   return (
     <section className='bg-black w-full' style={{ backgroundImage: `url('/bg.png')` }}>
-      <div className="py-24 px-4 sm:px-6 lg:px-8 flex flex-col justify-center min-h-screen">
+      <div className="py-4 px-16 sm:px-6 lg:px-8 flex flex-col justify-center min-h-[92vh]">
         <NavBar />
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="text-center lg:text-left">
             <div>
               <p className="text-2xl font-medium font-mono tracking-tight text-white sm:text-4xl leading-relaxed">
-                Frictionless, <br /> <strong style={{ fontSize: 48, color: '#FF00FF' }}>user-owned web</strong> 🏆
+                Build on a frictionless, <br /> <strong className={`${lora.className} text-5xl text-[#FF00FF]`}>user-owned cloud</strong> 🏆
               </p>
               <h3 className="max-w-xl mx-auto lg:mx-0 mt-4 text-base tracking-tight text-gray-300" style={{ fontSize: 18 }}>
-                Build high-performance apps that have a powerful sync engine, offline support, and user-owned data stores with Basic
+                Ship powerful apps with <i>built-in auth</i>, <i>realtime</i>, and <i>multi-device offline support</i> on Basic's user-owned Personal Data Stores
               </h3>
             </div>
             <div className="flex flex-col items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
@@ -119,17 +121,61 @@ const HeroSection = () => {
   )
 }
 
+const ProductsSection = () => {
+  const products = [
+    {
+      title: "Basic Auth",
+      icon: <LockClosedIcon className="w-12 h-12 text-red-500" />,
+      description: "With pre-built UI components, you get highly secure plug-and-play Auth and User Management via simple APIs or SDKs",
+    },
+    {
+      title: "Basic DB",
+      icon: <CircleStackIcon className="w-12 h-12 text-blue-500" />,
+      description: "Build leaner apps with enhanced privacy and interoperability on Basic's open source, user-owned Personal Data Stores",
+    },
+    {
+      title: "Basic Sync",
+      icon: <ArrowPathIcon className="w-12 h-12 text-green-500" />,
+      description: "Opt into Basic's local-first architecture for instant UI, offline support, and automatic multi-device sync",
+    },
+  ];
+
+  return (
+    <section className="bg-black min-h-[50vh]">
+      <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-white mb-12 text-center leading-relaxed`}>
+        Three <strong className={`${lora.className} text-5xl text-[#FF00FF]`}>Basic</strong> products...
+      </h2>
+      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="bg-[#131315] rounded-lg shadow-lg p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            >
+              <div className="flex items-center justify-center mb-6">
+                {product.icon}
+              </div>
+              <h3 className="text-2xl font-semibold text-center mb-4 text-white">{product.title}</h3>
+              <p className="text-gray-300 text-center">{product.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const WhyBasicSection = () => {
   return (
     <section className="bg-black">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-1 pb-24">
-        <h2 className="text-4xl font-bold text-white mb-6 mt-12 text-center font-mono leading-relaxed">
-          A <strong style={{ color: '#FF00FF' }}>new</strong> ✨ way to build
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pb-24">
+        <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-white mb-6 mt-12 text-center leading-relaxed`}>
+          ...for a <strong className={`${lora.className} text-5xl text-[#FF00FF]`}>new</strong> ✨ way to build
         </h2>
         <div className="max-w-2xl mx-auto">
           <FadeInParagraph>
             {[
-              "We're <strong><u>web enthusiasts</u></strong> frustrated with <i>walled gardens</i> 🥀 <i>lack of interoperability</i> 🔗 and the <i>security risks</i> 🚨 of apps today",
+              "We're <strong>web enthusiasts</strong> frustrated with <i>walled gardens</i> 🥀 <i>lack of interoperability</i> 🔗 and the <i>security risks</i> 🚨 of apps today",
             ]}
           </FadeInParagraph>
           <FadeInParagraph>
@@ -145,10 +191,10 @@ const WhyBasicSection = () => {
             ]}
           </FadeInParagraph> */}
           <FadeInParagraph>
-            {["We dreamt of a <strong><u>frictionless, user-owned web</u></strong> 🌐"]}
+            {["We dreamt of a <strong>frictionless, user-owned web</strong> 🌐"]}
           </FadeInParagraph>
           <FadeInParagraph>
-            {["So we built <strong><u>Basic</u></strong>."]}
+            {["So we built <strong>Basic</strong>."]}
           </FadeInParagraph>
         </div>
       </div>
@@ -191,7 +237,7 @@ const PrivacySection = () => {
         <div className="bg-[#131315] p-6 sm:p-12 rounded-lg">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <div className="w-full sm:w-1/2 pr-0 sm:pr-8 mb-8 sm:mb-0 flex flex-col items-center sm:items-start text-center sm:text-left">
-              <h2 className="text-2xl font-mono text-gray-200 mb-6">🔍 Secured by Basic 🔍</h2>
+              <h2 className={`${jetbrainsMono.className} text-2xl text-gray-200 mb-6`}>🔍 Secured by Basic 🔍</h2>
               <p className="text-gray-100 mb-8">
                 Basic creates personal data stores for every user, which apps can access if given permission.
                 Sensitive data never touches the developer servers, and users always own their data.
