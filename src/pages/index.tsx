@@ -79,15 +79,15 @@ const NavBar = () => {
 const HeroSection = () => {
   return (
     <section className='bg-black w-full' style={{ backgroundImage: `url('/bg.png')` }}>
-      <div className="py-4 px-16 sm:px-6 lg:px-8 flex flex-col justify-center min-h-[92vh]">
+      <div className="py-4 px-4 sm:px-6 lg:px-8 flex flex-col justify-center min-h-[92vh]">
         <NavBar />
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="text-center lg:text-left">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 items-center mt-32 lg:mt-0">
+          <div className="text-center lg:text-left lg:w-1/2">
             <div>
-              <p className="text-2xl font-medium font-mono tracking-tight text-white sm:text-4xl leading-relaxed">
+              <p className="text-4xl font-medium font-mono tracking-tight text-white leading-relaxed">
                 Build on a frictionless, <br /> <strong className={`${lora.className} text-5xl text-[#FF00FF]`}>user-owned cloud</strong> 🏆
               </p>
-              <h3 className="max-w-xl mx-auto lg:mx-0 mt-4 text-base tracking-tight text-gray-300" style={{ fontSize: 18 }}>
+              <h3 className="max-w-xl mx-auto lg:mx-0 mt-4 text-lg tracking-tight text-gray-300">
                 Ship powerful apps with <i>built-in auth</i>, <i>realtime</i>, and <i>multi-device offline support</i> on Basic's user-owned Personal Data Stores
               </h3>
             </div>
@@ -106,7 +106,7 @@ const HeroSection = () => {
               </a>
             </div>
           </div>
-          <div className="hidden lg:flex justify-center lg:justify-end">
+          <div className="lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0">
             <Image
               alt="basic code snippet"
               width={500}
@@ -141,16 +141,16 @@ const ProductsSection = () => {
   ];
 
   return (
-    <section className="bg-black min-h-[50vh]">
+    <section className="bg-black py-4">
       <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-white mb-12 text-center leading-relaxed`}>
         Three <strong className={`${lora.className} text-5xl text-[#FF00FF]`}>Basic</strong> products...
       </h2>
-      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {products.map((product, index) => (
             <div
               key={index}
-              className="bg-[#131315] rounded-lg shadow-lg p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#131315] rounded-lg shadow-lg p-8 w-full max-w-[350px]"
             >
               <div className="flex items-center justify-center mb-6">
                 {product.icon}
