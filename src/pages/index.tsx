@@ -150,7 +150,7 @@ const ProductsSection = () => {
           {products.map((product, index) => (
             <div
               key={index}
-              className="bg-black-800 rounded-lg shadow-lg p-8 w-full max-w-[375px]"
+              className="bg-black-800 rounded-lg shadow-lg p-8 w-full max-w-[320px]"
             >
               <div className="flex items-center justify-center mb-6">
                 {product.icon}
