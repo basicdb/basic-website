@@ -1,27 +1,27 @@
 const benefitsForDevelopers = [
     {
         title: "📚 No state management",
-        description: "Build complex apps faster without manual state management. Basic handles state synchronization between clients and the server automatically."
+        description: "Build complex apps faster with automatic state synchronization between clients and server."
     },
     {
         title: "🖥️ Type-safe SDKs",
-        description: "Our client SDKs are fully type-safe and designed for developer productivity, abstracting away the complexity of data sync, networking, and error handling."
+        description: "Fully type-safe client SDKs that abstract away data sync, networking, and error handling."
     },
     {
         title: "📐 Schema-as-code",
-        description: "Define and version your data schema-as-code in your codebase. Easy maintenance with Git-based versioning and easy dev-environment testing across your entire application."
+        description: "Define and version your data schema in code. Maintain with Git-like versioning and test across your entire app."
     },
     {
         title: "💸 Efficient architecture",
-        description: "Our local-first architecture means users primarily query their local database, reducing server load and costs while providing a faster user experience."
+        description: "Local-first querying reduces server load and costs while improving user experience."
     },
     {
         title: "🌍 Offline-first + Real-time sync",
-        description: "Enable offline-first experiences with automatic background sync when connectivity returns. Real-time updates ensure all connected clients stay in sync automatically across devices."
+        description: "Work offline with automatic background sync. Real-time updates keep all clients in sync across devices."
     },
     {
         title: "✍🏽 Open source",
-        description: "Fully open source and built for transparency. Deploy anywhere with our sync server and client SDKs."
+        description: "Open source for trust and transparency. Deploy anywhere with our sync server and SDKs."
     }
 ];
 
