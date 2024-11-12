@@ -155,13 +155,16 @@ function App() {
 
 const ProductsSection = () => {
   return (
-    <section className="bg-black">
+    <section className="bg-black w-full" style={{ backgroundImage: `url('/bg.png')` }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center gap-8">
           {products.map((product, index) => (
             <div
               key={index}
-              className="bg-black-800 rounded-lg shadow-lg p-8 w-full max-w-[320px]"
+              className="bg-black-800 rounded-lg shadow-lg p-8 w-full max-w-[320px] cursor-pointer hover:scale-105 transition-transform duration-300"
+              onClick={() => window.open(product.url, '_blank')}
+              role="link"
+              tabIndex={0}
             >
               <div className="flex items-center justify-center mb-6">
                 {product.icon}
@@ -178,7 +181,7 @@ const ProductsSection = () => {
 
 const WhyBasicSection = () => {
   return (
-    <section className="bg-black">
+    <section className="bg-black w-full" style={{ backgroundImage: `url('/bg.png')` }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pb-24">
         <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-white-100 mb-6 mt-12 text-center leading-relaxed`}>
           A <strong className={`${lora.className} text-5xl text-white-500`}>new</strong> ✨ way to build

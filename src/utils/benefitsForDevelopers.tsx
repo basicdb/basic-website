@@ -1,27 +1,27 @@
 const benefitsForDevelopers = [
     {
         title: "📚 No state management",
-        description: "Ship complex apps faster without needing to manually manage state. We sync state automatically between clients and the server for you."
+        description: "Build complex apps faster without manual state management. Basic handles state synchronization between clients and the server automatically."
     },
     {
-        title: "🖥️ Client SDKs",
-        description: "Our client SDKs are designed for ease of use, without the complexity of HTTP request, response and error handling."
+        title: "🖥️ Type-safe SDKs",
+        description: "Our client SDKs are fully type-safe and designed for developer productivity, abstracting away the complexity of data sync, networking, and error handling."
     },
     {
-        title: "💸 Lower server costs",
-        description: "Local-first architecture means your users query their localDB more and make less server calls, reducing your server load and costs."
+        title: "📐 Schema-as-code",
+        description: "Define and version your data schema-as-code in your codebase. Easy maintenance with Git-based versioning and easy dev-environment testing across your entire application."
     },
     {
-        title: "🔒 Auth included",
-        description: "Add secure user sign-ups and logins to your app. We handle user management, account recovery, and token authentication."
+        title: "💸 Efficient architecture",
+        description: "Our local-first architecture means users primarily query their local database, reducing server load and costs while providing a faster user experience."
     },
     {
-        title: "🌍 Offline support + Multiplayer built-in",
-        description: "Our sync engine enables multi-device offline support, and multiplayer features (coming soon) for your app to save you months of development time."
+        title: "🌍 Offline-first + Real-time sync",
+        description: "Enable offline-first experiences with automatic background sync when connectivity returns. Real-time updates ensure all connected clients stay in sync automatically across devices."
     },
     {
         title: "✍🏽 Open source",
-        description: "We strive for a user-owned internet and will always remain open source. You won't face any vendor lock-in with Basic."
+        description: "Fully open source and built for transparency. Deploy anywhere with our sync server and client SDKs."
     }
 ];
 
