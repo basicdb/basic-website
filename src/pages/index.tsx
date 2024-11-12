@@ -12,6 +12,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { JetBrains_Mono, Lora } from 'next/font/google'; // Update font imports
 import CodeBlock from '@/components/CodeBlock';
+import products from '@/utils/productsData';
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'] }); // Initialize JetBrains Mono
 const lora = Lora({ subsets: ['latin'] }); // Initialize Lora
@@ -153,29 +154,8 @@ function App() {
 }
 
 const ProductsSection = () => {
-  const products = [
-    {
-      title: "Basic Auth",
-      icon: <LockClosedIcon className="w-12 h-12 text-authmagenta-500" />,
-      description: "With pre-built UI components, you get highly secure plug-and-play Auth and User Management via simple APIs or SDKs",
-    },
-    {
-      title: "Basic DB",
-      icon: <CircleStackIcon className="w-12 h-12 text-dbblue-500" />,
-      description: "Build leaner apps with enhanced privacy and interoperability on Basic's open source, user-owned Personal Data Stores",
-    },
-    {
-      title: "Basic Sync",
-      icon: <ArrowPathIcon className="w-12 h-12 text-syncgreen-500" />,
-      description: "Opt into Basic's local-first architecture for instant UI, offline support, and automatic multi-device sync",
-    },
-  ];
-
   return (
-    <section className="bg-black py-4">
-      <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-white-100 mb-12 text-center leading-relaxed`}>
-        Three <strong className={`${lora.className} text-5xl text-white-500`}>Basic</strong> products...
-      </h2>
+    <section className="bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center gap-8">
           {products.map((product, index) => (
@@ -201,7 +181,7 @@ const WhyBasicSection = () => {
     <section className="bg-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pb-24">
         <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-white-100 mb-6 mt-12 text-center leading-relaxed`}>
-          ...for a <strong className={`${lora.className} text-5xl text-white-500`}>new</strong> ✨ way to build
+          A <strong className={`${lora.className} text-5xl text-white-500`}>new</strong> ✨ way to build
         </h2>
         <div className="max-w-2xl mx-auto">
           <FadeInParagraph>
@@ -257,31 +237,21 @@ const FadeInSentence = ({ children }: { children: React.ReactNode }) => {
 
 const PrivacySection = () => {
   return (
-    <section className="bg-white dark:bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="bg-black-800 p-6 sm:p-12 rounded-lg">
-          <div className="flex flex-col sm:flex-row justify-between items-center">
-            <div className="w-full sm:w-1/2 pr-0 sm:pr-8 mb-8 sm:mb-0 flex flex-col items-center sm:items-start text-center sm:text-left">
-              <h2 className={`${jetbrainsMono.className} text-2xl text-white-300 mb-6`}>🔍 Secured by Basic 🔍</h2>
-              <p className="text-white mb-8">
-                Basic creates personal data stores for every user, which apps can access if given permission.
-                Sensitive data never touches the developer servers, and users always own their data.
-              </p>
-              <a href="https://docs.basic.tech" target="_blank" rel="noopener noreferrer"
-                className="btn bg-black-700 text-white border-2 border-white-300 hover:bg-black-600 hover:border-white transition-all duration-300 transform hover:scale-105 hover:rotate-1 shadow-md hover:shadow-lg px-6 py-2 rounded-full font-semibold">
-                📖 Read the Docs
-              </a>
-            </div>
-            <div className="hidden sm:block w-full sm:w-1/2 pl-0 sm:pl-8">
-              <div className="text-center mb-12">
-                <h3 className="text-base text-white-300 font-mono mb-4">Traditional apps:</h3>
-                <Image src="/traditional.png" alt="Traditional apps diagram" className="mx-auto max-w-full" width={300} height={300} />
-              </div>
-              <div className="text-center">
-                <h3 className="text-base text-white-300 font-mono mb-4">Basic apps:</h3>
-                <Image src="/diagram_2.png" alt="Basic apps diagram" className="mx-auto max-w-full" width={320} height={320} />
-              </div>
-            </div>
+    <section className="bg-white dark:bg-black py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-black-800 p-6 sm:p-12 rounded-lg flex flex-col md:flex-row items-center justify-between">
+          <div className="w-full md:w-1/2 md:pr-8 mb-8 md:mb-0 text-center md:text-left">
+            <h2 className={`${jetbrainsMono.className} text-2xl text-white-300 mb-6`}>🔍 Secured by Basic 🔍</h2>
+            <p className="text-white mb-8">
+              Basic creates personal data stores that give users full control of their data. Apps request access via OAuth2, ensuring data privacy with enterprise-grade security.
+            </p>
+            <a href="https://docs.basic.tech" target="_blank" rel="noopener noreferrer"
+              className="btn bg-black-700 text-white border-2 border-white-300 hover:bg-black-600 hover:border-white transition-all duration-300 transform hover:scale-105 hover:rotate-1 shadow-md hover:shadow-lg px-6 py-2 rounded-full font-semibold">
+              📖 Read the Docs
+            </a>
+          </div>
+          <div className="w-full md:w-1/2 md:pl-8">
+            <Image src="/PDS.svg" alt="Basic apps diagram" className="mx-auto max-w-full" width={450} height={400} />
           </div>
         </div>
       </div>
