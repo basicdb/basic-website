@@ -1,18 +1,62 @@
-const Benefits = ({ benefits, title, subheader }: { benefits: Array<{ title: string; description: string }>; title: string, subheader?: string }) => {
+import { motion } from 'framer-motion';
+
+const Benefits = ({
+    benefits,
+    title,
+    subheader
+}: {
+    benefits: Array<{ title: string; description: string }>;
+    title: string,
+    subheader?: string
+}) => {
     return (
-        <section aria-labelledby="features" id="feature-five" className="w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
-            <div className='max-w-6xl mx-auto'>
-                <div className="mb-8">
-                    <h1 className='text-3xl font-mono pb-4 text-black dark:text-white-200 sm:text-center md:text-center lg:text-left'><strong>{title}</strong></h1>
+        <section
+            aria-labelledby="features"
+            className="w-full section-padding bg-black relative overflow-hidden"
+        >
+            {/* Animated circuit board background */}
+            <div className="absolute inset-0 opacity-5">
+                <div className="circuit-pattern" />
+            </div>
+
+            <div className="container-default relative">
+                <div className="mb-16 relative">
+                    <div className="inline-block px-4 py-2 rounded-full text-sm font-mono bg-purple-500/20 text-purple-400 border border-purple-500/40 mb-4">
+                        $ cat benefits.json
+                    </div>
+                    <h2 className="heading-1 font-mono text-white-200 glitch-text">
+                        {title}
+                    </h2>
+                    {subheader && (
+                        <p className="body-large text-white-300 mt-2 font-mono border-l-4 border-purple-500 pl-4">
+                            {subheader}
+                        </p>
+                    )}
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12">
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {benefits.map((benefit, index) => (
-                        <div key={index}>
-                            <p className="mt-3 text-lg font-medium leading-6 text-black-700 dark:text-white-100">{benefit.title}</p>
-                            <div className="mt-1 text-base text-black-200 dark:text-white">
-                                {benefit.description}
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1 }}
+                            className="relative group"
+                        >
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000" />
+                            <div className="relative p-6 bg-black-800 rounded-lg border border-white/10 hover:border-white/20 transition-all duration-300">
+                                <div className="flex items-center space-x-4 mb-4">
+                                    <div className="text-2xl">{benefit.title.split(' ')[0]}</div>
+                                    <div className="h-px flex-1 bg-gradient-to-r from-purple-500 to-cyan-500" />
+                                </div>
+                                <h3 className="heading-3 text-white-100 font-mono mb-2">
+                                    {benefit.title.split(' ').slice(1).join(' ')}
+                                </h3>
+                                <p className="body-default text-white/70 font-mono">
+                                    {benefit.description}
+                                </p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
