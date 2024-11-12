@@ -1,9 +1,9 @@
 // @ts-ignore
 
-
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
-import { RocketLaunchIcon, LockClosedIcon, ArrowPathIcon, CircleStackIcon } from '@heroicons/react/24/solid';
+import { RocketLaunchIcon, LockClosedIcon, ArrowPathIcon, CircleStackIcon, ClipboardDocumentIcon } from '@heroicons/react/24/solid';
 import Benefits from '@/components/Benefits';
 import benefitsForDevelopers from '@/utils/benefitsForDevelopers';
 import benefitsForUsers from '@/utils/benefitsForUsers';
@@ -11,16 +11,10 @@ import Script from 'next/script'
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { JetBrains_Mono, Lora } from 'next/font/google'; // Update font imports
+import CodeBlock from '@/components/CodeBlock';
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'] }); // Initialize JetBrains Mono
 const lora = Lora({ subsets: ['latin'] }); // Initialize Lora
-
-const DATA = {
-  title: "Basic Database",
-  description: "The database for a frictionless, user-owned web",
-  image: "/bg.png",
-  url: "https://basic.tech"
-}
 
 export default function Home() {
   return (
@@ -48,6 +42,23 @@ export default function Home() {
 }
 
 const NavBar = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="navbar bg-opacity-20 absolute top-0 left-0 right-0 px-8 py-4 lg:px-8">
       <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
@@ -60,10 +71,10 @@ const NavBar = () => {
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1 text-white space-x-4 flex items-center">
             <li>
-              <a className="btn btn-ghost flex items-center" href='https://twitter.com/basic_db' target="_blank" rel="noreferrer">
+              <a className="btn btn-ghost" href='https://twitter.com/basic_db' target="_blank" rel="noreferrer">
                 <Image alt="twitter" width={20} height={20} src="/icons/twitter.png" className="mr-2 hidden sm:inline" />
-                <span className="sm:hidden">Connect</span>
-                <span className="hidden sm:inline">Connect with us</span>
+                <span className={isMobile ? 'hidden' : ''}>Connect with us</span>
+                <span className={!isMobile ? 'hidden' : ''}>Connect</span>
               </a>
             </li>
             <li>
@@ -77,6 +88,17 @@ const NavBar = () => {
 }
 
 const HeroSection = () => {
+  const demoCode = `import { useBasic } from '@basictech/react';
+
+function App() {
+  const { db } = useBasic();
+  
+  db.collection('todos').add({
+    title: 'My first todo',
+    completed: false,
+  });
+}`;
+
   return (
     <section className='bg-black w-full' style={{ backgroundImage: `url('/bg.png')` }}>
       <div className="py-4 px-4 sm:px-6 lg:px-8 flex flex-col justify-center min-h-[92vh]">
@@ -84,6 +106,21 @@ const HeroSection = () => {
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 items-center mt-32 lg:mt-0">
           <div className="text-center lg:text-left lg:w-1/2">
             <div>
+              <div
+                className="inline-block mb-4 px-4 py-1.5 bg-black-700 text-white border border-white-300 rounded-full font-mono text-sm cursor-pointer w-[220px] text-center"
+                onClick={() => {
+                  navigator.clipboard.writeText('npm i @basictech/react');
+                  const el = event?.target as HTMLElement;
+                  const originalText = el.innerText;
+                  el.innerText = 'Copied!';
+                  setTimeout(() => {
+                    el.innerText = originalText;
+                  }, 700);
+                }}
+              >
+                npm i @basictech/react
+
+              </div>
               <p className="text-4xl font-medium font-mono tracking-tight text-white-100 leading-relaxed">
                 Build on a frictionless, <br /> <strong className={`${lora.className} text-5xl text-white-500`}>user-owned cloud</strong> 🏆
               </p>
@@ -107,13 +144,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0">
-            <Image
-              alt="basic code snippet"
-              width={500}
-              height={500}
-              src="/basic_snippet.png"
-              className="w-full max-w-md h-auto object-contain"
-            />
+            <CodeBlock code={demoCode} />
           </div>
         </div>
       </div>
