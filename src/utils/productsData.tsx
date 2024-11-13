@@ -11,7 +11,7 @@ const products = [
         title: "Basic DB",
         icon: <CircleStackIcon className="w-12 h-12 text-dbblue-500" />,
         description: "Build privacy-first apps with user-owned data stores. Minimum backend infrastructure and data hosting required",
-        url: "/https://docs.basic.tech/info/PDS"
+        url: "https://docs.basic.tech/info/PDS"
     },
     {
         title: "Basic Sync",
