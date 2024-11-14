@@ -93,7 +93,7 @@ function App() {
           <div className="text-center lg:text-left lg:w-1/2">
             <div>
               <div
-                className="inline-block mb-4 px-4 py-1.5 bg-black-700 text-white border border-white-300 rounded-full font-mono text-sm cursor-pointer w-[220px] text-center"
+                className="inline-block mb-4 px-4 py-1.5 bg-black-700 text-white border border-white-300 rounded-full font-mono text-sm cursor-pointer w-[230px] text-center"
                 onClick={() => {
                   navigator.clipboard.writeText('npm i @basictech/react');
                   const el = event?.target as HTMLElement;
@@ -140,7 +140,7 @@ function App() {
 
 const ProductsSection = () => {
   return (
-    <section className="bg-black w-full py-8 sm:py-0">
+    <section className="bg-black w-full py-8 sm:py-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center gap-8">
           {products.map((product, index) => (
@@ -227,12 +227,12 @@ const BenefitsForDevelopers = () => {
   return (
     <section className="bg-white dark:bg-black w-full min-h-screen flex flex-col">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 py-16 w-full">
-        <h2 className={`${jetbrainsMono.className} text-2xl md:text-4xl font-bold text-black dark:text-white-100 mb-24 mt-12 text-center leading-relaxed`}>
+        <h2 className={`${jetbrainsMono.className} text-2xl md:text-4xl font-bold text-black dark:text-white-100 mb-12 mt-12 text-center leading-relaxed`}>
           That's <strong className={`${lora.className} text-3xl md:text-5xl text-black-500 dark:text-white-500`}>basic-ally</strong> better for developers 📱
         </h2>
 
         <div className="space-y-24">
-          {developerFeatures.map((feature, index) => (
+          {developerFeatures.map((feature) => (
             <div key={feature.id} className={`flex flex-col md:flex-row gap-8 items-center`}>
               <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
                 <h3 className="text-2xl mb-4 text-black dark:text-white">
