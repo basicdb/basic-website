@@ -125,8 +125,8 @@ function App() {
                 npm i @basictech/react
 
               </div>
-              <p className="text-4xl font-medium font-mono tracking-tight text-white-100 leading-relaxed">
-                Open source infra for <br /> <strong className={`${lora.className} text-5xl text-white-500`}>data ownership</strong> 🏆
+              <p className="text-2xl md:text-4xl font-medium font-mono tracking-tight text-white-100 leading-relaxed">
+                Open source infra for <br /> <strong className={`${lora.className} text-4xl md:text-5xl text-white-500`}>data ownership</strong> 🏆
               </p>
               <h3 className="max-w-xl mx-auto lg:mx-0 mt-4 text-lg tracking-tight text-white">
                 Ship powerful apps with <i>built-in auth</i>, <i>realtime</i>, and <i>multi-device offline support</i> on Basic's user-owned Personal Data Stores
@@ -147,7 +147,7 @@ function App() {
               </a>
             </div>
           </div>
-          <div className="lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0 text-sm sm:text-base">
+          <div className="lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0 text-xs md:text-base">
             <CodeBlock code={demoCode} />
           </div>
         </div>
@@ -158,7 +158,7 @@ function App() {
 
 const ProductsSection = () => {
   return (
-    <section className="bg-black w-full" style={{ backgroundImage: `url('/bg.png')` }}>
+    <section className="bg-black w-full py-8 sm:py-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center gap-8">
           {products.map((product, index) => (
@@ -184,10 +184,10 @@ const ProductsSection = () => {
 
 const WhyBasicSection = () => {
   return (
-    <section className="bg-black w-full" style={{ backgroundImage: `url('/bg.png')` }}>
+    <section className="bg-black w-full">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pb-24">
-        <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-white-100 mb-6 mt-12 text-center leading-relaxed`}>
-          A <strong className={`${lora.className} text-5xl text-white-500`}>new</strong> ✨ way to build
+        <h2 className={`${jetbrainsMono.className} text-2xl md:text-4xl font-bold text-white-100 mb-6 mt-12 text-center leading-relaxed`}>
+          A <strong className={`${lora.className} text-3xl md:text-5xl text-white-500`}>new</strong> ✨ way to build
         </h2>
         <div className="max-w-2xl mx-auto">
           <FadeInParagraph>
@@ -215,7 +215,7 @@ const WhyBasicSection = () => {
 
 const FadeInParagraph = ({ children }: { children: Array<string> }) => {
   return (
-    <p className="text-2xl text-white mb-8 mt-12 leading-relaxed">
+    <p className="text-xl md:text-2xl text-white mb-8 mt-12 leading-relaxed">
       {children.map((sentence: string, index: number) => (
         <FadeInSentence key={index}>{sentence}</FadeInSentence>
       ))}
@@ -245,8 +245,8 @@ const BenefitsForDevelopers = () => {
   return (
     <section className="bg-white dark:bg-black w-full min-h-screen flex flex-col">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 py-16 w-full">
-        <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-black dark:text-white-100 mb-6 mt-12 text-center leading-relaxed`}>
-          That's <strong className={`${lora.className} text-5xl text-black-500 dark:text-white-500`}>basic-ally</strong> better for developers 📱
+        <h2 className={`${jetbrainsMono.className} text-2xl md:text-4xl font-bold text-black dark:text-white-100 mb-6 mt-12 text-center leading-relaxed`}>
+          That's <strong className={`${lora.className} text-3xl md:text-5xl text-black-500 dark:text-white-500`}>basic-ally</strong> better for developers 📱
         </h2>
 
         <Tabs defaultValue={developerFeatures[0].id} className="w-full h-full">
@@ -316,8 +316,8 @@ const BenefitsForUsers = ({ benefits }: { benefits: Array<{ title: string; descr
   return (
     <section aria-labelledby="features" id="feature-five" className="w-full pt-1 pb-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
       <div className='max-w-6xl mx-auto'>
-        <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-black dark:text-white-100 mb-6 mt-12 text-center leading-relaxed`}>
-          And better for your <strong className={`${lora.className} text-5xl text-black-500 dark:text-white-500`}>users</strong> 👯
+        <h2 className={`${jetbrainsMono.className} text-2xl md:text-4xl font-bold text-black dark:text-white-100 mb-6 mt-12 text-center leading-relaxed`}>
+          And better for your <strong className={`${lora.className} text-3xl md:text-5xl text-black-500 dark:text-white-500`}>users</strong> 👯
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12">
@@ -366,6 +366,7 @@ const Footer = () => {
             <span className="text-xl font-semibold text-black dark:text-white">Basic</span>
           </div>
           <div className="flex space-x-6">
+            <a href="https://github.com/basicdb" target="_blank" rel="noreferrer" className="text-black-600 dark:text-white-400 hover:text-black-900 dark:hover:text-white-100">Github</a>
             <a href="https://twitter.com/basic_db" target="_blank" rel="noreferrer" className="text-black-600 dark:text-white-400 hover:text-black-900 dark:hover:text-white-100">Twitter</a>
             <a href="https://airtable.com/shr5ALU6Ha9uBzErA" target="_blank" rel="noreferrer" className="text-black-600 dark:text-white-400 hover:text-black-900 dark:hover:text-white-100">Waitlist</a>
             <a href="https://docs.basic.tech" target="_blank" rel="noreferrer" className="text-black-600 dark:text-white-400 hover:text-black-900 dark:hover:text-white-100">Docs</a>
