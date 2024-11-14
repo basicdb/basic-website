@@ -3,9 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
-import { RocketLaunchIcon, LockClosedIcon, ArrowPathIcon, CircleStackIcon, ClipboardDocumentIcon } from '@heroicons/react/24/solid';
-import Benefits from '@/components/Benefits';
-import benefitsForDevelopers from '@/utils/benefitsForDevelopers';
+import { Rocket, Twitter, Github } from 'lucide-react';
 import benefitsForUsers from '@/utils/benefitsForUsers';
 import Script from 'next/script'
 import { motion } from 'framer-motion';
@@ -13,6 +11,8 @@ import { useInView } from 'react-intersection-observer';
 import { JetBrains_Mono, Lora } from 'next/font/google'; // Update font imports
 import CodeBlock from '@/components/CodeBlock';
 import products from '@/utils/productsData';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import developerFeatures from '@/utils/developerFeaturesData';
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'] }); // Initialize JetBrains Mono
 const lora = Lora({ subsets: ['latin'] }); // Initialize Lora
@@ -32,9 +32,9 @@ export default function Home() {
           <HeroSection />
           <ProductsSection />
           <WhyBasicSection />
-          <Benefits benefits={benefitsForDevelopers} title={"Basic-ally better for developers 📱"} />
+          <BenefitsForDevelopers />
           <PrivacySection />
-          <Benefits benefits={benefitsForUsers} title={"Also better for users 👯"} />
+          <BenefitsForUsers benefits={benefitsForUsers} />
           <Footer />
         </div>
       </main>
@@ -72,10 +72,13 @@ const NavBar = () => {
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1 text-white space-x-4 flex items-center">
             <li>
+              <a className="btn btn-ghost" href='https://github.com/basicdb' target="_blank" rel="noreferrer">
+                <Github className="w-5 h-5 mr-2" />
+              </a>
+            </li>
+            <li>
               <a className="btn btn-ghost" href='https://twitter.com/basic_db' target="_blank" rel="noreferrer">
-                <Image alt="twitter" width={20} height={20} src="/icons/twitter.png" className="mr-2 hidden sm:inline" />
-                <span className={isMobile ? 'hidden' : ''}>Connect with us</span>
-                <span className={!isMobile ? 'hidden' : ''}>Connect</span>
+                <Twitter className="w-5 h-5 mr-2" />
               </a>
             </li>
             <li>
@@ -123,7 +126,7 @@ function App() {
 
               </div>
               <p className="text-4xl font-medium font-mono tracking-tight text-white-100 leading-relaxed">
-                Build on a frictionless, <br /> <strong className={`${lora.className} text-5xl text-white-500`}>user-owned cloud</strong> 🏆
+                Open source infra for <br /> <strong className={`${lora.className} text-5xl text-white-500`}>data ownership</strong> 🏆
               </p>
               <h3 className="max-w-xl mx-auto lg:mx-0 mt-4 text-lg tracking-tight text-white">
                 Ship powerful apps with <i>built-in auth</i>, <i>realtime</i>, and <i>multi-device offline support</i> on Basic's user-owned Personal Data Stores
@@ -136,7 +139,7 @@ function App() {
                 rel="noreferrer"
                 className="btn btn-primary inline-flex items-center justify-center bg-white text-black py-2.5 px-8 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:rotate-1 hover:bg-white-100 hover:text-black-800 shadow-lg hover:shadow-xl border-2 border-black hover:border-black-800"
               >
-                <RocketLaunchIcon className="h-7 w-7 mr-3 animate-bounce" />
+                <Rocket className="h-7 w-7 mr-3 animate-bounce" />
                 <span className="relative flex items-center justify-center">
                   <span className="absolute -inset-1.5 bg-black opacity-20 rounded-full blur"></span>
                   <span className="relative">Request Early Access</span>
@@ -144,7 +147,7 @@ function App() {
               </a>
             </div>
           </div>
-          <div className="lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0">
+          <div className="lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0 text-sm sm:text-base">
             <CodeBlock code={demoCode} />
           </div>
         </div>
@@ -238,6 +241,53 @@ const FadeInSentence = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
+const BenefitsForDevelopers = () => {
+  return (
+    <section className="bg-white dark:bg-black w-full min-h-screen flex flex-col">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 py-16 w-full">
+        <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-black dark:text-white-100 mb-6 mt-12 text-center leading-relaxed`}>
+          That's <strong className={`${lora.className} text-5xl text-black-500 dark:text-white-500`}>basic-ally</strong> better for developers 📱
+        </h2>
+
+        <Tabs defaultValue={developerFeatures[0].id} className="w-full h-full">
+          <TabsList className="grid w-full grid-cols-4 bg-white-100 dark:bg-black-800 [&>[data-state=active]]:bg-white-300 dark:[&>[data-state=active]]:bg-black-100 dark:[&>[data-state=active]]:text-white-900 text-black-600 dark:text-white-100">
+            {developerFeatures.map((feature) => (
+              <TabsTrigger key={feature.id} value={feature.id} className="text-[8px] sm:text-xs lg:text-sm hover:bg-white-200 dark:hover:bg-black-100 transition-all duration-150">
+                {feature.label}<span className="hidden sm:inline-block pl-1">{feature.labelIcon}</span>
+              </TabsTrigger>
+            ))}
+          </TabsList>
+
+          {developerFeatures.map((feature) => (
+            <TabsContent key={feature.id} value={feature.id}>
+              <div className="p-6 flex flex-col md:flex-row gap-8 items-center">
+                <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
+                  <h3 className="text-2xl mb-4 text-black dark:text-white">{feature.content.title} {feature.content.labelIcon}</h3>
+                  {feature.content.description && (
+                    <p className="text-black dark:text-white">{feature.content.description}</p>
+                  )}
+                  {feature.content.description2 && (
+                    <p className="text-black dark:text-white mt-4">{feature.content.description2}</p>
+                  )}
+                </div>
+                <div className="w-full md:w-1/2 bg-black-800 rounded-lg min-h-[300px] flex items-center justify-center">
+                  {feature.content.image && <Image src={feature.content.image.src} alt={feature.label} width={feature.content.image.width} height={feature.content.image.height} />}
+                  {feature.content.code && <CodeBlock code={feature.content.code} />}
+                  {feature.content.icon === 'github' && (
+                    <a href="https://github.com/basicdb" target="_blank" rel="noopener noreferrer">
+                      <Github className="w-20 h-20 text-white-100 hover:text-white-300 transition-colors" />
+                    </a>
+                  )}
+                </div>
+              </div>
+            </TabsContent>
+          ))}
+        </Tabs>
+      </div>
+    </section>
+  );
+};
+
 const PrivacySection = () => {
   return (
     <section className="bg-white dark:bg-black py-12">
@@ -249,14 +299,57 @@ const PrivacySection = () => {
               Basic creates personal data stores that give users full control of their data. Apps request access via OAuth2, ensuring data privacy with enterprise-grade security.
             </p>
             <a href="https://docs.basic.tech" target="_blank" rel="noopener noreferrer"
-              className="btn bg-black-700 text-white border-2 border-white-300 hover:bg-black-600 hover:border-white transition-all duration-300 transform hover:scale-105 hover:rotate-1 shadow-md hover:shadow-lg px-6 py-2 rounded-full font-semibold">
+              className="btn bg-black-700 text-white border-2 border-white-300 hover:bg-black-600 hover:border-white transition-all duration-150 transform hover:scale-105 hover:rotate-1 shadow-md hover:shadow-lg px-6 py-2 rounded-full font-semibold">
               📖 Read the Docs
             </a>
           </div>
           <div className="w-full md:w-1/2 md:pl-8">
-            <Image src="/PDS.svg" alt="Basic apps diagram" className="mx-auto max-w-full" width={450} height={400} />
+            <Image src="/basic-auth-flow.png" alt="Basic apps diagram" className="mx-auto max-w-full" width={450} height={400} />
           </div>
         </div>
+      </div>
+    </section>
+  )
+}
+
+const BenefitsForUsers = ({ benefits }: { benefits: Array<{ title: string; description: string }> }) => {
+  return (
+    <section aria-labelledby="features" id="feature-five" className="w-full pt-1 pb-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
+      <div className='max-w-6xl mx-auto'>
+        <h2 className={`${jetbrainsMono.className} text-4xl font-bold text-black dark:text-white-100 mb-6 mt-12 text-center leading-relaxed`}>
+          And better for your <strong className={`${lora.className} text-5xl text-black-500 dark:text-white-500`}>users</strong> 👯
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12">
+          {benefits.map((benefit, index) => (
+            <div key={index}>
+              <p className="mt-3 text-lg font-medium leading-6 text-black-700 dark:text-white-100 text-center">{benefit.title}</p>
+              <div className="mt-2 text-base text-black-200 dark:text-white text-center">
+                {benefit.description}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <a
+          href="https://basic.id"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full block mt-12 p-12 text-center text-xl font-bold text-white rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-lg"
+          style={{
+            background: "linear-gradient(45deg, #ffe7d6, #313149, #ff8533)",
+            backgroundSize: "200% 200%",
+            animation: "gradient 5s ease infinite",
+            boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+          }}
+        >
+          <div className="flex items-center justify-center space-x-3">
+            <div className="w-10 h-10 rounded-full bg-black-500 flex items-center justify-center">
+              👤
+            </div>
+            <span className="text-2xl font-semibold">Explore Basic ID</span>
+          </div>
+        </a>
       </div>
     </section>
   )
