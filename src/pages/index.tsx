@@ -11,7 +11,6 @@ import { useInView } from 'react-intersection-observer';
 import { JetBrains_Mono, Lora } from 'next/font/google'; // Update font imports
 import CodeBlock from '@/components/CodeBlock';
 import products from '@/utils/productsData';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import developerFeatures from '@/utils/developerFeaturesData';
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'] }); // Initialize JetBrains Mono
@@ -43,23 +42,6 @@ export default function Home() {
 }
 
 const NavBar = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 640);
-    };
-
-    // Set initial value
-    handleResize();
-
-    // Add event listener
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
     <div className="navbar bg-opacity-20 absolute top-0 left-0 right-0 px-8 py-4 lg:px-8">
       <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
@@ -245,44 +227,43 @@ const BenefitsForDevelopers = () => {
   return (
     <section className="bg-white dark:bg-black w-full min-h-screen flex flex-col">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 py-16 w-full">
-        <h2 className={`${jetbrainsMono.className} text-2xl md:text-4xl font-bold text-black dark:text-white-100 mb-6 mt-12 text-center leading-relaxed`}>
+        <h2 className={`${jetbrainsMono.className} text-2xl md:text-4xl font-bold text-black dark:text-white-100 mb-24 mt-12 text-center leading-relaxed`}>
           That's <strong className={`${lora.className} text-3xl md:text-5xl text-black-500 dark:text-white-500`}>basic-ally</strong> better for developers 📱
         </h2>
 
-        <Tabs defaultValue={developerFeatures[0].id} className="w-full h-full">
-          <TabsList className="grid w-full grid-cols-4 bg-white-100 dark:bg-black-800 [&>[data-state=active]]:bg-white-300 dark:[&>[data-state=active]]:bg-black-100 dark:[&>[data-state=active]]:text-white-900 text-black-600 dark:text-white-100">
-            {developerFeatures.map((feature) => (
-              <TabsTrigger key={feature.id} value={feature.id} className="text-[8px] sm:text-xs lg:text-sm hover:bg-white-200 dark:hover:bg-black-100 transition-all duration-150">
-                {feature.label}<span className="hidden sm:inline-block pl-1">{feature.labelIcon}</span>
-              </TabsTrigger>
-            ))}
-          </TabsList>
-
-          {developerFeatures.map((feature) => (
-            <TabsContent key={feature.id} value={feature.id}>
-              <div className="p-6 flex flex-col md:flex-row gap-8 items-center">
-                <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
-                  <h3 className="text-2xl mb-4 text-black dark:text-white">{feature.content.title} {feature.content.labelIcon}</h3>
-                  {feature.content.description && (
-                    <p className="text-black dark:text-white">{feature.content.description}</p>
-                  )}
-                  {feature.content.description2 && (
-                    <p className="text-black dark:text-white mt-4">{feature.content.description2}</p>
-                  )}
-                </div>
-                <div className="w-full md:w-1/2 bg-black-800 rounded-lg min-h-[300px] flex items-center justify-center">
-                  {feature.content.image && <Image src={feature.content.image.src} alt={feature.label} width={feature.content.image.width} height={feature.content.image.height} />}
-                  {feature.content.code && <CodeBlock code={feature.content.code} />}
-                  {feature.content.icon === 'github' && (
-                    <a href="https://github.com/basicdb" target="_blank" rel="noopener noreferrer">
-                      <Github className="w-20 h-20 text-white-100 hover:text-white-300 transition-colors" />
-                    </a>
-                  )}
-                </div>
+        <div className="space-y-24">
+          {developerFeatures.map((feature, index) => (
+            <div key={feature.id} className={`flex flex-col md:flex-row gap-8 items-center`}>
+              <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
+                <h3 className="text-2xl mb-4 text-black dark:text-white">
+                  {feature.content.title} {feature.content.labelIcon}
+                </h3>
+                {feature.content.description && (
+                  <p className="text-black dark:text-white">{feature.content.description}</p>
+                )}
+                {feature.content.description2 && (
+                  <p className="text-black dark:text-white mt-4">{feature.content.description2}</p>
+                )}
               </div>
-            </TabsContent>
+              <div className="w-full md:w-1/2 bg-black-800 rounded-lg min-h-[300px] flex items-center justify-center p-6">
+                {feature.content.image &&
+                  <Image
+                    src={feature.content.image.src}
+                    alt={feature.label}
+                    width={feature.content.image.width}
+                    height={feature.content.image.height}
+                  />
+                }
+                {feature.content.code && <CodeBlock code={feature.content.code} />}
+                {feature.content.icon === 'github' && (
+                  <a href="https://github.com/basicdb" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-20 h-20 text-white-100 hover:text-white-300 transition-colors" />
+                  </a>
+                )}
+              </div>
+            </div>
           ))}
-        </Tabs>
+        </div>
       </div>
     </section>
   );
