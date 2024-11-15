@@ -350,23 +350,26 @@ const PricingSection = () => {
         {/* Header */}
         <div className="mx-auto max-w-4xl text-center">
           <h2 className={`${jetbrainsMono.className} text-2xl md:text-4xl font-bold text-black dark:text-white-100 mb-6 leading-relaxed`}>
-            Pricing
+            With simple pricing that scales
           </h2>
         </div>
 
         {/* Pricing Cards */}
-        <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
-          {/* Hobby Plan */}
-          <div className="rounded-3xl bg-white/60 dark:bg-black-800 p-8 ring-1 ring-white-300 sm:mx-8 sm:p-10 lg:mx-0">
-            <h3 className="text-xl font-semibold text-black dark:text-white">Free</h3>
-            <p className="mt-4 flex items-baseline gap-x-2">
-              <span className="text-5xl font-semibold text-black dark:text-white">$0</span>
-              <span className="text-base text-black-500 dark:text-white-500">/month</span>
-            </p>
-            <p className="mt-6 text-black-600 dark:text-white-300">For indie developers to try out Basic</p>
+        <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-stretch gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2 lg:gap-x-12">
+          {/* Free Plan */}
+          <div className="rounded-3xl bg-white/60 dark:bg-black-800 p-8 ring-1 ring-white-300 sm:mx-8 sm:p-10 lg:mx-0 flex flex-col">
+            <div>
+              <h3 className="text-xl font-semibold text-black dark:text-white">Free</h3>
+              <p className="mt-4 flex items-baseline gap-x-2">
+                <span className="text-5xl font-semibold text-black dark:text-white">$0</span>
+                <span className="text-base text-black-500 dark:text-white-500">/month</span>
+              </p>
+              <p className="mt-6 text-black-600 dark:text-white-300">For indie developers to try out Basic</p>
+              <p className="text-xs text-black-600 dark:text-white-300">Everything you need to get started</p>
+            </div>
 
-            <ul className="mt-8 space-y-3">
-              {['1 member per project', 'Unlimited projects', 'Local-first sync', 'Schema-as-code', 'Project-level privacy & permissions'].map((feature) => (
+            <ul className="mt-8 space-y-3 flex-grow">
+              {['1 member per project', 'Unlimited projects', 'Unlimited users', 'Local-first sync', 'Schema-as-code', 'Project-level privacy & permissions'].map((feature) => (
                 <li key={feature} className="flex gap-x-3 text-black-600 dark:text-white-300">
                   <svg className="h-6 w-5 flex-none text-white-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" />
@@ -381,18 +384,20 @@ const PricingSection = () => {
             </a>
           </div>
 
-          {/* Enterprise Plan */}
-          <div className="relative rounded-3xl bg-black-900 p-8 shadow-2xl sm:p-10">
-            <h3 className="text-xl font-semibold text-white">Enterprise</h3>
-            <p className="mt-4 flex items-baseline gap-x-2">
-              <span className="text-5xl font-semibold text-white">Contact</span>
-              <span className="text-base text-white-500">for pricing</span>
-            </p>
-            <p className="mt-6 text-white-300">For teams and enterprises</p>
+          {/* Custom Plan */}
+          <div className="relative rounded-3xl bg-white/60 dark:bg-black-800 p-8 ring-1 ring-white-300 sm:p-10 flex flex-col">
+            <div>
+              <h3 className="text-xl font-semibold text-black dark:text-white">Custom</h3>
+              <p className="mt-4 flex items-baseline gap-x-2">
+                <span className="text-3xl font-semibold text-black dark:text-white">Contact for pricing</span>
+              </p>
+              <p className="mt-6 text-black-600 dark:text-white-300">For teams and enterprises</p>
+              <p className="text-xs text-black-600 dark:text-white-300">Free tier features and more</p>
+            </div>
 
-            <ul className="mt-8 space-y-3">
-              {['Unlimited members', 'Indexing and analytics of users', 'Advanced analytics', 'Existing data embedding & migration', 'Federated learning', 'Enterprise Data Stores', 'Uptime SLAs', 'HIPAA & SOC 2 compliance checks', 'SAML SSO', 'Dedicated engineering support'].map((feature) => (
-                <li key={feature} className="flex gap-x-3 text-white-300">
+            <ul className="mt-8 space-y-3 flex-grow">
+              {['Unlimited members', 'Advanced user analytics', 'AI vector embeddings', 'Federated learning', 'Enterprise Data Stores', 'HIPAA & SOC 2 compliance checks', 'Uptime SLAs', 'SAML SSO', 'Dedicated engineering support'].map((feature) => (
+                <li key={feature} className="flex gap-x-3 text-black-600 dark:text-white-300">
                   <svg className="h-6 w-5 flex-none text-white-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" />
                   </svg>
@@ -401,7 +406,7 @@ const PricingSection = () => {
               ))}
             </ul>
 
-            <a href="mailto:abhi@basic.tech" className="mt-8 block rounded-full px-3.5 py-2.5 text-center text-sm font-semibold bg-white text-black hover:opacity-90">
+            <a href="mailto:abhi@basic.tech" className="mt-8 block rounded-full px-3.5 py-2.5 text-center text-sm font-semibold bg-black dark:bg-white text-white dark:text-black hover:opacity-90">
               Contact us
             </a>
           </div>
