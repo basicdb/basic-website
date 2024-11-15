@@ -141,7 +141,7 @@ function App() {
 
 const ProductsSection = () => {
   return (
-    <section className="bg-black w-full py-8 sm:py-2">
+    <section className="bg-black w-full py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center gap-8">
           {products.map((product, index) => (
@@ -167,8 +167,8 @@ const ProductsSection = () => {
 
 const WhyBasicSection = () => {
   return (
-    <section className="bg-black w-full">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pb-24">
+    <section className="bg-black w-full py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className={`${jetbrainsMono.className} text-2xl md:text-4xl font-bold text-white-100 mb-6 mt-12 text-center leading-relaxed`}>
           A <strong className={`${lora.className} text-3xl md:text-5xl text-white-500`}>new</strong> ✨ way to build
         </h2>
@@ -272,7 +272,7 @@ const BenefitsForDevelopers = () => {
 
 const PrivacySection = () => {
   return (
-    <section className="bg-white dark:bg-black py-12">
+    <section className="bg-white dark:bg-black py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-black-800 p-6 sm:p-12 rounded-lg flex flex-col md:flex-row items-center justify-between">
           <div className="w-full md:w-1/2 md:pr-8 mb-8 md:mb-0 text-center md:text-left">
@@ -296,8 +296,8 @@ const PrivacySection = () => {
 
 const BenefitsForUsers = ({ benefits }: { benefits: Array<{ title: string; description: string }> }) => {
   return (
-    <section aria-labelledby="features" id="feature-five" className="w-full pt-1 pb-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
-      <div className='max-w-6xl mx-auto'>
+    <section className="bg-white dark:bg-black w-full py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className={`${jetbrainsMono.className} text-2xl md:text-4xl font-bold text-black dark:text-white-100 mb-6 mt-12 text-center leading-relaxed`}>
           And better for your <strong className={`${lora.className} text-3xl md:text-5xl text-black-500 dark:text-white-500`}>users</strong> 👯
         </h2>
