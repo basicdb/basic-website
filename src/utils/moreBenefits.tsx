@@ -5,11 +5,11 @@ export default [
     },
     {
         title: "Plug-and-play Auth",
-        description: "Basic is an OAuth 2.0 provider, so you can easily integrate auth capabilities in your apps to manage users and tokens without any external tooling"
+        description: "Basic is an OAuth 2.0 provider, so you can easily integrate auth capabilities in your apps to manage users and tokens with your existing tooling"
     },
     {
         title: "Instant UI",
-        description: "Basic's local-first architecture of using users' local DBs (e.g., IndexedDB) as the primary read / write storage with our proprietary sync engine minimizes the need for loading states and spinners"
+        description: "Basic's local-first architecture of using users' local DBs (e.g., IndexedDB) as the primary read / write storage with our custom sync engine minimizes the need for loading states and spinners"
     },
     {
         title: "Client SDKs",
@@ -20,7 +20,7 @@ export default [
         description: "Because of Basic's user-owned data ownership model, sensitive data never touches servers, and compliance (e.g., PII, SOC 2, HIPAA) is simplified"
     },
     {
-        title: "Row-level permissions",
-        description: "Basic allows enterprise-grade permission per row for each user to ensure privacy and security"
+        title: "Enterprise-grade permissions",
+        description: "Basic allows for role-based access control (RBAC), and fine-grained permissions per row for each user to ensure privacy and security"
     }
 ];
