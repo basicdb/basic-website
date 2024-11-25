@@ -2,7 +2,7 @@ import MediumCard from '@/components/MediumCard';
 import moreBenefits from '@/utils/moreBenefits';
 import Benefits from '@/components/Benefits';
 
-import { BookOpenTextIcon, LaptopIcon } from 'lucide-react';
+import { BookOpenTextIcon, LaptopIcon, GithubIcon } from 'lucide-react';
 
 export default function OpenResilientPortable() {
     const mediumCardElements = [
@@ -14,16 +14,16 @@ export default function OpenResilientPortable() {
             textColor: 'text-green-500',
             content: [
                 {
-                    subtitle: 'Open source protocol',
-                    text: 'All our code is public and we invite everyone to contribute to the Basic protocol'
+                    subtitle: 'Open schemas',
+                    text: 'All apps on Basic have publicly accessible schemas while keeping data secure. Schemas can be forked so that developers can iterate on top of each other\'s work'
                 },
                 {
-                    subtitle: 'Self-hostable data stores',
-                    text: 'Users can self-host their data stores or host with any other provider, providing them the flexibility of cost, security and privacy for their personal and business needs'
-                }
+                    subtitle: 'Interoperability',
+                    text: 'Basic\'s data model is designed for interoperability instead of relying on APIs that limit data access. Developers can build apps that speak to each other without the need for connectors and plugins'
+                },
             ],
-            buttonText: 'Basic codebase',
-            buttonURL: 'https://github.com/basicdb',
+            buttonText: 'Basic docs',
+            buttonURL: 'https://docs.basic.tech/info/PDS',
             buttonBorderColor: 'border-green-800 dark:border-green',
             image: '/PDS.svg',
             buttonIcon: <BookOpenTextIcon className='w-5 h-5' />,
@@ -50,6 +50,7 @@ export default function OpenResilientPortable() {
             image: '/PDS.svg',
             buttonIcon: <LaptopIcon className='w-5 h-5' />,
         },
+
         {
             title: 'Portable pockets of internet',
             titleColor: 'text-pink-800 dark:text-pink',
@@ -58,29 +59,28 @@ export default function OpenResilientPortable() {
             textColor: 'text-pink-500',
             content: [
                 {
-                    subtitle: 'Open schemas',
-                    text: 'All apps on Basic have publicly accessible schemas while data is secure. Schemas may be forked for faster development'
+                    subtitle: 'Open source protocol',
+                    text: 'All our code is public and we invite everyone to contribute to the Basic protocol. You can fork and run your own Basic server as well (similar to BlueSky / Mastodon)'
                 },
                 {
-                    subtitle: 'Interoperability',
-                    text: 'Interoperability will no longer be gated behind limited APIs with open schemas and user-owned data stores. Your users will enjoy accessing their proprietary and sensitive data across apps, and for their own analytics'
+                    subtitle: 'Self-hostable data stores',
+                    text: 'Users can self-host their data stores or host with any other provider, giving them the flexibility of cost, security and privacy for their personal and business needs'
                 }
             ],
-            buttonText: 'React SDK',
-            buttonURL: 'https://docs.basic.tech/sdk-reference/react-components',
+            buttonText: 'Basic codebase',
+            buttonURL: 'https://github.com/basicdb',
             buttonBorderColor: 'border-pink-800 dark:border-pink',
             image: '/PDS.svg',
-            buttonIcon: <LaptopIcon className='w-5 h-5' />,
+            buttonIcon: <GithubIcon className='w-5 h-5' />,
         }
-
     ]
 
     return (
         <div>
             <h2 className='h-[15vh] text-center mt-[5vh]'>
-                <span className='text-[#305F53] dark:text-[#D6EBE3] text-5xl font-bold'>open, </span>
-                <span className='text-[#3E188C] dark:text-[#D9CBF6] text-5xl font-bold'>resilient, </span>
-                <span className='text-[#9E4276] dark:text-[#E7C5D8] text-5xl font-bold'>and portable</span>
+                <span className='text-green-700 dark:text-green text-5xl font-bold'>open, </span>
+                <span className='text-indigo-700 dark:text-indigo text-5xl font-bold'>resilient, </span>
+                <span className='text-pink-700 dark:text-pink text-5xl font-bold'>and portable</span>
             </h2>
             {mediumCardElements.map((card, index) => (
                 <MediumCard key={index} {...card} />

@@ -20,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Script strategy="afterInteractive" data-domain="basic.tech" src="https://plausible.io/js/script.js" />
-      <main className="flex flex-col items-center bg-green-100 dark:bg-black">
+      <main className="flex flex-col items-center bg-green-100 dark:bg-black min-h-screen overflow-x-hidden">
         <div className="w-full">
           <NavBar />
           <Hero />
@@ -37,7 +37,7 @@ export default function Home() {
 const NavBar = () => {
   return (
     <div className="navbar bg-opacity-20 absolute z-50 top-5 left-0 right-0 py-4 px-8">
-      <div className="max-w-7xl mx-auto w-full flex justify-between items-center text-[#F1F8F6] dark:text-[#08080C] px-2">
+      <div className="w-[calc(100%-2rem)] mx-4 my-2 flex justify-between items-center text-green-100 dark:text-black px-2">
         <div className="flex-1 flex items-center">
           <a className="btn btn-ghost normal-case text-xl flex items-center" href="/">
             <Image
@@ -83,7 +83,7 @@ const Footer = () => {
   return (
     <footer className="py-6">
       <hr className="border-t border-green-400 mb-6" />
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black dark:text-green-100">
+      <div className="w-[calc(100%-2rem)] m-4 px-2 text-black dark:text-green-100">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex items-center">
             <Image

@@ -1,13 +1,14 @@
 interface GiantCardProps {
     image: string;
     title?: string;
+    subtitle?: string;
     blurb?: string;
     blurb2?: string;
     pillText?: string;
     backgroundEffect?: string;
 }
 
-export default function GiantCard({ image, title, blurb, blurb2, pillText, backgroundEffect }: GiantCardProps) {
+export default function GiantCard({ image, title, subtitle, blurb, blurb2, pillText, backgroundEffect }: GiantCardProps) {
     const handlePillClick = (event: React.MouseEvent<HTMLElement>) => {
         navigator.clipboard.writeText(pillText || '');
         const el = event.currentTarget;
@@ -33,6 +34,7 @@ export default function GiantCard({ image, title, blurb, blurb2, pillText, backg
                     </div>
                 )}
                 <h1 className='text-green-100 text-6xl font-bold drop-shadow-lg'>{title}</h1>
+                {subtitle && <h2 className='text-green-100 text-xl drop-shadow-lg mt-4'>{subtitle}</h2>}
                 {blurb && <p className='text-green-100 text-xl sm:text-2xl font-semibold drop-shadow-lg mt-8'>{blurb}</p>}
                 {blurb2 && <p className='text-green-100 text-xl sm:text-2xl font-semibold drop-shadow-lg mt-4'>{blurb2}</p>}
             </div>
