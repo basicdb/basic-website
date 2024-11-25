@@ -60,7 +60,7 @@ export default function OpenResilientPortable() {
             content: [
                 {
                     subtitle: 'Open source protocol',
-                    text: 'All our code is public and we invite everyone to contribute to the Basic protocol. You can fork and run your own Basic server as well (similar to BlueSky / Mastodon)'
+                    text: 'All our code is public and we invite everyone to contribute to the Basic protocol'
                 },
                 {
                     subtitle: 'Self-hostable data stores',
