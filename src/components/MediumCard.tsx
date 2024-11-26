@@ -16,7 +16,7 @@ interface MediumCardProps {
 
 export default function MediumCard({ title, titleColor, cardColor, subtitleColor, textColor, content, buttonText, buttonURL, buttonIcon, buttonBorderColor, image }: MediumCardProps) {
     return (
-        <div className={`w-[calc(100%-2rem)] lg:w-[calc(100%-10rem)] rounded-3xl mx-4 lg:mx-20 flex flex-col-reverse md:flex-row gap-8 lg:gap-28 ${cardColor} p-10 md:p-12 lg:p-16 mb-5 items-center`}>
+        <div className={`w-[calc(100%-2rem)] lg:w-[calc(100%-10rem)] rounded-3xl mx-4 lg:mx-20 flex flex-col-reverse md:flex-row gap-10 lg:gap-16 ${cardColor} p-10 md:p-12 lg:p-16 mb-5 items-center`}>
             <div className="w-full lg:w-1/2">
                 <h3 className={`${titleColor} text-xl font-bold pb-5`}>{title}</h3>
                 {content.map((item, index) => (

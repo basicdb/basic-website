@@ -25,7 +25,7 @@ export default function OpenResilientPortable() {
             buttonText: 'Basic docs',
             buttonURL: 'https://docs.basic.tech/info/PDS',
             buttonBorderColor: 'border-green-800 dark:border-green',
-            image: '/PDS.svg',
+            image: '/open.svg',
             buttonIcon: <BookOpenTextIcon className='w-5 h-5' />,
         },
         {
@@ -47,7 +47,7 @@ export default function OpenResilientPortable() {
             buttonText: 'React SDK',
             buttonURL: 'https://docs.basic.tech/sdk-reference/react-components',
             buttonBorderColor: 'border-indigo-800 dark:border-indigo',
-            image: '/PDS.svg',
+            image: '/resilient.svg',
             buttonIcon: <LaptopIcon className='w-5 h-5' />,
         },
 
@@ -70,7 +70,7 @@ export default function OpenResilientPortable() {
             buttonText: 'Basic codebase',
             buttonURL: 'https://github.com/basicdb',
             buttonBorderColor: 'border-pink-800 dark:border-pink',
-            image: '/PDS.svg',
+            image: '/portable.svg',
             buttonIcon: <GithubIcon className='w-5 h-5' />,
         }
     ]
