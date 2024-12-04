@@ -1,6 +1,6 @@
 export default function Benefits({ benefits, title }: { benefits: Array<{ title: string; description: string }>; title: string }) {
     return (
-        <div className="w-[calc(100%-14rem)] mx-28 my-20">
+        <div className="w-[calc(100%-4rem)] mx-8 md:w-[calc(100%-14rem)] md:mx-28 my-20">
             <div>
                 <div className="mb-6">
                     <h1 className='text-xl text-green-800 dark:text-green font-bold'>{title}</h1>

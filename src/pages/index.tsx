@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Twitter, Github } from 'lucide-react';
 import Script from 'next/script'
+import Link from 'next/link'
 
 import Hero from '@/components/Hero';
 import OpenResilientPortable from '@/components/OpenResilientPortable';
@@ -58,20 +59,14 @@ const NavBar = () => {
           </a>
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal px-1 space-x-4 flex items-center">
-            <li>
-              <a className="btn btn-ghost" href='https://github.com/basicdb' target="_blank" rel="noreferrer">
-                <Github className="w-5 h-5 mr-2" />
-              </a>
-            </li>
-            <li>
-              <a className="btn btn-ghost" href='https://twitter.com/basic_db' target="_blank" rel="noreferrer">
-                <Twitter className="w-5 h-5 mr-2" />
-              </a>
-            </li>
-            <li>
-              <a href="https://docs.basic.tech/" target="_blank" rel="noreferrer" className="btn btn-ghost">Docs</a>
-            </li>
+          <ul className="menu menu-horizontal px-1 space-x-1 md:space-x-4 flex items-center">
+            <li><a className="hidden sm:block px-3 py-2" href="https://docs.basic.tech/get-started/implement-basic/using-react" target="_blank" rel="noopener noreferrer">database</a></li>
+            <li><a className="hidden sm:block px-3 py-2" href="https://basic.id" target="_blank" rel="noopener noreferrer">auth</a></li>
+            <li><a className="px-3 py-2" href="https://app.basic.tech" target="_blank" rel="noopener noreferrer">admin portal</a></li>
+            <li><a className="hidden sm:block px-3 py-2" href="https://www.npmjs.com/package/@basictech/cli" target="_blank" rel="noopener noreferrer">cli</a></li>
+            <li><a className="hidden md:block px-3 py-2" href="https://github.com/basicdb" target="_blank" rel="noreferrer">github</a></li>
+            <li><a className="hidden lg:block px-3 py-2" href="https://twitter.com/basic_db" target="_blank" rel="noreferrer">twitter</a></li>
+            <li><a className="btn btn-ghost" href="https://docs.basic.tech/" target="_blank" rel="noreferrer">docs</a></li>
           </ul>
         </div>
       </div>
