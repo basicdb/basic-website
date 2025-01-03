@@ -11,7 +11,16 @@ import OpenResilientPortable from '@/components/OpenResilientPortable';
 import UserOwned from '@/components/UserOwned';
 import BasicTiles from '@/components/BasicTiles';
 
+import CalEmbed, { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
+
 export default function Home() {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ "namespace": "speak-to-a-basic-founder" });
+      cal("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+    })();
+  }, [])
   return (
     <>
       <Head>
@@ -28,6 +37,7 @@ export default function Home() {
           <OpenResilientPortable />
           <UserOwned />
           <BasicTiles />
+          <Cal />
           <Footer />
         </div>
       </main>
@@ -71,6 +81,17 @@ const NavBar = () => {
         </div>
       </div>
     </div>
+  )
+}
+
+const Cal = () => {
+  return (
+    <CalEmbed
+      namespace="speak-to-a-basic-founder"
+      calLink="abhicvk/speak-to-a-basic-founder"
+      style={{ width: "100%", height: "100%", overflow: "scroll" }}
+      config={{ layout: "month_view" }}
+    />
   )
 }
 
