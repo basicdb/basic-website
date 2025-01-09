@@ -2,85 +2,125 @@ import MediumCard from '@/components/MediumCard';
 import moreBenefits from '@/utils/moreBenefits';
 import Benefits from '@/components/Benefits';
 
-import { BookOpenTextIcon, LaptopIcon, GithubIcon } from 'lucide-react';
+type MediumCardProps = {
+    title: string;
+    layout?: 'grid';
+    titleColor: string;
+    cardColor: string;
+    subtitleColor: string;
+    textColor: string;
+    content: Array<{
+        subtitle?: string;
+        text: string;
+        text2?: string;
+        text3?: string;
+        text4?: string;
+        url?: string;
+        urlText?: string;
+        urlStyle?: string;
+        comingSoon?: string;
+    }>;
+    image?: string;
+};
 
 export default function OpenResilientPortable() {
-    const mediumCardElements = [
+    const mediumCardElements: MediumCardProps[] = [
         {
-            title: 'Open ecosystem',
+            title: 'user-owned data stores',
             titleColor: 'text-green-800 dark:text-green',
             cardColor: 'bg-green dark:bg-green-800',
             subtitleColor: 'text-green-700 dark:text-green-400',
             textColor: 'text-green-500',
             content: [
                 {
-                    subtitle: 'Open schemas',
-                    text: 'All apps on Basic have publicly accessible schemas while keeping data secure. Schemas can be forked so that developers can iterate on top of each other\'s work'
+                    text: 'User-owned data stores are a new paradigm for user-data storage. Instead of writing your users\' data to a central database for each of your applications, Basic spins up and manages independent databases for each of your users.',
+                    text2: 'These will contain all of a user\'s data from across all their Basic apps. Your users will provision access of their data to your apps.',
+                    url: 'https://docs.basic.tech/info/user-owned-data-stores',
+                    urlText: 'Discover user-owned data stores',
                 },
                 {
-                    subtitle: 'Interoperability',
-                    text: 'Basic\'s data model is designed for interoperability instead of relying on APIs that limit data access. Developers can build apps that speak to each other without the need for connectors and plugins'
+
+                },
+                {
+                    subtitle: '🪪 Basic.id',
+                    text: 'Basic.id is a user-facing interface similar to Google SSO and Google Cloud. Your users will use basic.id to sign in to your apps, and manage their account and app permissions.',
+                    text2: 'Basic.id is also the means for your users to access their data interoperably, and eventually run their own analytics on their data or pair it with personal AI agents.',
+                    url: 'https://basic.id',
+                    urlText: 'Try Basic.id',
+                },
+                {
+                    subtitle: '🎒 Self-hostable data stores',
+                    text: 'Users can self-host their data stores or host with any other provider. This gives them the flexibility of cost, security and privacy for their personal and business needs without a vendor lockup with Basic.',
+                    comingSoon: 'Self-hosting will be available soon.'
                 },
             ],
-            buttonText: 'Basic docs',
-            buttonURL: 'https://docs.basic.tech/info/PDS',
-            buttonBorderColor: 'border-green-800 dark:border-green',
             image: '/open.svg',
-            buttonIcon: <BookOpenTextIcon className='w-5 h-5' />,
         },
         {
-            title: 'Resilient apps and data',
+            title: 'developer platform',
+            layout: 'grid',
             titleColor: 'text-indigo-800 dark:text-indigo',
             cardColor: 'bg-indigo dark:bg-indigo-800',
             subtitleColor: 'text-indigo-700 dark:text-indigo-400',
             textColor: 'text-indigo-500',
             content: [
                 {
-                    subtitle: 'Local-first architecture',
-                    text: 'Your users should be able to access your apps across all their devices, with their coworkers, friends and family, and even if there\'s downtime in their WiFi'
+                    text: 'We want to make the developer experience for our builders exceptional.',
+                    text2: 'That\'s why we\'ve made Basic available with local-first architecture, a tech stack where your apps perform primary read / write operations to a local database on your users\' devices while our custom sync engine maintains real-time state across multiple devices and users.',
+                    url: 'https://docs.basic.tech/info/local-first-sync',
+                    urlText: 'Explore local-first architecture',
                 },
                 {
-                    subtitle: 'Permanence of data',
-                    text: 'You can sell trust and transparency to your users as their data will perpetually remain in their control. Any data written by them using your apps will always be stored and accessible by them in their User-owned Data Stores, granting them freedom from vendor lock-ins'
-                }
-            ],
-            buttonText: 'React SDK',
-            buttonURL: 'https://docs.basic.tech/sdk-reference/react-components',
-            buttonBorderColor: 'border-indigo-800 dark:border-indigo',
-            image: '/resilient.svg',
-            buttonIcon: <LaptopIcon className='w-5 h-5' />,
+                    subtitle: '💾 Client SDKs',
+                    text: 'Basic SDKs speed up development by removing the need for writing and handling read / write API calls to the server, and auth and token management.',
+                    url: 'https://www.npmjs.com/package/@basictech/react',
+                    urlText: 'Install React SDK',
+                },
+                {
+                    subtitle: '💻 Admin console',
+                    text: 'The admin console provides an easy UI to manage all your projects as a development team including API keys, schemas, and version history. ',
+                    url: 'https://app.basic.tech',
+                    urlText: 'Access admin console',
+                },
+                {
+                    subtitle: '👨🏾‍💻 Command Line Interface (CLI)',
+                    text: 'We integrate your most frequently used commands and operations from the admin console directly into your terminal, so that you never need to leave your programming workflow.',
+                    url: 'https://docs.basic.tech/api/overview',
+                    urlText: 'Download CLI',
+                },
+                {
+                    subtitle: '📚 Docs',
+                    text: 'Browse through our extensive documentation to learn more about the philosophy behind Basic, and how to get started.',
+                    url: 'https://docs.basic.tech',
+                    urlText: 'Read Basic docs',
+                },
+            ]
         },
-
         {
-            title: 'Portable pockets of internet',
+            title: 'protocol',
             titleColor: 'text-pink-800 dark:text-pink',
             cardColor: 'bg-pink dark:bg-pink-800',
             subtitleColor: 'text-pink-700 dark:text-pink-400',
             textColor: 'text-pink-500',
             content: [
                 {
-                    subtitle: 'Open source protocol',
-                    text: 'All our code is public and we invite everyone to contribute to the Basic protocol'
+                    text: 'We\'re on a bold and ambitious mission to dismantle walled gardens and replace them with a collaborative and frictionless user-owned web.',
+                    text2: 'We think the internet can work better when data is user-owned. User-owned data is more interoperable, secure, and better for analytics - but it\'s also fairer.',
+                    text3: 'To achieve this, we\'ve designed the Basic protocol to be an open, federated layer which powers our data stores. Data in data stores are ever-lasting because it can accessed by spinning up a server via its APIs, even if Basic were to ever become obsolete.',
+                    text4: 'We also understand that the future of the internet is only as powerful as its adoption - therefore, we currently invite developers to contribute to and partake in the Basic protocol.',
+                    url: 'https://github.com/basicdb',
+                    urlText: 'View Basic codebase',
                 },
-                {
-                    subtitle: 'Self-hostable data stores',
-                    text: 'Users can self-host their data stores or host with any other provider, giving them the flexibility of cost, security and privacy for their personal and business needs'
-                }
             ],
-            buttonText: 'Basic codebase',
-            buttonURL: 'https://github.com/basicdb',
-            buttonBorderColor: 'border-pink-800 dark:border-pink',
             image: '/portable.svg',
-            buttonIcon: <GithubIcon className='w-5 h-5' />,
         }
     ]
 
     return (
         <div>
-            <h2 className='h-[15vh] text-center mt-[5vh]'>
-                <span className='text-green-700 dark:text-green text-5xl font-bold'>open, </span>
-                <span className='text-indigo-700 dark:text-indigo text-5xl font-bold'>resilient, </span>
-                <span className='text-pink-700 dark:text-pink text-5xl font-bold'>and portable</span>
+            <h2 className='h-[15vh] text-center mt-[5vh] w-[calc(100%-2rem)] mx-4'>
+                <span className='text-green-700 dark:text-green text-3xl md:text-4xl lg:text-5xl font-semibold'>data in users' hands, </span>
+                <span className='text-pink-500 dark:text-pink-500 text-3xl md:text-4xl lg:text-5xl font-semibold'>development in yours :)</span>
             </h2>
             {mediumCardElements.map((card, index) => (
                 <MediumCard key={index} {...card} />
