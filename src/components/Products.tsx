@@ -23,7 +23,7 @@ type MediumCardProps = {
     image?: string;
 };
 
-export default function OpenResilientPortable() {
+export default function Products() {
     const mediumCardElements: MediumCardProps[] = [
         {
             title: 'user-owned data stores',
@@ -37,9 +37,6 @@ export default function OpenResilientPortable() {
                     text2: 'These will contain all of a user\'s data from across all their Basic apps. Your users will provision access of their data to your apps.',
                     url: 'https://docs.basic.tech/info/user-owned-data-stores',
                     urlText: 'Discover user-owned data stores',
-                },
-                {
-
                 },
                 {
                     subtitle: '🪪 Basic.id',
@@ -85,7 +82,7 @@ export default function OpenResilientPortable() {
                 {
                     subtitle: '👨🏾‍💻 Command Line Interface (CLI)',
                     text: 'We integrate your most frequently used commands and operations from the admin console directly into your terminal, so that you never need to leave your programming workflow.',
-                    url: 'https://docs.basic.tech/api/overview',
+                    url: 'https://www.npmjs.com/package/@basictech/cli',
                     urlText: 'Download CLI',
                 },
                 {

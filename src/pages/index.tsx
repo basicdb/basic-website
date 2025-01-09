@@ -4,12 +4,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { TwitterIcon, GithubIcon } from 'lucide-react';
 import Script from 'next/script'
-import Link from 'next/link'
 
 import Hero from '@/components/Hero';
-import OpenResilientPortable from '@/components/OpenResilientPortable';
-import UserOwned from '@/components/UserOwned';
-import BasicTiles from '@/components/BasicTiles';
+import Products from '@/components/Products';
+import Pricing from '@/components/Pricing';
 
 import CalEmbed, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
@@ -34,8 +32,8 @@ export default function Home() {
         <div className="w-full">
           <NavBar />
           <Hero />
-          <OpenResilientPortable />
-          <UserOwned />
+          <Products />
+          <Pricing />
           <Cal />
           <Footer />
         </div>
@@ -82,6 +80,7 @@ const NavBar = () => {
 const Cal = () => {
   return (
     <CalEmbed
+      id="speak-to-a-basic-founder"
       namespace="speak-to-a-basic-founder"
       calLink="abhicvk/speak-to-a-basic-founder"
       style={{ width: "100%", height: "100%", overflow: "scroll", marginTop: "20vh", marginBottom: "10vh" }}
