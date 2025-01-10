@@ -51,7 +51,7 @@ export default function Products() {
                     comingSoon: 'Self-hosting will be available soon.'
                 },
             ],
-            image: '/open.svg',
+            image: '/user-owned.svg',
         },
         {
             title: 'developer platform',
@@ -109,7 +109,7 @@ export default function Products() {
                     urlText: 'View Basic codebase',
                 },
             ],
-            image: '/portable.svg',
+            image: '/protocol.svg',
         }
     ]
 

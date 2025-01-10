@@ -4,7 +4,7 @@ import { BookOpenIcon } from 'lucide-react';
 const heroCardElements = {
     image: '/user-owned.jpg',
     title: 'get started for free',
-    subtitle: 'Basic is currently in beta and available for free for all developers and users.',
+    subtitle: 'Basic will always be free for indie devs and small projects. Beta access available now.',
     backgroundEffect: 'blur-[1px] brightness-50',
     buttonText: 'Basic docs',
     buttonURL: 'https://docs.basic.tech',
