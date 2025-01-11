@@ -2,10 +2,10 @@ import GiantCard from '@/components/GiantCard';
 import { BookOpenIcon } from 'lucide-react';
 
 const heroCardElements = {
-    image: '/user-owned.jpg',
+    image: '/bonfire.png',
     title: 'get started for free',
     subtitle: 'Basic will always be free for indie devs and small projects. Beta access available now.',
-    backgroundEffect: 'blur-[1px] brightness-50',
+    backgroundEffect: ' brightness-50',
     buttonText: 'Basic docs',
     buttonURL: 'https://docs.basic.tech',
     buttonBorderColor: 'border-pink-700 dark:border-pink-700',
