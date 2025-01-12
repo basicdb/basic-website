@@ -33,14 +33,14 @@ export default function Products() {
             textColor: 'text-green-500',
             content: [
                 {
-                    text: 'User-owned data stores are a new paradigm for user-data storage. Instead of storing your users\' data to a central database for each of your applications, you can directly read / write to your users\' data stores',
+                    text: 'User-owned data stores are a new paradigm for user-data storage. Instead of storing your users\' data to a central database for each of your applications, you can directly read / write to your users\' data stores.',
                     text2: 'These will contain all of a user\'s data from across all their Basic apps. Your users will provision access of their data to your apps.',
                     url: 'https://docs.basic.tech/info/user-owned-data-stores',
                     urlText: 'Discover user-owned data stores',
                 },
                 {
                     subtitle: '🪪 Basic.ID',
-                    text: 'Basic.ID is the easiest way for your users to create their user-owned data stores. They will use Basic.ID to sign in to your apps, and manage their account and app permissions.',
+                    text: 'Basic.ID is the easiest way for your users to create their data stores. They will use Basic.ID to sign in to your apps, and manage their account and app permissions.',
                     text2: 'Basic.ID is also how your users can access their data interoperably and run analytics on their data, or pair it with personal AI agents.',
                     url: 'https://basic.id',
                     urlText: 'Try Basic.ID',

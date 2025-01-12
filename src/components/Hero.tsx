@@ -11,9 +11,9 @@ const heroCardElements = {
     backgroundEffect: 'brightness-95',
     buttonText: 'talk to a founder',
     buttonURL: '#speak-to-a-basic-founder',
-    buttonBorderColor: 'border-indigo-700 dark:border-indigo-700',
+    buttonBorderColor: 'border-indigo-700/80 dark:border-indigo-700/70',
     buttonIcon: <CalendarIcon className='w-5 h-5' />,
-    buttonColor: 'bg-indigo-700/80 dark:bg-indigo-700/70'
+    buttonColor: 'bg-gradient-to-r from-green-700/80 to-indigo-700/80 dark:from-green-700/70 dark:to-indigo-700/70'
 }
 
 
