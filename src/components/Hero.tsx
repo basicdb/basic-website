@@ -4,7 +4,7 @@ import GiantCard from './GiantCard';
 
 const heroCardElements = {
     image: '/landing-image.jpg',
-    title: 'build a user-owned web',
+    title: 'build on the user-owned web',
     titleColor: 'text-green-100 dark:text-black',
     subtitle: 'ship powerful apps with our new data storage protocol for user-owned data',
     pillText: 'npm i @basictech/react',

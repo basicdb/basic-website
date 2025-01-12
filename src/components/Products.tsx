@@ -33,21 +33,21 @@ export default function Products() {
             textColor: 'text-green-500',
             content: [
                 {
-                    text: 'User-owned data stores are a new paradigm for user-data storage. Instead of writing your users\' data to a central database for each of your applications, Basic spins up and manages independent databases for each of your users.',
+                    text: 'User-owned data stores are a new paradigm for user-data storage. Instead of storing your users\' data to a central database for each of your applications, you can directly read / write to your users\' data stores',
                     text2: 'These will contain all of a user\'s data from across all their Basic apps. Your users will provision access of their data to your apps.',
                     url: 'https://docs.basic.tech/info/user-owned-data-stores',
                     urlText: 'Discover user-owned data stores',
                 },
                 {
-                    subtitle: '🪪 Basic.id',
-                    text: 'Basic.id is a user-facing interface similar to Google SSO and Google Cloud. Your users will use basic.id to sign in to your apps, and manage their account and app permissions.',
-                    text2: 'Basic.id is also the means for your users to access their data interoperably, and eventually run their own analytics on their data or pair it with personal AI agents.',
+                    subtitle: '🪪 Basic.ID',
+                    text: 'Basic.ID is the easiest way for your users to create their user-owned data stores. They will use Basic.ID to sign in to your apps, and manage their account and app permissions.',
+                    text2: 'Basic.ID is also how your users can access their data interoperably and run analytics on their data, or pair it with personal AI agents.',
                     url: 'https://basic.id',
-                    urlText: 'Try Basic.id',
+                    urlText: 'Try Basic.ID',
                 },
                 {
                     subtitle: '🎒 Self-hostable data stores',
-                    text: 'Users can self-host their data stores or host with any other provider. This gives them the flexibility of cost, security and privacy for their personal and business needs without a vendor lockup with Basic.',
+                    text: 'Users can self-host their data stores or host with any other provider. This gives them the flexibility of cost, security and privacy for their personal and business needs.',
                     comingSoon: 'Self-hosting will be available soon.'
                 },
             ],
