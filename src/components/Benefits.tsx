@@ -9,7 +9,7 @@ export default function Benefits({ benefits, title }: { benefits: Array<{ title:
                     {benefits.map((benefit, index) => (
                         <div key={index}>
                             <p className="mt-3 font-medium text-green-700 dark:text-green-400">{benefit.title}</p>
-                            <div className="mt-1 text-sm text-green-500">
+                            <div className="mt-1 text-sm text-green-600 dark:text-green-500">
                                 {benefit.description}
                             </div>
                         </div>

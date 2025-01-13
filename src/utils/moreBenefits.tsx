@@ -5,7 +5,7 @@ export default [
     },
     {
         title: "Instant UI",
-        description: "Basic\'s local-first architecture combines combines local DBs (e.g., IndexedDB) with our custom sync engine to minimize the need for loading states and spinners "
+        description: "Basic\'s local-first architecture combines local DBs (e.g., IndexedDB) with our custom sync engine to minimize the need for loading states and spinners "
     },
     {
         title: "Plug-and-play Auth",

@@ -30,7 +30,7 @@ export default function Products() {
             titleColor: 'text-green-800 dark:text-green',
             cardColor: 'bg-green dark:bg-green-800',
             subtitleColor: 'text-green-700 dark:text-green-400',
-            textColor: 'text-green-500',
+            textColor: 'text-green-600 dark:text-green-500',
             content: [
                 {
                     text: 'User-owned data stores are a new paradigm for user-data storage. Instead of storing your users\' data to a central database for each of your applications, you can directly read / write to your users\' data stores.',
@@ -59,7 +59,7 @@ export default function Products() {
             titleColor: 'text-indigo-800 dark:text-indigo',
             cardColor: 'bg-indigo dark:bg-indigo-800',
             subtitleColor: 'text-indigo-700 dark:text-indigo-400',
-            textColor: 'text-indigo-500',
+            textColor: 'text-indigo-600 dark:text-indigo-500',
             content: [
                 {
                     text: 'We want to make the developer experience for our builders exceptional.',
@@ -98,12 +98,12 @@ export default function Products() {
             titleColor: 'text-pink-800 dark:text-pink',
             cardColor: 'bg-pink dark:bg-pink-800',
             subtitleColor: 'text-pink-700 dark:text-pink-400',
-            textColor: 'text-pink-500',
+            textColor: 'text-pink-600 dark:text-pink-500',
             content: [
                 {
                     text: 'We\'re on a bold and ambitious mission to dismantle walled gardens and replace them with a collaborative and frictionless user-owned web.',
                     text2: 'We think the internet can work better when data is user-owned. User-owned data is more interoperable, secure, and better for analytics - but it\'s also fairer.',
-                    text3: 'To achieve this, we\'ve designed the Basic protocol to be an open, federated layer which powers our data stores. Data in data stores are ever-lasting because it can accessed by spinning up a server via its APIs, even if Basic were to ever become obsolete.',
+                    text3: 'To achieve this, we\'ve designed the Basic protocol to be an open, federated layer which powers our data stores. Data in data stores are ever-lasting because it can be accessed by spinning up a server via its APIs, even if Basic were to ever become obsolete.',
                     text4: 'We also understand that the future of the internet is only as powerful as its adoption - therefore, we currently invite developers to contribute to and partake in the Basic protocol.',
                     url: 'https://github.com/basicdb',
                     urlText: 'View Basic codebase',
@@ -117,7 +117,7 @@ export default function Products() {
         <div>
             <h2 className='h-[15vh] text-center mt-[5vh] w-[calc(100%-2rem)] mx-4'>
                 <span className='text-green-700 dark:text-green text-3xl md:text-4xl lg:text-5xl font-semibold'>data in users' hands, </span>
-                <span className='text-pink-500 dark:text-pink-500 text-3xl md:text-4xl lg:text-5xl font-semibold'>development in yours :)</span>
+                <span className='text-pink-600 dark:text-pink-500 text-3xl md:text-4xl lg:text-5xl font-semibold'>development in yours :)</span>
             </h2>
             {mediumCardElements.map((card, index) => (
                 <MediumCard key={index} {...card} />
