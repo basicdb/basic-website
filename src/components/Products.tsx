@@ -2,6 +2,7 @@ import MediumCard from '@/components/MediumCard';
 import moreBenefits from '@/utils/moreBenefits';
 import Benefits from '@/components/Benefits';
 import { OrbitingCirclesDemo } from '@/components/RotatingCircles';
+import { MarqueeDemo } from '@/components/Marquee';
 
 type MediumCardProps = {
     title: string;
@@ -117,10 +118,11 @@ export default function Products() {
 
     return (
         <div>
-            <h2 className='h-[15vh] text-center mt-[5vh] w-[calc(100%-2rem)] mx-4'>
+            <h2 className='h-[10vh] text-center mt-[5vh] w-[calc(100%-2rem)] mx-4'>
                 <span className='text-green-700 dark:text-green text-3xl md:text-4xl lg:text-5xl font-semibold'>data in users' hands, </span>
                 <span className='text-pink-600 dark:text-pink-500 text-3xl md:text-4xl lg:text-5xl font-semibold'>development in yours :)</span>
             </h2>
+            <MarqueeDemo />
             {mediumCardElements.map((card, index) => (
                 <MediumCard key={index} {...card} />
             ))}
