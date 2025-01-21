@@ -7,9 +7,6 @@ const firstRow = [
     'consumer ai',
     'web3',
     'local-first apps',
-    'privacy',
-    'security',
-    'open source',
     'decentralized web',
 ];
 
