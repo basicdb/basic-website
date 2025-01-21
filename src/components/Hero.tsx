@@ -6,7 +6,7 @@ const heroCardElements = {
     image: '/landing-image.jpg',
     title: 'build on the user-owned web',
     titleColor: 'text-green-100 dark:text-black',
-    subtitle: 'ship powerful apps with our new database where users own their data',
+    subtitle: 'ship powerful apps with our new database that gives users control of their data',
     pillText: 'npm i @basictech/react',
     backgroundEffect: 'brightness-95',
     buttonText: 'talk to a founder',
