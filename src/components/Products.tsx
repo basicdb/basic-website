@@ -1,6 +1,7 @@
 import MediumCard from '@/components/MediumCard';
 import moreBenefits from '@/utils/moreBenefits';
 import Benefits from '@/components/Benefits';
+import { OrbitingCirclesDemo } from '@/components/RotatingCircles';
 
 type MediumCardProps = {
     title: string;
@@ -21,6 +22,7 @@ type MediumCardProps = {
         comingSoon?: string;
     }>;
     image?: string;
+    imageComponent?: React.ReactNode;
 };
 
 export default function Products() {
@@ -51,7 +53,7 @@ export default function Products() {
                     comingSoon: 'Self-hosting will be available soon.'
                 },
             ],
-            image: '/user-owned.svg',
+            imageComponent: <OrbitingCirclesDemo />,
         },
         {
             title: 'developer platform',

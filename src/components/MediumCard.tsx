@@ -9,9 +9,10 @@ interface MediumCardProps {
     textColor: string;
     content: Array<{ subtitle?: string, text: string, text2?: string, text3?: string, text4?: string, comingSoon?: string, url?: string, urlText?: string }>;
     image?: string;
+    imageComponent?: React.ReactNode;
 }
 
-export default function MediumCard({ title, titleColor, cardColor, subtitleColor, textColor, content, image, layout }: MediumCardProps) {
+export default function MediumCard({ title, titleColor, cardColor, subtitleColor, textColor, content, image, layout, imageComponent }: MediumCardProps) {
     return (
         <div className={`w-[calc(100%-2rem)] lg:w-[calc(100%-10rem)] rounded-3xl mx-4 lg:mx-20 flex flex-col-reverse md:flex-row gap-10 lg:gap-16 ${cardColor} p-10 md:p-12 lg:p-16 mb-5 items-center`}>
             <div className={`w-full ${layout === 'grid' ? 'flex flex-col' : 'lg:w-1/2'}`}>
@@ -30,9 +31,15 @@ export default function MediumCard({ title, titleColor, cardColor, subtitleColor
                     ))}
                 </div>
             </div>
-            {image && <div className="w-full lg:w-1/2 xl:p-4">
-                <Image src={image} alt={title} width={500} height={500} className="w-full" />
-            </div>}
+            {image ? (
+                <div className="w-full lg:w-1/2 xl:p-4">
+                    <Image src={image} alt={title} width={500} height={500} className="w-full" />
+                </div>
+            ) : imageComponent ? (
+                <div className="w-full lg:w-1/2 xl:p-4">
+                    {imageComponent}
+                </div>
+            ) : null}
         </div>
     )
 }
