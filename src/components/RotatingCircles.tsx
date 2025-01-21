@@ -25,7 +25,7 @@ export function OrbitingCirclesDemo() {
                 <MessagesSquareIcon />
                 <MailIcon />
             </OrbitingCircles>
-            <OrbitingCircles radius={95} path={false} reverse speed={1} className="text-green-500">
+            <OrbitingCircles radius={95} path={false} speed={1.2} className="text-green-500">
                 <FileImageIcon />
                 <FingerprintIcon />
                 <IdCardIcon />
