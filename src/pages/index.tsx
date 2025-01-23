@@ -5,6 +5,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { TwitterIcon, GithubIcon } from 'lucide-react';
 import Script from 'next/script'
+import { RiBlueskyLine } from "react-icons/ri";
 
 import Hero from '@/components/Hero';
 import Products from '@/components/Products';
@@ -85,6 +86,9 @@ const NavBar = () => {
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1 space-x-4 flex items-center">
+            <li><a className="px-3 py-2" href="https://basictech.bsky.social" target="_blank" rel="noreferrer">
+              <RiBlueskyLine className="w-5 h-5" />
+            </a></li>
             <li><a className="px-3 py-2" href="https://github.com/basicdb" target="_blank" rel="noreferrer"><GithubIcon className="w-5 h-5" /></a></li>
             <li><a className="px-3 py-2" href="https://twitter.com/basic_db" target="_blank" rel="noreferrer"><TwitterIcon className="w-5 h-5" /></a></li>
             <li><a className="btn btn-ghost" href="https://docs.basic.tech/" target="_blank" rel="noreferrer">docs</a></li>
