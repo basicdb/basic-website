@@ -19,7 +19,7 @@ const heroCardElements = {
 
 export default function Hero() {
     return (
-        <div className='w-full h-[95vh]'>
+        <div className='w-full h-[90vh]'>
             <GiantCard {...heroCardElements} />
         </div>
     )
