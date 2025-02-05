@@ -1,7 +1,6 @@
 import MediumCard from '@/components/MediumCard';
 import moreBenefits from '@/utils/moreBenefits';
 import Benefits from '@/components/Benefits';
-import { OrbitingCirclesDemo } from '@/components/RotatingCircles';
 import { MarqueeDemo } from '@/components/Marquee';
 
 type MediumCardProps = {
@@ -23,6 +22,7 @@ type MediumCardProps = {
         comingSoon?: string;
     }>;
     image?: string;
+    video?: string;
     imageComponent?: React.ReactNode;
 };
 
@@ -54,7 +54,7 @@ export default function Products() {
                     comingSoon: 'Self-hosting will be available soon.'
                 },
             ],
-            imageComponent: <OrbitingCirclesDemo />,
+            video: '/user-owned-animation.mp4',
         },
         {
             title: 'developer platform',
@@ -112,7 +112,7 @@ export default function Products() {
                     urlText: 'View Basic codebase',
                 },
             ],
-            image: '/protocol.svg',
+            video: '/network-animation.mp4',
         }
     ]
 
