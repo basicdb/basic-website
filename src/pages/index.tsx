@@ -86,7 +86,7 @@ const NavBar = () => {
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1 space-x-4 flex items-center">
-            <li><a className="px-3 py-2" href="https://basictech.bsky.social" target="_blank" rel="noreferrer">
+            <li><a className="px-3 py-2" href="https://bsky.app/profile/basic.tech" target="_blank" rel="noreferrer">
               <RiBlueskyLine className="w-5 h-5" />
             </a></li>
             <li><a className="px-3 py-2" href="https://github.com/basicdb" target="_blank" rel="noreferrer"><GithubIcon className="w-5 h-5" /></a></li>
