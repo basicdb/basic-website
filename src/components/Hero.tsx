@@ -7,7 +7,7 @@ const heroCardElements = {
     title: 'build on the user-owned web',
     titleColor: 'text-green-100 dark:text-black',
     subtitle: 'ship powerful apps with our new database that gives users control of their data',
-    pillText: 'npm i @basictech/react',
+    pillText: 'npx create-lofi-app',
     backgroundEffect: 'brightness-95',
     buttonText: 'talk to a founder',
     buttonURL: '#speak-to-a-basic-founder',
