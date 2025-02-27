@@ -32,7 +32,7 @@ export default function Home() {
       <Script strategy="afterInteractive" data-domain="basic.tech" src="https://plausible.io/js/script.js" />
       <main className="flex flex-col items-center bg-green-100 dark:bg-black min-h-screen overflow-x-hidden">
         <div className="w-full">
-          <Banner />
+          {/* <Banner /> */}
           <NavBar />
           <Hero />
           <Products />
@@ -63,7 +63,7 @@ const Banner = () => {
 
 const NavBar = () => {
   return (
-    <div className="navbar bg-opacity-20 absolute z-50 top-10 left-0 right-0 py-4 px-8">
+    <div className="navbar bg-opacity-20 absolute z-50 top-5 left-0 right-0 py-4 px-8">
       <div className="w-[calc(100%-2rem)] mx-4 my-2 flex justify-between items-center text-green-100 dark:text-black px-2">
         <div className="flex-1 flex items-center">
           <a className="btn btn-ghost normal-case text-xl flex items-center" href="/">
