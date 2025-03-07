@@ -16,7 +16,7 @@ const heroCardElements = {
 
 export default function Pricing() {
     return (
-        <div className='w-full h-[50vh]'>
+        <div className='w-full min-h-[50vh] py-8'>
             <GiantCard {...heroCardElements} />
         </div>
     )

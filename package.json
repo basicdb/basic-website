@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@calcom/embed-react": "^1.5.2",
     "@heroicons/react": "^2.1.5",
     "@radix-ui/react-tabs": "^1.1.1",
     "@types/node": "18.15.3",
