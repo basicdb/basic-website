@@ -1,5 +1,4 @@
-
-import { CalendarIcon } from 'lucide-react';
+import { StarIcon } from 'lucide-react';
 import GiantCard from './GiantCard';
 
 const heroCardElements = {
@@ -9,17 +8,18 @@ const heroCardElements = {
     subtitle: 'ship powerful apps with our new database that gives users control of their data',
     pillText: 'npx create-lofi-app',
     backgroundEffect: 'brightness-95',
-    buttonText: 'talk to a founder',
-    buttonURL: '#speak-to-a-basic-founder',
+    buttonText: 'us on GitHub',
+    buttonURL: 'https://github.com/basicdb/create-lofi-app',
+    buttonTarget: '_blank',
     buttonBorderColor: 'border-indigo-700/80 dark:border-indigo-700/70',
-    buttonIcon: <CalendarIcon className='w-5 h-5' />,
-    buttonColor: 'bg-gradient-to-r from-green-700/80 to-indigo-700/80 dark:from-green-700/70 dark:to-indigo-700/70'
+    buttonIcon: <StarIcon className='w-5 h-5' />,
+    buttonColor: 'bg-gradient-to-r from-green-700/80 to-indigo-700/80 dark:from-green-700/70 dark:to-indigo-700/70',
+    video: '/create-lofi-app.mp4'
 }
-
 
 export default function Hero() {
     return (
-        <div className='w-full h-[90vh]'>
+        <div className='w-full min-h-[90vh] lg:h-[90vh]'>
             <GiantCard {...heroCardElements} />
         </div>
     )
