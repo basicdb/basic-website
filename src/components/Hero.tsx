@@ -2,7 +2,7 @@ import { StarIcon } from 'lucide-react';
 import GiantCard from './GiantCard';
 
 const heroCardElements = {
-    image: '/landing-image.jpg',
+    image: '/landing-image-min.jpg',
     title: 'build on the user-owned web',
     titleColor: 'text-green-100 dark:text-black',
     subtitle: 'ship powerful apps with our new database that gives users control of their data',
