@@ -45,19 +45,19 @@ export const NavBar = () => {
 export const Footer = () => {
     return (
         <footer className="footer sm:footer-horizontal text-base-content p-10 border-t border-black dark:border-white">
-            <aside className="flex items-center gap-4">
+            <aside className="flex items-center gap-4 lg:mt-10">
                 <div>
                     <Image
                         alt="logo"
-                        width={32}
-                        height={32}
+                        width={50}
+                        height={50}
                         src="/logo_dark.png"
                         className="block dark:hidden"
                     />
                     <Image
                         alt="logo"
-                        width={32}
-                        height={32}
+                        width={50}
+                        height={50}
                         src="/logo_light.png"
                         className="hidden dark:block"
                     />

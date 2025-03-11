@@ -1,6 +1,7 @@
 interface GiantCardProps {
     image: string;
     title?: string;
+    titleStyle?: string;
     subtitle?: string;
     blurb?: string;
     blurb2?: string;
@@ -15,7 +16,7 @@ interface GiantCardProps {
     video?: string;
 }
 
-export default function GiantCard({ image, title, subtitle, blurb, blurb2, pillText, buttonText, buttonURL, buttonTarget, buttonBorderColor, buttonIcon, buttonColor, backgroundEffect, video }: GiantCardProps) {
+export default function GiantCard({ image, title, titleStyle, subtitle, blurb, blurb2, pillText, buttonText, buttonURL, buttonTarget, buttonBorderColor, buttonIcon, buttonColor, backgroundEffect, video }: GiantCardProps) {
     const handlePillClick = (event: React.MouseEvent<HTMLElement>) => {
         navigator.clipboard.writeText(pillText || '');
         const el = event.currentTarget;
@@ -41,7 +42,7 @@ export default function GiantCard({ image, title, subtitle, blurb, blurb2, pillT
                             {pillText}
                         </div>
                     )}
-                    <h1 className={`text-green-100 text-5xl sm:text-6xl lg:mt-0 ${video ? 'mt-10' : ''} font-bold drop-shadow-lg`}>{title}</h1>
+                    <h1 className={`text-green-100 ${titleStyle} lg:mt-0 ${video ? 'mt-10' : ''} font-bold drop-shadow-lg`}>{title}</h1>
                     {subtitle && <h2 className='text-green-100 text-xl drop-shadow-lg mt-4'>{subtitle}</h2>}
                     {blurb && <p className='text-green-100 text-xl sm:text-2xl font-semibold drop-shadow-lg mt-8'>{blurb}</p>}
                     {blurb2 && <p className='text-green-100 text-xl sm:text-2xl font-semibold drop-shadow-lg mt-4'>{blurb2}</p>}

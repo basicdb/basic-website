@@ -4,8 +4,9 @@ import JoinDiscord from '@/components/JoinDiscord';
 import { NavBar, Footer } from '@/components/NavFooter';
 
 const heroCardElements = {
-    image: '/pricing-hero.png',
+    image: '/pricing-hero.webp',
     title: 'always free for indie hackers.',
+    titleStyle: 'text-4xl sm:text-5xl',
     backgroundEffect: 'brightness-50'
 };
 
