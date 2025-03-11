@@ -14,14 +14,14 @@ export const NavBar = () => {
                             alt="logo"
                             width={32}
                             height={32}
-                            src="/logo_light.png"
+                            src="/logo_light.webp"
                             className="mr-2 block dark:hidden"
                         />
                         <Image
                             alt="logo"
                             width={32}
                             height={32}
-                            src="/logo_dark.png"
+                            src="/logo_dark.webp"
                             className="mr-2 hidden dark:block"
                         />
                         <span className='font-bold'>Basic</span>
@@ -51,14 +51,14 @@ export const Footer = () => {
                         alt="logo"
                         width={50}
                         height={50}
-                        src="/logo_dark.png"
+                        src="/logo_dark.webp"
                         className="block dark:hidden"
                     />
                     <Image
                         alt="logo"
                         width={50}
                         height={50}
-                        src="/logo_light.png"
+                        src="/logo_light.webp"
                         className="hidden dark:block"
                     />
                 </div>
