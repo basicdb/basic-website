@@ -6,7 +6,7 @@ const heroCardElements = {
     title: 'you don\'t have to build alone!',
     titleStyle: 'text-3xl sm:text-4xl',
     subtitle: 'join our discord for an active community of builders, and get live support from our founders',
-    backgroundEffect: 'brightness-50 bg-[50%_25%]',
+    backgroundEffect: 'brightness-50 bg-[center_30%]',
     buttonText: 'join our Discord',
     buttonURL: 'https://discord.gg/M57gcazvYk',
     buttonTarget: '_blank',
