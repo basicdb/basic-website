@@ -18,7 +18,7 @@ export default function Pricing() {
                 <meta name="description" content="Pricing plans for Basic Database - from free tier to enterprise solutions" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
-            <section className="bg-white dark:bg-black w-full min-h-screen flex flex-col">
+            <section className="bg-green-100 dark:bg-black w-full min-h-screen flex flex-col">
                 <NavBar />
                 <div className="w-full h-[40vh]">
                     <GiantCard {...heroCardElements} />

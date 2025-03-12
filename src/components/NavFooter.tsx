@@ -25,6 +25,7 @@ export const NavBar = () => {
                             className="mr-2 hidden dark:block"
                         />
                         <span className='font-bold'>Basic</span>
+                        <h4 className="ml-2 text-xs italic font-light bg-indigo-800 text-green-200 px-2 py-0.5 rounded-full ">beta</h4>
                     </a>
                 </div>
                 <div className="flex-none">
