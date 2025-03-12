@@ -31,8 +31,11 @@ export default function GiantCard({ image, title, titleStyle, subtitle, blurb, b
         <div className="relative w-[calc(100%-2rem)] h-full m-4">
             {/* Blurred background layer */}
             <div
-                className={`absolute inset-0 rounded-3xl bg-cover bg-center bg-no-repeat ${backgroundEffect}`}
-                style={{ backgroundImage: `url(${image})` }}
+                className={`absolute inset-0 rounded-3xl bg-cover bg-no-repeat ${backgroundEffect}`}
+                style={{
+                    backgroundImage: `url(${image})`,
+                    backgroundPosition: 'var(--bg-position, center)'
+                }}
             />
             {/* Content layer */}
             <div className="relative w-full h-full flex flex-col lg:flex-row">
