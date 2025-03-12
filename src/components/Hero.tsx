@@ -3,10 +3,10 @@ import GiantCard from './GiantCard';
 
 const heroCardElements = {
     image: '/landing-image.webp',
-    title: 'build on the user-owned web',
-    titleStyle: 'text-5xl sm:text-6xl',
+    title: 'database for the user-owned web',
+    titleStyle: 'text-4xl sm:text-5xl',
     titleColor: 'text-green-100 dark:text-black',
-    subtitle: 'ship powerful apps with our new database that gives users control of their data',
+    subtitle: 'build blazing-fast, hyper-personalized apps with our “database-per-user” tech',
     backgroundEffect: 'brightness-95',
     buttonText: 'us on GitHub',
     buttonURL: 'https://github.com/basicdb/create-lofi-app',

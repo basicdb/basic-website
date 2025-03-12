@@ -2,12 +2,12 @@ import GiantCard from '@/components/GiantCard';
 import { FaDiscord } from 'react-icons/fa';
 
 const heroCardElements = {
-    image: '/bonfire.png',
+    image: '/discord-hero.webp',
     title: 'you don\'t have to build alone!',
     titleStyle: 'text-3xl sm:text-4xl',
     subtitle: 'join our discord for an active community of builders, and get live support from our founders',
     backgroundEffect: ' brightness-50',
-    buttonText: 'join Discord',
+    buttonText: 'join our Discord',
     buttonURL: 'https://discord.gg/M57gcazvYk',
     buttonTarget: '_blank',
     buttonBorderColor: 'border-pink-700 dark:border-pink-700',
@@ -17,7 +17,7 @@ const heroCardElements = {
 
 export default function JoinDiscord() {
     return (
-        <div className='w-full min-h-[50vh] py-8'>
+        <div className='w-full h-[60vh] py-8'>
             <GiantCard {...heroCardElements} />
         </div>
     )

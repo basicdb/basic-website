@@ -20,11 +20,11 @@ export default function Pricing() {
             </Head>
             <section className="bg-white dark:bg-black w-full min-h-screen flex flex-col">
                 <NavBar />
-                <div className="w-full h-[35vh]">
+                <div className="w-full h-[40vh]">
                     <GiantCard {...heroCardElements} />
                 </div>
 
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 py-16 w-full relative">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 w-full relative">
                     <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 sm:mt-20 lg:max-w-6xl lg:grid-cols-3">
                         {/* Free Plan */}
                         <div className="ring-1 ring-gray-200 dark:ring-gray-800 rounded-3xl p-8 sm:p-10">

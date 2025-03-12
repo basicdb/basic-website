@@ -76,7 +76,8 @@ export const Footer = () => {
             </nav>
             <nav>
                 <h6 className="footer-title">Company</h6>
-                <a href="/pricing" target="_blank" rel="noreferrer" className="link link-hover">Pricing</a>
+                <a href="/about" className="link link-hover">About us</a>
+                <a href="/pricing" className="link link-hover">Pricing</a>
             </nav>
             <nav>
                 <h6 className="footer-title">Socials</h6>
