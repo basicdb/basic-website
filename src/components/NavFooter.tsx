@@ -30,11 +30,11 @@ export const NavBar = () => {
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal px-1 flex items-center">
-                        <li><a className="px-3 py-2" href="https://bsky.app/profile/basic.tech" target="_blank" rel="noreferrer">
+                        <li className="hidden sm:block"><a className="px-3 py-2" href="https://bsky.app/profile/basic.tech" target="_blank" rel="noreferrer">
                             <RiBlueskyLine className="w-5 h-5" />
                         </a></li>
                         <li><a className="px-3 py-2" href="https://discord.gg/M57gcazvYk" target="_blank" rel="noreferrer"><FaDiscord className="w-5 h-5" /></a></li>
-                        <li><a className="px-3 py-2" href="https://twitter.com/basic_db" target="_blank" rel="noreferrer"><TwitterIcon className="w-5 h-5" /></a></li>
+                        <li className="hidden sm:block"><a className="px-3 py-2" href="https://twitter.com/basic_db" target="_blank" rel="noreferrer"><TwitterIcon className="w-5 h-5" /></a></li>
                         <li><a className="btn btn-ghost" href="https://docs.basic.tech/" target="_blank" rel="noreferrer">docs</a></li>
                     </ul>
                 </div>
@@ -47,26 +47,28 @@ export const Footer = () => {
     return (
         <footer className="footer sm:footer-horizontal text-base-content p-10 border-t border-black dark:border-white">
             <aside className="flex items-center gap-4 lg:mt-10">
-                <div>
-                    <Image
-                        alt="logo"
-                        width={50}
-                        height={50}
-                        src="/logo_dark.webp"
-                        className="block dark:hidden"
-                    />
-                    <Image
-                        alt="logo"
-                        width={50}
-                        height={50}
-                        src="/logo_light.webp"
-                        className="hidden dark:block"
-                    />
-                </div>
-                <p>
-                    <span className="text-xl font-semibold block">Basic</span>
-                    Made with love by our team ❤️
-                </p>
+                <a href="/" className="rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200 flex items-center gap-4 p-2">
+                    <div>
+                        <Image
+                            alt="logo"
+                            width={50}
+                            height={50}
+                            src="/logo_dark.webp"
+                            className="block dark:hidden"
+                        />
+                        <Image
+                            alt="logo"
+                            width={50}
+                            height={50}
+                            src="/logo_light.webp"
+                            className="hidden dark:block"
+                        />
+                    </div>
+                    <p>
+                        <span className="text-xl font-semibold block">Basic</span>
+                        Made with love by our team ❤️
+                    </p>
+                </a>
             </aside>
             <nav>
                 <h6 className="footer-title">Dev platform</h6>
@@ -77,7 +79,7 @@ export const Footer = () => {
             </nav>
             <nav>
                 <h6 className="footer-title">Company</h6>
-                <a href="/about" className="link link-hover">About us</a>
+                {/* <a href="/about" className="link link-hover">About us</a> */}
                 <a href="/pricing" className="link link-hover">Pricing</a>
             </nav>
             <nav>
