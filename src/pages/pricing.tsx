@@ -6,7 +6,7 @@ import { NavBar, Footer } from '@/components/NavFooter';
 const heroCardElements = {
     image: '/pricing-hero.webp',
     title: 'always free for indie hackers.',
-    titleStyle: 'text-4xl sm:text-5xl',
+    titleStyle: 'text-4xl md:text-6xl sm:text-5xl',
     backgroundEffect: 'brightness-50'
 };
 
@@ -20,7 +20,7 @@ export default function Pricing() {
             </Head>
             <section className="bg-green-100 dark:bg-black w-full min-h-screen flex flex-col">
                 <NavBar />
-                <div className="w-full h-[40vh]">
+                <div className="w-full h-[40vh] landscape:h-[70vh] md:landscape:h-[40vh]">
                     <GiantCard {...heroCardElements} />
                 </div>
 

@@ -6,7 +6,7 @@ import GiantCard from '@/components/GiantCard';
 const heroCardElements = {
     image: '/events-hero.webp',
     title: 'we like to bring our hackers together for cool events.',
-    titleStyle: 'text-4xl sm:text-5xl',
+    titleStyle: 'text-4xl md:text-6xl lg:text-5xl',
     backgroundEffect: 'brightness-50'
 };
 
@@ -36,7 +36,7 @@ export default function Events() {
             </Head>
             <section className="bg-green-100 dark:bg-black w-full min-h-screen flex flex-col">
                 <NavBar />
-                <div className="w-full h-[45vh]">
+                <div className="w-full h-[60vh] landscape:h-[80vh] md:landscape:h-[60vh]">
                     <GiantCard {...heroCardElements} />
                 </div>
                 <div className="container mx-auto py-16 px-4 xl:px-20">
