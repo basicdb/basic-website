@@ -5,8 +5,8 @@ import { NavBar, Footer } from '@/components/NavFooter';
 
 const heroCardElements = {
     image: '/aboutus-hero.webp',
-    title: 'serendipity through a cleaner database architecture',
-    titleStyle: 'text-4xl sm:text-5xl',
+    title: 'make magic with Basic.',
+    titleStyle: 'text-4xl md:text-6xl sm:text-5xl',
     backgroundEffect: 'brightness-50'
 };
 
@@ -20,7 +20,7 @@ export default function About() {
             </Head>
             <section className="bg-green-100 dark:bg-black w-full min-h-screen flex flex-col">
                 <NavBar />
-                <div className="w-full h-[50vh]">
+                <div className="w-full h-[40vh] landscape:h-[70vh] md:landscape:h-[40vh]">
                     <GiantCard {...heroCardElements} />
                 </div>
 
@@ -28,65 +28,61 @@ export default function About() {
                     <div className="mx-auto mt-16 max-w-3xl">
                         <div className="space-y-6">
                             <div>
-                                <p className="text-gray-600 dark:text-gray-400">Basic was born from the frustration with existing solutions — where the simplest tasks required increasingly complex code to be written.</p>
+                                <p className="text-gray-600 dark:text-gray-400">The next 1 billion apps will be different. They will be built at exponentially faster rates using newer tools, and by a broader range of people.</p>
                             </div>
                             <div>
-                                <p className="text-gray-600 dark:text-gray-400">We wanted to build a simpler internet where:</p>
-                            </div>
-
-                            <div>
-                                <h2 className="text-3xl font-bold text-black dark:text-white">users store their data, not applications</h2>
+                                <p className="text-gray-600 dark:text-gray-400">Yet one thing will remain the same — the best of them will still feel like magic.</p>
                             </div>
                             <div>
-                                <p className="text-gray-600 dark:text-gray-400">Rather than applications storing data of all their users, what if users stored their data from all their apps?</p>
+                                <p className="text-gray-600 dark:text-gray-400">We remember experiencing it many times, from the real-time collaboration in Figma, and the open ecosystem of Raycast, to the potential for creativity with genAI. Making magic isn’t easy because it requires complex code, but what we consider magic today has already been solved for. It ought to be made accessible so that we can focus on creating new types of magic.</p>
                             </div>
                             <div>
-                                <p className="text-gray-600 dark:text-gray-400">Users could then provision access of all their existing data to any new applications they onboard onto. Imagine accessing a new social media page but instead of it being empty, you already had your existing friends, photos, and posts. Similarly, you could cut off access of your data from any “evil” apps with just a switch-flip without worrying about your data being sent to them forever.</p>
-                            </div>
-                            <div>
-                                <p className="text-gray-600 dark:text-gray-400">Developers could build in a much leaner way without worrying about data bloat and management. They could focus on building better applications instead of handling privacy, security and compliance concerns. They could ship more features without worry as much about breaking their existing databases. They could iterate much quicker with a smaller team by focussing on user experiences and interfaces instead of re-solving data storage.</p>
-                            </div>
-                            <div>
-                                <p className="text-gray-600 dark:text-gray-400">Crazy thing is, we&apos;ve already achieved this with some aspects of the internet today — like emails, and even websites themselves. You could easily move email clients or website hosting services because you own and store those pieces of information. The best technologies continue to be open.</p>
+                                <p className="text-gray-600 dark:text-gray-400">At Basic, we believe it’s time to raise the bar for infrastructure to usher in this new internet. </p>
                             </div>
 
                             <div>
-                                <h2 className="text-3xl font-bold text-black dark:text-white">we didn&apos;t need to make API calls just to load simple text</h2>
+                                <h2 className="text-3xl font-bold text-black dark:text-white">AI will be hyper-personalized</h2>
                             </div>
                             <div>
-                                <p className="text-gray-600 dark:text-gray-400">Rather than making a request to the cloud via a satellite for even simple tasks, what if our devices (i.e., phones, laptops) were utilized to their full potential while maintaining cloud-like benefits?</p>
-                            </div>
-                            <div>
-                                <p className="text-gray-600 dark:text-gray-400">It&apos;s silly that the overpowered devices we hold in our hands — that we continue to pay and upgrade annually or biannually for their latest tech — currently are only being used as API wrappers. Every button click creates a spinner loading state as the supercomputers we hold onto ping a satellite in space which then pings a data center hundreds or thousands of miles away just to retrieve even a few kilobytes of data.</p>
-                            </div>
-                            <div>
-                                <p className="text-gray-600 dark:text-gray-400">Instead, read / writes could happen directly on devices while syncing state automatically in the background — this would eliminate latency for loading data entirely. It’d create a seamless way to work not only when transitioning between devices, but also while weaving in and out of wifi connection. Imagine jotting down a thought on your phone while in the cab, then picking up your laptop to flesh it out while on your flight, and finally proofreading it on your tablet cozily in your bed when you reach home.</p>
-                            </div>
-                            <div>
-                                <p className="text-gray-600 dark:text-gray-400">Some of the best tools that you may already be using (e.g., Figma, Linear, Superhuman, Raycast) are built on this architecture and have surpassed their competition simply because they work a LOT better for their users.</p>
+                                <p className="text-gray-600 dark:text-gray-400">Data remains gold even in a post-AI world where apps and agents will be as powerful as the context they have. Developers will focus on function instead of having to connect the spread of data across a user’s apps. We will build on top of the “infinite context” of our users where their digital interactions even outside our own apps will improve all aspects of personalization for them.</p>
                             </div>
 
                             <div>
-                                <h2 className="text-3xl font-bold text-black dark:text-white">applications were <i>actually</i> personalized to users</h2>
+                                <h2 className="text-3xl font-bold text-black dark:text-white">Apps will be local-first</h2>
                             </div>
                             <div>
-                                <p className="text-gray-600 dark:text-gray-400">Rather than apps being prioritized for the masses, what if they were able to be truly personalized to each and every one of our preferences and needs?</p>
+                                <p className="text-gray-600 dark:text-gray-400">Devices and models continue to get powerful, and there’s a lot more we can do with what our users hold in their hands before punting it to the cloud. Apps will have instant page loads, and work seamlessly across devices even with spotty wifi connections. Personal AI agents will be highly private and secure.</p>
+                            </div>
+
+                            <div>
+                                <h2 className="text-3xl font-bold text-black dark:text-white">Collaboration will be real-time</h2>
                             </div>
                             <div>
-                                <p className="text-gray-600 dark:text-gray-400">We want to push the boundaries of tech as we know it today. If we could learn better because our teachers knew their exact strengths and weaknesses and how to best supplement them; if doctors and other professionals knew all our relevant history and context even if its their first time seeing us; if movies, tv shows, songs, and artistic experiences could be uniquely generated for us, not just discovered, based on our preferences and moods; and if ecommerce wasn't just being suggested the same vacuum cleaner over and over despite having just bought it, we might finally enter a new era of personalization.</p>
+                                <p className="text-gray-600 dark:text-gray-400">The lack of collaboration in real-time causes information to exist in multiple places with the chance of inconsistencies. Tech like Google Drive, Figma, and CRDTs have made huge strides in this — real-time collaboration will become the default for every app.</p>
+                            </div>
+
+                            <div>
+                                <h2 className="text-3xl font-bold text-black dark:text-white">Data will be user-owned</h2>
                             </div>
                             <div>
-                                <p className="text-gray-600 dark:text-gray-400">We want to foster more cozy corners on the internet, where applications didn’t need to be built for all 8 billion of us at the cost of personalization. Smaller, leaner apps could be built for fewer folks that REALLY love them because they are easier to spin up and maintain. We could finally start seeing the “mom and pop shops” of software, where people build for their communities rather than for the masses.</p>
+                                <p className="text-gray-600 dark:text-gray-400">Developers will build lean apps that read data directly from their users. We will iterate and ship faster without worrying about compliance and security. Onboarding users will become instant as every app will start with existing context (e.g., a new user on a new social media platform will bring over all their existing followers and relevant posts). AI / ML models will improve securely without any leakage of sensitive information.</p>
+                            </div>
+
+                            <div>
+                                <h2 className="text-3xl font-bold text-black dark:text-white">Systems will be interoperable</h2>
+                            </div>
+                            <div>
+                                <p className="text-gray-600 dark:text-gray-400">Schemas will be public for developers to build on top of each other’s applications. Apps will speak to each other and allow information to flow between them in real-time. Teams will access all relevant information instantly while referring to a single source of truth. Friends and family will share memories and experiences seamlessly despite using different apps.</p>
                             </div>
 
                             <div>
                                 <h2 className="text-3xl font-bold text-black dark:text-white">… and more!</h2>
                             </div>
                             <div>
-                                <p className="text-gray-600 dark:text-gray-400">Basically (pun intended), we are folks that believe the internet can be a lot better for everyone when certain assumptions are challenged. We&apos;re dedicated to seeing that mission through while understanding it&apos;s a never-ending pursuit. We like bringing people together who have a similar mindset to us because we know that for any surmountable change to occur, we need to empower many more people with the ability to create. And we like having a lot of fun along the way!</p>
+                                <p className="text-gray-600 dark:text-gray-400">We, at Basic, are dedicated to further the rate of innovation for infrastructure alongside the developments in AI and app creation. Meanwhile, we love to gather like-minded people because empowering creators allows for transformational change. And we love having a lot of fun along the way!</p>
                             </div>
                             <div>
-                                <p className="text-gray-600 dark:text-gray-400">If you&apos;d like to chat about building on Basic, work with us, or just to say hi, <a href="mailto:founders@basic.tech" className="text-indigo-500 underline">drop us an email</a>!</p>
+                                <p className="text-gray-600 dark:text-gray-400">If you&apos;d like to chat about building on Basic or work with us, <a href="mailto:founders@basic.tech" className="text-indigo-500 underline">drop us an email</a>!</p>
                             </div>
                         </div>
                     </div>
