@@ -5,7 +5,7 @@ import { NavBar, Footer } from '@/components/NavFooter';
 
 const heroCardElements = {
     image: '/aboutus-hero.webp',
-    title: 'make magic with Basic.',
+    title: 'magic with just a few lines of code.',
     titleStyle: 'text-4xl md:text-6xl sm:text-5xl',
     backgroundEffect: 'brightness-50'
 };
@@ -34,7 +34,7 @@ export default function About() {
                                 <p className="text-gray-600 dark:text-gray-400">Yet one thing will remain the same — the best of them will still feel like magic.</p>
                             </div>
                             <div>
-                                <p className="text-gray-600 dark:text-gray-400">We remember experiencing it many times, from the real-time collaboration in Figma, and the open ecosystem of Raycast, to the potential for creativity with genAI. Making magic isn’t easy because it requires complex code, but what we consider magic today has already been solved for. It ought to be made accessible so that we can focus on creating new types of magic.</p>
+                                <p className="text-gray-600 dark:text-gray-400">We remember experiencing it many times, from the real-time collaboration in Figma, and the open ecosystem of Raycast, to the potential for creativity with genAI. Building apps like these isn’t easy because it requires complex code, despite a lot of the architecture already having been solved for. It ought to be made accessible so that we can focus on creating new types of magic.</p>
                             </div>
                             <div>
                                 <p className="text-gray-600 dark:text-gray-400">At Basic, we believe it’s time to raise the bar for infrastructure to usher in this new internet. </p>
@@ -69,10 +69,10 @@ export default function About() {
                             </div>
 
                             <div>
-                                <h2 className="text-3xl font-bold text-black dark:text-white">Systems will be interoperable</h2>
+                                <h2 className="text-3xl font-bold text-black dark:text-white">Systems will speak to each other</h2>
                             </div>
                             <div>
-                                <p className="text-gray-600 dark:text-gray-400">Schemas will be public for developers to build on top of each other’s applications. Apps will speak to each other and allow information to flow between them in real-time. Teams will access all relevant information instantly while referring to a single source of truth. Friends and family will share memories and experiences seamlessly despite using different apps.</p>
+                                <p className="text-gray-600 dark:text-gray-400">Schemas will be public for developers to build on top of each other’s applications. Apps will allow information to flow between them in real-time. Teams will access all relevant information instantly while referring to a single source of truth. Friends and family will share memories and experiences seamlessly despite using different apps.</p>
                             </div>
 
                             <div>

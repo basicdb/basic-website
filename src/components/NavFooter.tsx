@@ -78,6 +78,11 @@ export const Footer = () => {
                 <a href="https://docs.basic.tech" target="_blank" rel="noreferrer" className="link link-hover">Docs</a>
             </nav>
             <nav>
+                <h6 className="footer-title">Build these</h6>
+                <a href="/ai" className="link link-hover">AI</a>
+                <a href="/local-first" className="link link-hover">Local-first</a>
+            </nav>
+            <nav>
                 <h6 className="footer-title">Company</h6>
                 <a href="/about" className="link link-hover">About us</a>
                 <a href="/pricing" className="link link-hover">Pricing</a>
