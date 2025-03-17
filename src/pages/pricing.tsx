@@ -82,7 +82,7 @@ export default function Pricing() {
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">API access to indices</li>
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">dedicated engineering support</li>
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">SSO</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">99.9% uptime SLAs</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">SLAs</li>
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">SOC II & HIPAA compliance</li>
                             </ul>
                         </div>
