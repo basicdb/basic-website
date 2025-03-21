@@ -39,10 +39,10 @@ export default function Pricing() {
                                 </a>
                             </div>
                             <ul className="mt-8 space-y-3 list-disc pl-5">
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">unlimited projects</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">unlimited users</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">no additional cost for user-data bandwidth</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">access to all dev tools (CLI, admin panel, SDKs)</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">Unlimited projects</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">Unlimited users</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">No additional cost for user-data bandwidth</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">Access to all dev tools (CLI, admin panel, SDKs)</li>
                             </ul>
                         </div>
 
@@ -59,17 +59,17 @@ export default function Pricing() {
                                 </a>
                             </div>
                             <ul className="mt-8 space-y-3 list-disc pl-5">
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">everything in free plan</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">index to view data across all your users in real-time</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">basic user-analytics (e.g., DAU, MAU, user sign-ups)</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">publish to Basic.ID app store</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">Everything in free plan</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">Index to view data across all your users in real-time</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">User-analytics (e.g., DAU, MAU, user sign-ups)</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">Publish to Basic.ID app store</li>
                             </ul>
                         </div>
 
                         {/* Growth Plan */}
                         <div className="ring-1 ring-gray-200 dark:ring-gray-800 rounded-3xl p-8 sm:p-10">
                             <div className="h-56 flex flex-col justify-between">
-                                <h3 className="text-2xl font-bold text-black dark:text-white text-center">growth</h3>
+                                <h3 className="text-2xl font-bold text-black dark:text-white text-center">custom</h3>
                                 <p className="flex items-baseline justify-center gap-x-2">
                                     <span className="text-5xl font-bold text-black dark:text-white">contact us</span>
                                 </p>
@@ -78,9 +78,13 @@ export default function Pricing() {
                                 </a>
                             </div>
                             <ul className="mt-8 space-y-3 list-disc pl-5">
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">everything in startup plan</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">Everything in startup plan</li>
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">API access to indices</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">dedicated engineering support</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">Custom SDKs</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">Dedicated engineering support</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">Automated backups</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">Logging & monitoring</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">Data encryption</li>
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">SSO</li>
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">SLAs</li>
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">SOC II & HIPAA compliance</li>
