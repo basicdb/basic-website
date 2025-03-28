@@ -7,11 +7,8 @@ import Hero from '@/components/Hero'
 import Products from '@/components/Products'
 import JoinDiscord from '@/components/JoinDiscord'
 import { NavBar, Footer } from '@/components/NavFooter'
-// import Banner from '@/components/Banner';
-// import Cal, { useCalEmbed } from '@/components/Cal';
 
 export default function Home() {
-  // useCalEmbed();
   return (
     <>
       <Head>

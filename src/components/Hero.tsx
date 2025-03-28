@@ -3,10 +3,10 @@ import GiantCard from './GiantCard';
 
 const heroCardElements = {
     image: '/landing-image.webp',
-    title: 'programmable user data',
-    titleStyle: 'text-4xl sm:text-5xl',
+    title: 'build powerful apps that understand your users',
+    titleStyle: 'text-4xl',
     titleColor: 'text-green-100 dark:text-black',
-    subtitle: 'build hyper-personalized, local-first apps with Personal Data Stores',
+    subtitle: 'create hyper personalized, local-first apps with PDS datastore-per-user technology',
     backgroundEffect: 'brightness-95',
     buttonText: 'us on GitHub',
     buttonURL: 'https://github.com/basicdb/create-lofi-app',
