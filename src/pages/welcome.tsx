@@ -248,7 +248,7 @@ export default function Home() {
                     </div>
 
                     
-                    <div className="absolute bottom-2 left-0 h-[10px] flex items-center justify-between p-4">
+                    <div className="hidden md:absolute bottom-2 left-0 h-[10px] flex items-center justify-between p-4">
                         
                         <p className="text-[#666666] z-10 text-xs font-mono bg-black rounded-tr-[10px] px-2 py-1">basic | 2025</p>
                         <div className="w-8 h-5 relative -left-3.5 -bottom-2 bg-black rotate-180 [mask-image:_radial-gradient(farthest-corner_at_bottom_left,_transparent_40%,_black_41%)] [-webkit-mask-image:_radial-gradient(circle_at_bottom_left,_transparent_40%,_black_41%)]"></div>
