@@ -8,7 +8,9 @@ import Products from '@/components/Products'
 import JoinDiscord from '@/components/JoinDiscord'
 import { NavBar, Footer } from '@/components/NavFooter'
 import GiantCard from '@/components/GiantCard'
-import { StarIcon } from 'lucide-react'
+import { StarIcon, XIcon } from 'lucide-react'
+import { RiTwitterXLine, RiBlueskyLine } from "react-icons/ri"
+import { FaDiscord } from "react-icons/fa"
 import { motion, AnimatePresence } from 'framer-motion'
 
 const heroCardElements = {
@@ -25,7 +27,7 @@ function DynamicFooter() {
 
     return (
         <motion.div
-            className={`w-full md:w-full md:max-w-xl bg-opacity-60 bg-black rounded-lg mb-0 md:mb-4 mx-auto backdrop-blur-sm flex flex-col gap-0 shadow-lg `}
+            className={`w-full md:w-full md:max-w-xl bg-opacity-60 bg-black mb-0 md:mb-16 mx-auto backdrop-blur-md flex flex-col gap-0 shadow-lg rounded-xl`}
             layout
             transition={{ type: "spring", stiffness: 30, damping: 30 }}
         >
@@ -33,7 +35,7 @@ function DynamicFooter() {
                 <div className="flex gap-2">
                     <motion.button
                         onClick={() => setActiveTab(activeTab === "about" ? null : "about")}
-                        className={`text-white font-bold text-left focus:outline-none px-4 py-2 transition-all duration-200 rounded-md hover:bg-[#5D6B90]/70 ${activeTab === "about" ? "bg-[#5D6B90]/80 text-white" : "bg-black bg-opacity-10"}`}
+                        className={`text-white font-bold text-left focus:outline-none px-4 py-2 transition-all duration-200 rounded-full hover:bg-[#5D6B90]/70 ${activeTab === "about" ? "bg-[#5D6B90]/80 text-white" : "bg-black bg-opacity-10"}`}
                         layout
                     >
                         About
@@ -41,7 +43,7 @@ function DynamicFooter() {
 
                     <motion.button
                         onClick={() => setActiveTab(activeTab === "community" ? null : "community")}
-                        className={`text-white font-bold text-left focus:outline-none px-4 py-2 transition-all duration-200 rounded-md hover:bg-[#5D6B90]/70 ${activeTab === "community" ? "bg-[#5D6B90]/80 text-white" : "bg-black bg-opacity-10"}`}
+                        className={`text-white font-bold text-left focus:outline-none px-4 py-2 transition-all duration-200 rounded-full hover:bg-[#5D6B90]/70 ${activeTab === "community" ? "bg-[#5D6B90]/80 text-white" : "bg-black bg-opacity-10"}`}
                         layout
                     >
                         Community
@@ -134,11 +136,23 @@ function DynamicFooter() {
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     >
-                        <div className="text-white space-y-6 px-4 py-8">
+                        <div className="text-white space-y-4 px-4 py-4">
                             <h2 className="text-lg font-bold">Join Our Community</h2>
                             <p className="text-sm">
-                                We're building a community of developers, designers, and creators who are passionate about the future of the web. Join us to share ideas, get early access to new features, and help shape the future of Basic.
+                                We're building a community of developers, designers, and creators who are passionate about the future of the web. Join us to share ideas, get early access to new features, and shape the future of Basic.
                             </p>
+                            {/* Social Icons */}
+                            <div className="flex gap-2">
+                                <a href="https://x.com/basic_db" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                                    <RiTwitterXLine className="w-6 h-6" />
+                                </a>
+                                <a href="https://bsky.app/profile/basic.tech" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                                    <RiBlueskyLine className="w-6 h-6" />
+                                </a>
+                                <a href="https://discord.gg/M57gcazvYk" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                                    <FaDiscord className="w-6 h-6" />
+                                </a>
+                            </div>
 
                             <div className="mt-8 mb-4">
                                 <video
@@ -169,7 +183,7 @@ function DynamicFooter() {
                         onBlur={() => setInputFocused(false)}
                     />
                     <motion.button
-                        className="absolute right-0 top-0 bottom-0 px-5 bg-gradient-to-r from-transparent to-[#5D6B90]/60 hover:bg-[#5D6B90]/60 text-white transition-colors duration-200 rounded-r-lg"
+                        className={`${!inputFocused && 'hidden'} absolute right-0 top-0 bottom-0 px-5 bg-gradient-to-r from-transparent to-[#5D6B90]/60 hover:bg-[#5D6B90]/60 text-white transition-colors duration-200 rounded-r-lg`}
                         animate={{ opacity: inputFocused ? 1 : 0 }}
                         transition={{ duration: 0.3 }}
                     >
@@ -208,7 +222,7 @@ function DynamicFooter() {
                         animate={{
                             opacity: 1
                         }}
-                        key="discord"
+                        key="discord-mobile"
                         initial={{ opacity: 0 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
@@ -240,15 +254,17 @@ export default function Home() {
                     <div className="flex-1 m-4 rounded-lg flex flex-col justify-between"
                         style={{ backgroundImage: `url(${heroCardElements.image})`, backgroundSize: 'cover', backgroundPosition: 'bottom' }}
                     >
+                        <div className="flex-1 flex mt-20 justify-center ">
+                            <h1 className="p-10 absolute top-20 text-white text-4xl font-bold "> the web in your hands </h1>
+                        </div>
 
-                        <h1 className="p-10 text-white text-4xl font-bold "> welcome to the user-owned web </h1>
 
                         <DynamicFooter />
 
                     </div>
 
                     
-                    <div className="hidden md:absolute bottom-2 left-0 h-[10px] flex items-center justify-between p-4">
+                    <div className=" md:absolute bottom-2 left-0 h-[10px] flex items-center justify-between p-4">
                         
                         <p className="text-[#666666] z-10 text-xs font-mono bg-black rounded-tr-[10px] px-2 py-1">basic | 2025</p>
                         <div className="w-8 h-5 relative -left-3.5 -bottom-2 bg-black rotate-180 [mask-image:_radial-gradient(farthest-corner_at_bottom_left,_transparent_40%,_black_41%)] [-webkit-mask-image:_radial-gradient(circle_at_bottom_left,_transparent_40%,_black_41%)]"></div>
