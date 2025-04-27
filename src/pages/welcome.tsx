@@ -20,10 +20,30 @@ const heroCardElements = {
 const communityVideo = "https://basicwebsitecontent.s3.us-east-2.amazonaws.com/Event+Recap_v3.mp4"
 
 function DynamicFooter() {
-    const [inputFocused, setInputFocused] = React.useState(false);
     const [activeTab, setActiveTab] = React.useState<string | null>(null);
+    const [email, setEmail] = React.useState('');
+    const [screenStatus, setScreenStatus] = React.useState<'init' | 'expanded' | 'loading' | 'success'>('init');
 
     const isExpanded = activeTab !== null;
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!email) return;
+        
+        setScreenStatus('loading');
+        
+        try {
+            // Replace with your actual API endpoint
+            await new Promise(resolve => setTimeout(resolve, 1000)); // Simulating API call
+            setScreenStatus('success');
+        } catch (error) {
+            console.error('Error submitting email:', error);
+            setScreenStatus('expanded');
+        }
+    };
+
+
+    const discordButtonExpanded = screenStatus === 'init' || screenStatus === 'success';
 
     return (
         <motion.div
@@ -174,65 +194,90 @@ function DynamicFooter() {
             </AnimatePresence>
 
             <motion.div className="flex gap-3 items-center p-2 pb-8 md:pb-2  bg-black bg-opacity-40 shadow-lg rounded-b-lg" layout>
-                <div className="relative bg-black bg-opacity-70 rounded-lg flex-1 font-mono">
-                    <input
-                        type="email"
-                        placeholder="email for early access"
-                        className="w-full px-4 py-2 pr-24 bg-transparent rounded text-white focus:outline-none"
-                        onFocus={() => setInputFocused(true)}
-                        onBlur={() => setInputFocused(false)}
-                    />
-                    <motion.button
-                        className={`${!inputFocused && 'hidden'} absolute right-0 top-0 bottom-0 px-5 bg-gradient-to-r from-transparent to-[#5D6B90]/60 hover:bg-[#5D6B90]/60 text-white transition-colors duration-200 rounded-r-lg`}
-                        animate={{ opacity: inputFocused ? 1 : 0 }}
-                        transition={{ duration: 0.3 }}
-                    >
-                        Submit
-                    </motion.button>
-                </div>
-                <motion.button
-                    className="rounded-lg text-white bg-[#5D6B90]/60 hover:bg-[#5D6B90]/90 font-mono transition-colors duration-200 whitespace-nowrap overflow-hidden"
-                    animate={{
-                        width: inputFocused ? '100px' : '180px',
-                        paddingLeft: inputFocused ? '0.75rem' : '1rem',
-                        paddingRight: inputFocused ? '0.75rem' : '1rem',
-                        paddingTop: '0.5rem',
-                        paddingBottom: '0.5rem'
-                    }}
-                    transition={{
-                        type: "spring",
-                        stiffness: 300,
-                        damping: 30,
-                        mass: 0.8
-                    }}
-                >
-                    <motion.span
+                <form onSubmit={handleSubmit} className="flex gap-3 items-center w-full">
+                    <div className="relative bg-black bg-opacity-70 rounded-lg flex-1 font-mono">
+                        <input
+                            type="email"
+                            placeholder="email for early access"
+                            className="w-full px-4 py-2 pr-24 bg-transparent rounded text-white focus:outline-none"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            onFocus={() => setScreenStatus('expanded')}
+                            onBlur={() => setScreenStatus('init')}
+                            disabled={screenStatus === 'loading' || screenStatus === 'success'}
+                        />
+                        <motion.button
+                            type="submit"
+                            className={`${discordButtonExpanded ? 'hidden' : ''} absolute right-0 top-0 bottom-0 px-5 text-white rounded-r-lg overflow-hidden`}
+                            animate={{ opacity: !discordButtonExpanded  ? 1 : 0 }}
+                            transition={{ duration: 0.3 }}
+                            whileHover="hover"
+                            initial="initial"
+                            variants={{
+                                initial: {},
+                                hover: {}
+                            }}
+                            disabled={screenStatus === 'loading' || screenStatus === 'success'}
+                        >
+                            <motion.div 
+                                className="absolute inset-0 bg-gradient-to-r from-transparent to-[#5D6B90]/60 z-0"
+                                variants={{
+                                    initial: { right: 0, left: '50%' },
+                                    hover: { right: 0, left: -30 }
+                                }}
+                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                            />
+                            <span className="relative z-10">
+                                {screenStatus === 'loading' ? 'Sending...' : 
+                                 screenStatus === 'success' ? 'Signed up!' : 'Submit'}
+                            </span>
+                        </motion.button>
+                    </div>
+                    <motion.a
+                        href="https://discord.gg/M57gcazvYk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-lg text-white bg-[#5D6B90]/60 hover:bg-[#5D6B90]/90 font-mono transition-colors duration-200 whitespace-nowrap overflow-hidden"
                         animate={{
-                            opacity: 1
+                            width: !discordButtonExpanded ? '100px' : '180px',
+                            paddingLeft: !discordButtonExpanded ? '0.75rem' : '1rem',
+                            paddingRight: !discordButtonExpanded ? '0.75rem' : '1rem',
+                            paddingTop: '0.5rem',
+                            paddingBottom: '0.5rem'
                         }}
-                        key={inputFocused ? 'discord' : 'join-discord'}
-                        initial={{ opacity: 0 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="hidden md:block"
-                    >
-                        {inputFocused ? 'Discord' : 'Join the Discord'}
-                    </motion.span>
-                    <motion.span
-                        animate={{
-                            opacity: 1
+                        transition={{
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 30,
+                            mass: 0.8
                         }}
-                        key="discord-mobile"
-                        initial={{ opacity: 0 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="md:hidden"
                     >
-                        Discord
-                    </motion.span>
-                    
-                </motion.button>
-
+                        <motion.span
+                            animate={{
+                                opacity: 1
+                            }}
+                            key={discordButtonExpanded ? 'discord' : 'join-discord'}
+                            initial={{ opacity: 0 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="hidden md:block"
+                        >
+                            {!discordButtonExpanded ? 'Discord' : 'Join the Discord'}
+                        </motion.span>
+                        <motion.span
+                            animate={{
+                                opacity: 1
+                            }}
+                            key="discord-mobile"
+                            initial={{ opacity: 0 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="md:hidden"
+                        >
+                            Discord
+                        </motion.span>
+                    </motion.a>
+                </form>
             </motion.div>
         </motion.div>
     )
