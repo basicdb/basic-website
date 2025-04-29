@@ -197,7 +197,7 @@ function DynamicFooter() {
                 )}
             </AnimatePresence>
 
-            <motion.div className="flex flex-col gap-3 items-center p-2 pb-8 md:pb-2 bg-black bg-opacity-40 shadow-lg rounded-b-lg" layout>
+            <motion.div className="flex flex-col gap-3 items-center p-3 bg-black bg-opacity-40 shadow-lg rounded-b-lg" layout>
                 <form onSubmit={handleSubmit} className="flex gap-3 items-center w-full">
                     <div className="relative bg-black bg-opacity-70 rounded-lg flex-1 font-mono">
                         <input
@@ -281,10 +281,6 @@ function DynamicFooter() {
                     Join the Discord
                 </motion.button>
             </motion.div>
-
-
-
-
         </motion.div>
     )
 }
@@ -294,13 +290,13 @@ export default function Home() {
         <>
             <Head>
                 <title>Basic</title>
-                <meta name="description" content="The database for a frictionless, user-owned web" />
+                <meta name="description" content="building the user-owned web" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="theme-color" content="#000000" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="min-h-[100dvh] overflow-x-hidden">
                 <div className="w-full h-[100dvh] flex flex-col bg-black overflow-hidden">
-
                     <div
                         className="flex-1 m-4 rounded-xl flex flex-col justify-between"
                         style={{ backgroundImage: `url(${heroCardElements.image})`, backgroundSize: 'cover', backgroundPosition: 'bottom' }}
@@ -308,16 +304,13 @@ export default function Home() {
                         <div className="flex-1 flex mt-20 justify-center ">
                             <h1 className="p-10 absolute top-20 text-white text-3xl sm:text-4xl font-bold "> the web in your hands </h1>
                         </div>
-
                         <DynamicFooter />
                     </div>
-
 
                     <div className="hidden sm:flex absolute bottom-2 left-0 h-[10px] items-center justify-between p-4">
                         <p className="text-[#666666] z-10 text-xs font-mono bg-black rounded-tr-[10px] px-2 py-1">basic | 2025</p>
                         <div className="w-8 h-5 relative -left-3.5 -bottom-2 bg-black rotate-180 [mask-image:_radial-gradient(farthest-corner_at_bottom_left,_transparent_40%,_black_41%)] [-webkit-mask-image:_radial-gradient(circle_at_bottom_left,_transparent_40%,_black_41%)]"/>
                     </div>
-
 
                 </div>
             </main >
