@@ -298,8 +298,8 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className="min-h-screen overflow-x-hidden">
-                <div className="w-full h-screen flex flex-col bg-black">
+            <main className="min-h-[100dvh] overflow-x-hidden">
+                <div className="w-full h-[100dvh] flex flex-col bg-black overflow-hidden">
 
                     <div
                         className="flex-1 m-4 rounded-xl flex flex-col justify-between"
