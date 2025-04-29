@@ -12,9 +12,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Basic Database</title>
-        <meta name="description" content="The database for a frictionless, user-owned web" />
+        <title>Basic</title>
+        <meta name="description" content="building the user-owned web" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Script strategy="afterInteractive" data-domain="basic.tech" src="https://plausible.io/js/script.js" />
