@@ -28,10 +28,11 @@ function DynamicFooter() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        console.log('email', email);
         if (!email) return;
-        
+
         setScreenStatus('loading');
-        
+
         try {
             // Replace with your actual API endpoint
             await new Promise(resolve => setTimeout(resolve, 1000)); // Simulating API call
@@ -42,8 +43,11 @@ function DynamicFooter() {
         }
     };
 
-
-    const discordButtonExpanded = screenStatus === 'init' || screenStatus === 'success';
+    // Email input is expanded when:
+    // - User has typed something in the input
+    // - Input is focused (screenStatus is 'expanded')
+    // - Form is in loading state
+    const emailInputExpanded = email.length > 0 || screenStatus === 'expanded' || screenStatus === 'loading';
 
     return (
         <motion.div
@@ -193,7 +197,7 @@ function DynamicFooter() {
                 )}
             </AnimatePresence>
 
-            <motion.div className="flex gap-3 items-center p-2 pb-8 md:pb-2  bg-black bg-opacity-40 shadow-lg rounded-b-lg" layout>
+            <motion.div className="flex flex-col gap-3 items-center p-2 pb-8 md:pb-2 bg-black bg-opacity-40 shadow-lg rounded-b-lg" layout>
                 <form onSubmit={handleSubmit} className="flex gap-3 items-center w-full">
                     <div className="relative bg-black bg-opacity-70 rounded-lg flex-1 font-mono">
                         <input
@@ -203,13 +207,17 @@ function DynamicFooter() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             onFocus={() => setScreenStatus('expanded')}
-                            onBlur={() => setScreenStatus('init')}
+                            onBlur={() => {
+                                if (email.length === 0) {
+                                    setScreenStatus('init');
+                                }
+                            }}
                             disabled={screenStatus === 'loading' || screenStatus === 'success'}
                         />
                         <motion.button
                             type="submit"
-                            className={`${discordButtonExpanded ? 'hidden' : ''} absolute right-0 top-0 bottom-0 px-5 text-white rounded-r-lg overflow-hidden`}
-                            animate={{ opacity: !discordButtonExpanded  ? 1 : 0 }}
+                            className={`${!emailInputExpanded ? 'hidden' : ''} absolute right-0 top-0 bottom-0 px-5 text-white rounded-r-lg overflow-hidden`}
+                            animate={{ opacity: emailInputExpanded ? 1 : 0 }}
                             transition={{ duration: 0.3 }}
                             whileHover="hover"
                             initial="initial"
@@ -219,7 +227,7 @@ function DynamicFooter() {
                             }}
                             disabled={screenStatus === 'loading' || screenStatus === 'success'}
                         >
-                            <motion.div 
+                            <motion.div
                                 className="absolute inset-0 bg-gradient-to-r from-transparent to-[#5D6B90]/60 z-0"
                                 variants={{
                                     initial: { right: 0, left: '50%' },
@@ -228,8 +236,8 @@ function DynamicFooter() {
                                 transition={{ duration: 0.3, ease: "easeInOut" }}
                             />
                             <span className="relative z-10">
-                                {screenStatus === 'loading' ? 'Sending...' : 
-                                 screenStatus === 'success' ? 'Signed up!' : 'Submit'}
+                                {screenStatus === 'loading' ? 'Sending...' :
+                                    screenStatus === 'success' ? 'Signed up!' : 'Submit'}
                             </span>
                         </motion.button>
                     </div>
@@ -237,11 +245,11 @@ function DynamicFooter() {
                         href="https://discord.gg/M57gcazvYk"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-lg text-white bg-[#5D6B90]/60 hover:bg-[#5D6B90]/90 font-mono transition-colors duration-200 whitespace-nowrap overflow-hidden"
+                        className="rounded-lg text-white bg-[#5D6B90]/60 hover:bg-[#5D6B90]/90 font-mono transition-colors duration-200 whitespace-nowrap overflow-hidden hidden sm:block"
                         animate={{
-                            width: !discordButtonExpanded ? '100px' : '180px',
-                            paddingLeft: !discordButtonExpanded ? '0.75rem' : '1rem',
-                            paddingRight: !discordButtonExpanded ? '0.75rem' : '1rem',
+                            width: emailInputExpanded ? '100px' : '180px',
+                            paddingLeft: emailInputExpanded ? '0.75rem' : '1rem',
+                            paddingRight: emailInputExpanded ? '0.75rem' : '1rem',
                             paddingTop: '0.5rem',
                             paddingBottom: '0.5rem'
                         }}
@@ -256,29 +264,27 @@ function DynamicFooter() {
                             animate={{
                                 opacity: 1
                             }}
-                            key={discordButtonExpanded ? 'discord' : 'join-discord'}
+                            key={emailInputExpanded ? 'discord' : 'join-discord'}
                             initial={{ opacity: 0 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="hidden md:block"
                         >
-                            {!discordButtonExpanded ? 'Discord' : 'Join the Discord'}
-                        </motion.span>
-                        <motion.span
-                            animate={{
-                                opacity: 1
-                            }}
-                            key="discord-mobile"
-                            initial={{ opacity: 0 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="md:hidden"
-                        >
-                            Discord
+                            {emailInputExpanded ? 'Discord' : 'Join the Discord'}
                         </motion.span>
                     </motion.a>
                 </form>
+
+                <motion.button
+                    onClick={() => window.open('https://discord.gg/M57gcazvYk', '_blank')}
+                    className="w-full sm:hidden rounded-lg text-white bg-[#5D6B90]/60 hover:bg-[#5D6B90]/90 font-mono transition-colors duration-200 whitespace-nowrap overflow-hidden text-center py-2"
+                >
+                    Join the Discord
+                </motion.button>
             </motion.div>
+
+
+
+
         </motion.div>
     )
 }
@@ -292,27 +298,24 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className="dark:bg-black min-h-screen overflow-x-hidden">
+            <main className="min-h-screen overflow-x-hidden">
                 <div className="w-full h-screen flex flex-col bg-black">
 
-
-                    <div className="flex-1 m-4 rounded-lg flex flex-col justify-between"
+                    <div
+                        className="flex-1 m-4 rounded-xl flex flex-col justify-between"
                         style={{ backgroundImage: `url(${heroCardElements.image})`, backgroundSize: 'cover', backgroundPosition: 'bottom' }}
                     >
                         <div className="flex-1 flex mt-20 justify-center ">
-                            <h1 className="p-10 absolute top-20 text-white text-4xl font-bold "> the web in your hands </h1>
+                            <h1 className="p-10 absolute top-20 text-white text-3xl sm:text-4xl font-bold "> the web in your hands </h1>
                         </div>
 
-
                         <DynamicFooter />
-
                     </div>
 
-                    
-                    <div className=" md:absolute bottom-2 left-0 h-[10px] flex items-center justify-between p-4">
-                        
+
+                    <div className="hidden sm:flex absolute bottom-2 left-0 h-[10px] items-center justify-between p-4">
                         <p className="text-[#666666] z-10 text-xs font-mono bg-black rounded-tr-[10px] px-2 py-1">basic | 2025</p>
-                        <div className="w-8 h-5 relative -left-3.5 -bottom-2 bg-black rotate-180 [mask-image:_radial-gradient(farthest-corner_at_bottom_left,_transparent_40%,_black_41%)] [-webkit-mask-image:_radial-gradient(circle_at_bottom_left,_transparent_40%,_black_41%)]"></div>
+                        <div className="w-8 h-5 relative -left-3.5 -bottom-2 bg-black rotate-180 [mask-image:_radial-gradient(farthest-corner_at_bottom_left,_transparent_40%,_black_41%)] [-webkit-mask-image:_radial-gradient(circle_at_bottom_left,_transparent_40%,_black_41%)]"/>
                     </div>
 
 
