@@ -28,14 +28,25 @@ function DynamicFooter() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('email', email);
         if (!email) return;
 
         setScreenStatus('loading');
 
         try {
-            // Replace with your actual API endpoint
-            await new Promise(resolve => setTimeout(resolve, 1000)); // Simulating API call
+            const response = await fetch('/api/submit-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.message || 'Failed to submit email');
+            }
+
             setScreenStatus('success');
         } catch (error) {
             console.error('Error submitting email:', error);
