@@ -109,7 +109,8 @@ function DynamicFooter() {
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     >
-                        <div className="text-white space-y-6 px-4 py-8">
+                        <div className="text-white space-y-4 px-4 py-8">
+                            <h1 className="text-xl font-bold">Universal API for user data</h1>
                             <p className="text-sm">
                                 The next 1 billion apps will be different. They will be built at exponentially faster rates using newer tools, and by a broader range of people.
                             </p>
@@ -128,12 +129,7 @@ function DynamicFooter() {
 
                             <h2 className="text-lg font-bold">AI will be hyper-personalized</h2>
                             <p className="text-sm">
-                                Data remains gold even in a post-AI world where apps and agents will be as powerful as the context they have. Developers will focus on function instead of having to connect the spread of data across a user's apps. We will build on top of the "infinite context" of our users where their digital interactions even outside our own apps will improve all aspects of personalization for them.
-                            </p>
-
-                            <h2 className="text-lg font-bold">Apps will be local-first</h2>
-                            <p className="text-sm">
-                                Devices and models continue to get powerful, and there's a lot more we can do with what our users hold in their hands before punting it to the cloud. Apps will have instant page loads, and work seamlessly across devices even with spotty wifi connections. Personal AI agents will be highly private and secure.
+                                Context becomes gold, instead of data, in a post-AI world where apps and agents will be as powerful as the context they have. Developers will focus on function instead of having to connect the spread of data across a user's apps. We will build on top of the "infinite context" of our users where their digital interactions even outside our own apps will improve all aspects of personalization for them.
                             </p>
 
                             <h2 className="text-lg font-bold">Collaboration will be real-time</h2>
@@ -146,18 +142,13 @@ function DynamicFooter() {
                                 Developers will build lean apps that read data directly from their users. We will iterate and ship faster without worrying about compliance and security. Onboarding users will become instant as every app will start with existing context (e.g., a new user on a new social media platform will bring over all their existing followers and relevant posts). AI / ML models will improve securely without any leakage of sensitive information.
                             </p>
 
-                            <h2 className="text-lg font-bold">Systems will be interoperable</h2>
-                            <p className="text-sm">
-                                Schemas will be public for developers to build on top of each other's applications. Apps will speak to each other and allow information to flow between them in real-time. Teams will access all relevant information instantly while referring to a single source of truth. Friends and family will share memories and experiences seamlessly despite using different apps.
-                            </p>
-
                             <h2 className="text-lg font-bold">…and more!</h2>
                             <p className="text-sm">
-                                We, at Basic, are dedicated to further the rate of innovation for infrastructure alongside the developments in AI and app creation. Meanwhile, we love to gather like-minded people because empowering creators allows for transformational change. And we love having a lot of fun along the way!
+                                We, at Basic, are dedicated to further the rate of innovation for infrastructure alongside the developments in AI and app creation. Meanwhile, we love to gather like-minded people interested in building the open web.
                             </p>
 
                             <p className="text-sm">
-                                If you'd like to chat about building on Basic or working with us drop us an email!
+                                If you'd like to chat about building on Basic or working with us, leave your email, or join our Discord!
                             </p>
                         </div>
                     </motion.div>
@@ -309,18 +300,17 @@ export default function Home() {
             <main className="min-h-[100dvh] overflow-x-hidden">
                 <div className="w-full h-[100dvh] flex flex-col bg-black overflow-hidden">
                     <div
-                        className="flex-1 m-4 rounded-xl flex flex-col justify-between"
+                        className="flex-1 m-4 rounded-xl justify-between"
                         style={{ backgroundImage: `url(${heroCardElements.image})`, backgroundSize: 'cover', backgroundPosition: 'bottom' }}
                     >
-                        <div className="flex-1 flex mt-20 justify-center ">
-                            <h1 className="p-10 absolute top-20 text-white text-3xl sm:text-4xl font-bold "> the web in your hands </h1>
+                        <div className="mt-14">
+                            <DynamicFooter />
                         </div>
-                        <DynamicFooter />
                     </div>
 
                     <div className="hidden sm:flex absolute bottom-2 left-0 h-[10px] items-center justify-between p-4">
                         <p className="text-[#666666] z-10 text-xs font-mono bg-black rounded-tr-[10px] px-2 py-1">basic | 2025</p>
-                        <div className="w-8 h-5 relative -left-3.5 -bottom-2 bg-black rotate-180 [mask-image:_radial-gradient(farthest-corner_at_bottom_left,_transparent_40%,_black_41%)] [-webkit-mask-image:_radial-gradient(circle_at_bottom_left,_transparent_40%,_black_41%)]"/>
+                        <div className="w-8 h-5 relative -left-3.5 -bottom-2 bg-black rotate-180 [mask-image:_radial-gradient(farthest-corner_at_bottom_left,_transparent_40%,_black_41%)] [-webkit-mask-image:_radial-gradient(circle_at_bottom_left,_transparent_40%,_black_41%)]" />
                     </div>
 
                 </div>
