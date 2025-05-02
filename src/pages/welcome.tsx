@@ -8,7 +8,7 @@ import Products from '@/components/Products'
 import JoinDiscord from '@/components/JoinDiscord'
 import { NavBar, Footer } from '@/components/NavFooter'
 import GiantCard from '@/components/GiantCard'
-import { StarIcon, XIcon } from 'lucide-react'
+import { StarIcon, XIcon, ArrowRight } from 'lucide-react'
 import { RiTwitterXLine, RiBlueskyLine } from "react-icons/ri"
 import { FaDiscord } from "react-icons/fa"
 import { motion, AnimatePresence } from 'framer-motion'
@@ -21,48 +21,12 @@ const communityVideo = "https://basicwebsitecontent.s3.us-east-2.amazonaws.com/E
 
 function DynamicFooter() {
     const [activeTab, setActiveTab] = React.useState<string | null>(null);
-    const [email, setEmail] = React.useState('');
-    const [screenStatus, setScreenStatus] = React.useState<'init' | 'expanded' | 'loading' | 'success'>('init');
 
     const isExpanded = activeTab !== null;
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        if (!email) return;
-
-        setScreenStatus('loading');
-
-        try {
-            const response = await fetch('/api/submit-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email }),
-            });
-
-            const data = await response.json();
-
-            if (!response.ok) {
-                throw new Error(data.message || 'Failed to submit email');
-            }
-
-            setScreenStatus('success');
-        } catch (error) {
-            console.error('Error submitting email:', error);
-            setScreenStatus('expanded');
-        }
-    };
-
-    // Email input is expanded when:
-    // - User has typed something in the input
-    // - Input is focused (screenStatus is 'expanded')
-    // - Form is in loading state
-    const emailInputExpanded = email.length > 0 || screenStatus === 'expanded' || screenStatus === 'loading';
-
     return (
         <motion.div
-            className={`w-full md:w-full md:max-w-xl bg-opacity-60 bg-black mb-0 md:mb-16 mx-auto backdrop-blur-md flex flex-col gap-0 shadow-lg rounded-xl`}
+            className={`w-full md:w-full md:max-w-xl bg-opacity-60 bg-black mb-0 md:mb-16 mx-auto backdrop-blur-md flex flex-col gap-0 shadow-lg rounded-xl px-4 md:px-0`}
             layout
             transition={{ type: "spring", stiffness: 30, damping: 30 }}
         >
@@ -148,7 +112,7 @@ function DynamicFooter() {
                             </p>
 
                             <p className="text-sm">
-                                If you'd like to chat about building on Basic or working with us, leave your email, or join our Discord!
+                                If you'd like to chat about building on Basic or working with us, join our Discord!
                             </p>
                         </div>
                     </motion.div>
@@ -193,95 +157,21 @@ function DynamicFooter() {
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
-
                         </div>
                     </motion.div>
                 )}
             </AnimatePresence>
 
-            <motion.div className="flex flex-col gap-3 items-center p-3 bg-black bg-opacity-40 shadow-lg rounded-b-lg" layout>
-                <form onSubmit={handleSubmit} className="flex gap-3 items-center w-full">
-                    <div className="relative bg-black bg-opacity-70 rounded-lg flex-1 font-mono">
-                        <input
-                            type="email"
-                            placeholder="email for early access"
-                            className="w-full px-4 py-2 pr-24 bg-transparent rounded text-white focus:outline-none"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            onFocus={() => setScreenStatus('expanded')}
-                            onBlur={() => {
-                                if (email.length === 0) {
-                                    setScreenStatus('init');
-                                }
-                            }}
-                            disabled={screenStatus === 'loading' || screenStatus === 'success'}
-                        />
-                        <motion.button
-                            type="submit"
-                            className={`${!emailInputExpanded ? 'hidden' : ''} absolute right-0 top-0 bottom-0 px-5 text-white rounded-r-lg overflow-hidden`}
-                            animate={{ opacity: emailInputExpanded ? 1 : 0 }}
-                            transition={{ duration: 0.3 }}
-                            whileHover="hover"
-                            initial="initial"
-                            variants={{
-                                initial: {},
-                                hover: {}
-                            }}
-                            disabled={screenStatus === 'loading' || screenStatus === 'success'}
-                        >
-                            <motion.div
-                                className="absolute inset-0 bg-gradient-to-r from-transparent to-[#5D6B90]/60 z-0"
-                                variants={{
-                                    initial: { right: 0, left: '50%' },
-                                    hover: { right: 0, left: -30 }
-                                }}
-                                transition={{ duration: 0.3, ease: "easeInOut" }}
-                            />
-                            <span className="relative z-10">
-                                {screenStatus === 'loading' ? 'Sending...' :
-                                    screenStatus === 'success' ? 'Signed up!' : 'Submit'}
-                            </span>
-                        </motion.button>
-                    </div>
-                    <motion.a
-                        href="https://discord.gg/M57gcazvYk"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="rounded-lg text-white bg-[#5D6B90]/60 hover:bg-[#5D6B90]/90 font-mono transition-colors duration-200 whitespace-nowrap overflow-hidden hidden sm:block"
-                        animate={{
-                            width: emailInputExpanded ? '100px' : '180px',
-                            paddingLeft: emailInputExpanded ? '0.75rem' : '1rem',
-                            paddingRight: emailInputExpanded ? '0.75rem' : '1rem',
-                            paddingTop: '0.5rem',
-                            paddingBottom: '0.5rem'
-                        }}
-                        transition={{
-                            type: "spring",
-                            stiffness: 300,
-                            damping: 30,
-                            mass: 0.8
-                        }}
-                    >
-                        <motion.span
-                            animate={{
-                                opacity: 1
-                            }}
-                            key={emailInputExpanded ? 'discord' : 'join-discord'}
-                            initial={{ opacity: 0 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            {emailInputExpanded ? 'Discord' : 'Join the Discord'}
-                        </motion.span>
-                    </motion.a>
-                </form>
-
-                <motion.button
-                    onClick={() => window.open('https://discord.gg/M57gcazvYk', '_blank')}
-                    className="w-full sm:hidden rounded-lg text-white bg-[#5D6B90]/60 hover:bg-[#5D6B90]/90 font-mono transition-colors duration-200 whitespace-nowrap overflow-hidden text-center py-2"
+            <motion.div className="flex flex-col gap-3 items-start p-3 bg-black bg-opacity-40 shadow-lg rounded-b-lg" layout>
+                <motion.a
+                    href="https://discord.gg/M57gcazvYk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full rounded-lg text-white bg-[#5D6B90]/60 hover:bg-[#5D6B90]/90 font-mono transition-colors duration-200 whitespace-nowrap overflow-hidden text-left py-2 pl-4 pr-4 flex items-center gap-2"
                 >
-                    Join the Discord
-                </motion.button>
+                    <span>Join the Discord</span>
+                    <ArrowRight className="w-4 h-4" />
+                </motion.a>
             </motion.div>
         </motion.div>
     )
@@ -303,7 +193,7 @@ export default function Home() {
                         className="flex-1 m-4 rounded-xl justify-between"
                         style={{ backgroundImage: `url(${heroCardElements.image})`, backgroundSize: 'cover', backgroundPosition: 'bottom' }}
                     >
-                        <div className="mt-14">
+                        <div className="mt-14 px-4 md:px-0">
                             <DynamicFooter />
                         </div>
                     </div>
