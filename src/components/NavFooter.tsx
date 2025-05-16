@@ -73,7 +73,7 @@ export const Footer = () => {
             <nav>
                 <h6 className="footer-title">Dev platform</h6>
                 <a href="https://www.npmjs.com/package/@basictech/react" target="_blank" rel="noreferrer" className="link link-hover">React SDK</a>
-                <a href="https://www.npmjs.com/package/@basictech/cli" target="_blank" rel="noreferrer" className="link link-hover">CLI</a>
+                {/* <a href="https://www.npmjs.com/package/@basictech/cli" target="_blank" rel="noreferrer" className="link link-hover">CLI</a> */}
                 <a href="https://app.basic.tech" target="_blank" rel="noreferrer" className="link link-hover">Admin Panel</a>
                 <a href="https://docs.basic.tech" target="_blank" rel="noreferrer" className="link link-hover">Docs</a>
             </nav>
