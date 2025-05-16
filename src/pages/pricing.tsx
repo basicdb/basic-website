@@ -29,7 +29,7 @@ export default function Pricing() {
                         {/* Free Plan */}
                         <div className="ring-1 ring-gray-200 dark:ring-gray-800 rounded-3xl p-8 sm:p-10 w-full">
                             <div className="h-56 flex flex-col justify-between">
-                                <h3 className="text-2xl font-bold text-black dark:text-white text-center">free for indie apps</h3>
+                                <h3 className="text-2xl font-bold text-black dark:text-white text-center">free to test</h3>
                                 <p className="flex items-baseline justify-center gap-x-2">
                                     <span className="text-5xl font-bold text-black dark:text-white">$0</span>
                                     <span className="text-base text-gray-500 dark:text-gray-400">/mo</span>
