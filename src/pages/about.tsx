@@ -48,13 +48,6 @@ export default function About() {
                             </div>
 
                             <div>
-                                <h2 className="text-3xl font-bold text-black dark:text-white">Apps will be local-first</h2>
-                            </div>
-                            <div>
-                                <p className="text-gray-600 dark:text-gray-400">Devices and models continue to get powerful, and there’s a lot more we can do with what our users hold in their hands before punting it to the cloud. Apps will have instant page loads, and work seamlessly across devices even with spotty wifi connections. Personal AI agents will be highly private and secure.</p>
-                            </div>
-
-                            <div>
                                 <h2 className="text-3xl font-bold text-black dark:text-white">Collaboration will be real-time</h2>
                             </div>
                             <div>
@@ -69,20 +62,13 @@ export default function About() {
                             </div>
 
                             <div>
-                                <h2 className="text-3xl font-bold text-black dark:text-white">Systems will speak to each other</h2>
-                            </div>
-                            <div>
-                                <p className="text-gray-600 dark:text-gray-400">Schemas will be public for developers to build on top of each other’s applications. Apps will allow information to flow between them in real-time. Teams will access all relevant information instantly while referring to a single source of truth. Friends and family will share memories and experiences seamlessly despite using different apps.</p>
-                            </div>
-
-                            <div>
                                 <h2 className="text-3xl font-bold text-black dark:text-white">… and more!</h2>
                             </div>
                             <div>
-                                <p className="text-gray-600 dark:text-gray-400">We, at Basic, are dedicated to further the rate of innovation for infrastructure alongside the developments in AI and app creation. Meanwhile, we love to gather like-minded people because empowering creators allows for transformational change. And we love having a lot of fun along the way!</p>
+                                <p className="text-gray-600 dark:text-gray-400">At Basic, we are dedicated to further the rate of innovation for infrastructure alongside the developments in AI. Meanwhile, we love to gather like-minded people because empowering creators allows for transformational change. And we love having a lot of fun along the way!</p>
                             </div>
                             <div>
-                                <p className="text-gray-600 dark:text-gray-400">If you&apos;d like to chat about building on Basic or work with us, <a href="mailto:founders@basic.tech" className="text-indigo-500 underline">drop us an email</a>!</p>
+                                <p className="text-gray-600 dark:text-gray-400">If you&apos;d like to chat about building on Basic or work with us, <a href="#discord" className="text-indigo-500 underline">join our Discord</a>!</p>
                             </div>
                         </div>
                     </div>

@@ -1,18 +1,19 @@
-import { StarIcon } from 'lucide-react';
+import { } from 'lucide-react';
 import GiantCard from './GiantCard';
+import { FaDiscord } from 'react-icons/fa';
 
 const heroCardElements = {
     image: '/landing-image.webp',
-    title: 'build powerful apps that understand your users',
-    titleStyle: 'text-4xl',
+    title: 'the purpose-built backend, for AI',
+    titleStyle: 'text-6xl',
     titleColor: 'text-green-100 dark:text-black',
-    subtitle: 'create hyper personalized, local-first apps with PDS datastore-per-user technology',
+    subtitle: 'Basic is a new way to store and share user data, designed specifically for AI apps and agents',
     backgroundEffect: 'brightness-95',
-    buttonText: 'us on GitHub',
+    buttonText: 'join private beta',
     buttonURL: 'https://github.com/basicdb/create-lofi-app',
     buttonTarget: '_blank',
     buttonBorderColor: 'border-indigo-700/80 dark:border-indigo-700/70',
-    buttonIcon: <StarIcon className='w-5 h-5' />,
+    buttonIcon: <FaDiscord className='w-5 h-5' />,
     buttonColor: 'bg-gradient-to-r from-green-700/80 to-indigo-700/80 dark:from-green-700/70 dark:to-indigo-700/70',
     video: 'https://basicwebsitecontent.s3.us-east-2.amazonaws.com/Event+Recap_v3.mp4'
 }
