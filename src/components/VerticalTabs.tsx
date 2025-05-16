@@ -71,7 +71,7 @@ export default function VerticalTabs({
                         ) : tabs[activeTab].image ? (
                             <div className="w-full h-full rounded-lg bg-transparent dark:bg-green-600 flex items-center justify-center">
                                 <Image
-                                    src={tabs[activeTab].image}
+                                    src={tabs[activeTab].image || '/placeholder.jpg'}
                                     alt={tabs[activeTab].title}
                                     width={600}
                                     height={400}
