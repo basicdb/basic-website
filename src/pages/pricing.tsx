@@ -25,11 +25,11 @@ export default function Pricing() {
                 </div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 w-full relative">
-                    <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 sm:mt-20 lg:max-w-6xl lg:grid-cols-3">
+                    <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 sm:mt-20 lg:max-w-4xl lg:grid-cols-2">
                         {/* Free Plan */}
-                        <div className="ring-1 ring-gray-200 dark:ring-gray-800 rounded-3xl p-8 sm:p-10">
+                        <div className="ring-1 ring-gray-200 dark:ring-gray-800 rounded-3xl p-8 sm:p-10 w-full">
                             <div className="h-56 flex flex-col justify-between">
-                                <h3 className="text-2xl font-bold text-black dark:text-white text-center">free</h3>
+                                <h3 className="text-2xl font-bold text-black dark:text-white text-center">free to test</h3>
                                 <p className="flex items-baseline justify-center gap-x-2">
                                     <span className="text-5xl font-bold text-black dark:text-white">$0</span>
                                     <span className="text-base text-gray-500 dark:text-gray-400">/mo</span>
@@ -41,33 +41,12 @@ export default function Pricing() {
                             <ul className="mt-8 space-y-3 list-disc pl-5">
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">Unlimited projects</li>
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">Unlimited users</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">No additional cost for user-data bandwidth</li>
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">Access to all dev tools (CLI, admin panel, SDKs)</li>
                             </ul>
                         </div>
 
-                        {/* Startup Plan */}
-                        <div className="ring-1 ring-gray-200 dark:ring-gray-800 rounded-3xl p-8 sm:p-10">
-                            <div className="h-56 flex flex-col justify-between">
-                                <h3 className="text-2xl font-bold text-black dark:text-white text-center">startup</h3>
-                                <p className="flex items-baseline justify-center gap-x-2">
-                                    <span className="text-5xl font-bold text-black dark:text-white">$20</span>
-                                    <span className="text-base text-gray-500 dark:text-gray-400">/user/mo</span>
-                                </p>
-                                <a className="block rounded-lg px-3.5 py-2.5 text-center text-sm font-semibold bg-gray-400 dark:bg-gray-600 text-white dark:text-gray-300 opacity-50 cursor-not-allowed">
-                                    included for free while in beta!
-                                </a>
-                            </div>
-                            <ul className="mt-8 space-y-3 list-disc pl-5">
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">Everything in free plan</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">Index to view data across all your users in real-time</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">User-analytics (e.g., DAU, MAU, user sign-ups)</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">Publish to Basic.ID app store</li>
-                            </ul>
-                        </div>
-
                         {/* Growth Plan */}
-                        <div className="ring-1 ring-gray-200 dark:ring-gray-800 rounded-3xl p-8 sm:p-10">
+                        <div className="ring-1 ring-gray-200 dark:ring-gray-800 rounded-3xl p-8 sm:p-10 w-full">
                             <div className="h-56 flex flex-col justify-between">
                                 <h3 className="text-2xl font-bold text-black dark:text-white text-center">custom</h3>
                                 <p className="flex items-baseline justify-center gap-x-2">
@@ -78,15 +57,11 @@ export default function Pricing() {
                                 </a>
                             </div>
                             <ul className="mt-8 space-y-3 list-disc pl-5">
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">Everything in startup plan</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">API access to indices</li>
+                                <li className="text-gray-600 dark:text-gray-300 pl-2">Pricing that scales with usage</li>
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">Custom SDKs</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">Dedicated engineering support</li>
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">Automated backups</li>
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">Logging & monitoring</li>
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">Data encryption</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">SSO</li>
-                                <li className="text-gray-600 dark:text-gray-300 pl-2">SLAs</li>
                                 <li className="text-gray-600 dark:text-gray-300 pl-2">SOC II & HIPAA compliance</li>
                             </ul>
                         </div>

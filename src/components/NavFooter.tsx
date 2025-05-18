@@ -71,16 +71,14 @@ export const Footer = () => {
                 </a>
             </aside>
             <nav>
-                <h6 className="footer-title">Dev platform</h6>
-                <a href="https://www.npmjs.com/package/@basictech/react" target="_blank" rel="noreferrer" className="link link-hover">React SDK</a>
-                <a href="https://www.npmjs.com/package/@basictech/cli" target="_blank" rel="noreferrer" className="link link-hover">CLI</a>
-                <a href="https://app.basic.tech" target="_blank" rel="noreferrer" className="link link-hover">Admin Panel</a>
-                <a href="https://docs.basic.tech" target="_blank" rel="noreferrer" className="link link-hover">Docs</a>
+                <h6 className="footer-title">Get started</h6>
+                <a href="https://discord.gg/M57gcazvYk" target="_blank" rel="noreferrer" className="link link-hover">Discord</a>
+                <a href="https://docs.basic.tech/basic-react/create-lofi-app" target="_blank" rel="noreferrer" className="link link-hover">Quickstart</a>
             </nav>
             <nav>
-                <h6 className="footer-title">Build these</h6>
-                <a href="/ai" className="link link-hover">AI</a>
-                <a href="/local-first" className="link link-hover">Local-first</a>
+                <h6 className="footer-title">Dev platform</h6>
+                <a href="https://app.basic.tech" target="_blank" rel="noreferrer" className="link link-hover">Admin Panel</a>
+                <a href="https://docs.basic.tech" target="_blank" rel="noreferrer" className="link link-hover">Docs</a>
             </nav>
             <nav>
                 <h6 className="footer-title">Company</h6>
@@ -90,7 +88,6 @@ export const Footer = () => {
             </nav>
             <nav>
                 <h6 className="footer-title">Socials</h6>
-                <a href="https://discord.gg/M57gcazvYk" target="_blank" rel="noreferrer" className="link link-hover">Discord</a>
                 <a href="https://github.com/basicdb/" target="_blank" rel="noreferrer" className="link link-hover">Github</a>
                 <a href="https://twitter.com/basic_db" target="_blank" rel="noreferrer" className="link link-hover">Twitter</a>
                 <a href="https://bsky.app/profile/basic.tech" target="_blank" rel="noreferrer" className="link link-hover">Bluesky</a>
