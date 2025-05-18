@@ -10,7 +10,7 @@ const heroCardElements = {
     subtitle: 'Basic is a new way to store and share user data, designed specifically for AI apps and agents',
     backgroundEffect: 'brightness-95',
     buttonText: 'join private beta',
-    buttonURL: 'https://github.com/basicdb/create-lofi-app',
+    buttonURL: 'https://discord.gg/M57gcazvYk',
     buttonTarget: '_blank',
     buttonBorderColor: 'border-indigo-700/80 dark:border-indigo-700/70',
     buttonIcon: <FaDiscord className='w-5 h-5' />,
