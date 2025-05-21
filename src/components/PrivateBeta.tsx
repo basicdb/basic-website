@@ -51,7 +51,7 @@ export default function PrivateBeta() {
     ];
 
     return (
-        <div className="my-12">
+        <div className="my-12 mx-auto max-w-5xl">
             <h2 className='text-center mb-4 w-[calc(100%-2rem)] mx-4'>
                 <span className='text-green-700 dark:text-green-400 text-3xl md:text-4xl lg:text-5xl font-semibold'>request for startups</span>
             </h2>
