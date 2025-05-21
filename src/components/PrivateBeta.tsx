@@ -55,7 +55,7 @@ export default function PrivateBeta() {
             <h2 className='text-center mb-4 w-[calc(100%-2rem)] mx-4'>
                 <span className='text-green-700 dark:text-green-400 text-3xl md:text-4xl lg:text-5xl font-semibold'>request for startups</span>
             </h2>
-            <p className='text-green-700 dark:text-green-400 text-lg text-center mb-8'>If you're building with the following technologies, chat with us for an early partnership. We want to build with you.</p>
+            <p className='text-green-700 dark:text-green-400 text-lg text-center mb-8 px-4 sm:px-8 md:px-12 lg:px-16'>If you're building with the following technologies, chat with us for an early partnership. We want to build with you.</p>
 
             <VerticalTabs
                 tabs={betaTechnologies}
