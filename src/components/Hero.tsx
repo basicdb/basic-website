@@ -5,7 +5,7 @@ import { FaDiscord } from 'react-icons/fa';
 const heroCardElements = {
     image: '/landing-image.webp',
     title: 'the purpose-built backend, for AI',
-    titleStyle: 'text-6xl',
+    titleStyle: 'text-5xl md:text-6xl',
     titleColor: 'text-green-100 dark:text-black',
     subtitle: 'Basic is a new way to store and share user data, designed specifically for AI apps and agents',
     backgroundEffect: 'brightness-95',
