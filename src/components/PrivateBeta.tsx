@@ -30,7 +30,7 @@ export default function PrivateBeta() {
             title: "AI wearables",
             content: [
                 "You're building wearables for your users that record a lot of personal information.",
-                "You want to help them store it securely, but continue improving your models with leaking their data."
+                "You want to help them store it securely, but continue improving your models without leaking their data."
             ],
             image: "/ai_wearable.png"
         },
