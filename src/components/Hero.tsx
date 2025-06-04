@@ -4,10 +4,10 @@ import { FaDiscord } from 'react-icons/fa';
 
 const heroCardElements = {
     image: '/landing-image.webp',
-    title: 'the purpose-built backend, for AI',
+    title: 'the memory layer for AI',
     titleStyle: 'text-5xl md:text-6xl',
     titleColor: 'text-green-100 dark:text-black',
-    subtitle: 'Basic is a new way to store and share user data, designed specifically for AI apps and agents',
+    subtitle: 'Basic is the primary datastore for AI apps. Give each user persistent memory and built-in auth — no backend required.',
     backgroundEffect: 'brightness-95',
     buttonText: 'join private beta',
     buttonURL: 'https://discord.gg/M57gcazvYk',
