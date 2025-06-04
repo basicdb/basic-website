@@ -41,7 +41,7 @@ export default function GiantCard({ image, title, titleStyle, subtitle, blurb, b
             <div className="relative w-full h-full flex flex-col lg:flex-row">
                 <div className={`w-full ${video ? 'lg:w-1/2' : 'lg:w-full'} h-full flex flex-col justify-center ${video ? 'items-center text-center lg:text-left lg:items-start' : ''} p-10 ${video ? 'mt-16' : ''} lg:mt-0`}>
                     {pillText && (
-                        <div className="hidden lg:inline-block mb-4 px-4 py-1.5 bg-pink text-pink-700 border border-pink-700 rounded-full font-mono font-semibold text-sm cursor-pointer w-[230px] text-center" onClick={handlePillClick}>
+                        <div className="hidden lg:inline-block mb-4 px-4 py-1.5 bg-pink text-pink-700 border border-pink-700 rounded-full font-mono font-semibold text-sm cursor-pointer text-center" onClick={handlePillClick}>
                             {pillText}
                         </div>
                     )}
