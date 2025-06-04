@@ -17,15 +17,15 @@ interface GiantCardProps {
 }
 
 export default function GiantCard({ image, title, titleStyle, subtitle, blurb, blurb2, pillText, buttonText, buttonURL, buttonTarget, buttonBorderColor, buttonIcon, buttonColor, backgroundEffect, video }: GiantCardProps) {
-    const handlePillClick = (event: React.MouseEvent<HTMLElement>) => {
-        navigator.clipboard.writeText(pillText || '');
-        const el = event.currentTarget;
-        const originalText = el.innerText;
-        el.innerText = 'Copied!';
-        setTimeout(() => {
-            el.innerText = originalText;
-        }, 700);
-    };
+    // const handlePillClick = (event: React.MouseEvent<HTMLElement>) => {
+    //     navigator.clipboard.writeText(pillText || '');
+    //     const el = event.currentTarget;
+    //     const originalText = el.innerText;
+    //     el.innerText = 'Copied!';
+    //     setTimeout(() => {
+    //         el.innerText = originalText;
+    //     }, 700);
+    // };
 
     return (
         <div className="relative w-[calc(100%-2rem)] h-full m-4">
@@ -41,11 +41,11 @@ export default function GiantCard({ image, title, titleStyle, subtitle, blurb, b
             <div className="relative w-full h-full flex flex-col lg:flex-row">
                 <div className={`w-full ${video ? 'lg:w-1/2' : 'lg:w-full'} h-full flex flex-col justify-center ${video ? 'items-center text-center lg:text-left lg:items-start' : ''} p-10 ${video ? 'mt-16' : ''} lg:mt-0`}>
                     {pillText && (
-                        <div className="hidden lg:inline-block mb-4 px-4 py-1.5 bg-pink text-pink-700 border border-pink-700 rounded-full font-mono font-semibold text-sm cursor-pointer text-center" onClick={handlePillClick}>
+                        <div className="mb-4 px-4 py-1.5 bg-pink text-pink-700 border border-pink-700 rounded-full font-mono font-semibold text-sm text-center" /* cursor-pointer */ /* onClick={handlePillClick} */>
                             {pillText}
                         </div>
                     )}
-                    <h1 className={`text-green-100 ${titleStyle} lg:mt-0 ${video ? 'mt-10' : ''} font-bold drop-shadow-lg`}>{title}</h1>
+                    <h1 className={`text-green-100 ${titleStyle} lg:mt-0 font-bold drop-shadow-lg`}>{title}</h1>
                     {subtitle && <p className='text-green-100 text-lg drop-shadow-lg mt-4'>{subtitle}</p>}
                     {blurb && <p className='text-green-100 text-xl sm:text-2xl font-semibold drop-shadow-lg mt-8'>{blurb}</p>}
                     {blurb2 && <p className='text-green-100 text-xl sm:text-2xl font-semibold drop-shadow-lg mt-4'>{blurb2}</p>}
