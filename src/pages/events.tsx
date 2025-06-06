@@ -11,8 +11,6 @@ const heroCardElements = {
 };
 
 const eventData = {
-    title: "we hosted our first event — lofihack, feb 22nd, SF",
-    subtitle: "here are some memories",
     video: {
         url: "https://basicwebsitecontent.s3.us-east-2.amazonaws.com/Event+Recap_v3.mp4",
         poster: "/event-poster.webp"
@@ -40,8 +38,31 @@ export default function Events() {
                     <GiantCard {...heroCardElements} />
                 </div>
                 <div className="container mx-auto py-16 px-4 xl:px-20">
-                    <h1 className="text-4xl font-bold mb-6 text-center">{eventData.title}</h1>
-                    <p className="text-xl mb-12 text-green-500 text-center">{eventData.subtitle}</p>
+                    <h1 className="text-4xl font-bold mb-6 text-center">JOIN NOW: Speaking with Machines — AI hackathon with Windsurf</h1>
+                    <div className="flex justify-center">
+                        <span className="text-xl mb-12 text-green-500">Jun 21st (virtual + SF option),&nbsp;</span>
+                        <a href="#memories" className="text-xl mb-12 text-indigo-500 hover:text-indigo-600 transition-colors underline">sign up while slots last.</a>
+                    </div>
+
+                    {/* Video Embed */}
+                    <div className="w-full aspect-video mb-16">
+                        <video
+                            className="w-full h-full object-cover rounded-lg"
+                            controls
+                            autoPlay
+                            muted
+                            poster={eventData.video.poster}
+                        >
+                            <source
+                                src="https://basicwebsitecontent.s3.us-east-2.amazonaws.com/swm+4k.m4v"
+                                type="video/x-m4v"
+                            />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <h1 className="text-4xl font-bold mb-6 text-center">Previously, we hosted our first event — lofihack, feb 22nd, SF</h1>
+                    <p className="text-xl mb-12 text-green-500 text-center">here are some memories</p>
 
                     {/* Video Embed */}
                     <div className="w-full aspect-video mb-16">
