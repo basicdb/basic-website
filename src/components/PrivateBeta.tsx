@@ -13,7 +13,7 @@ export default function PrivateBeta() {
         {
             title: "AI apps, agents",
             content: [
-                "As you build, you realize your apps and agents are missing a crucial piece in their workflows: a memory layer.",
+                "Your apps and agents are missing a crucial piece in their workflows — a memory layer.",
                 "You want a super simple way to store and access user context from previous interactions."
             ],
             image: "/ai_app.png"
@@ -22,14 +22,14 @@ export default function PrivateBeta() {
             title: "AI gen platforms",
             content: [
                 "You're building a platform for your users to create AI apps and agents.",
-                "You need a way to scale auth and backends for the thousands of apps and agents your users are building, and Supabase / Neon is not cutting it."
+                "You need to scale auth and storage that's scoped to each user, but it's too complex with Supabase / Neon."
             ],
             image: "/ai_platform.png"
         },
         {
             title: "AI wearables",
             content: [
-                "You're building wearables for your users that record a lot of personal information.",
+                "You're building wearables that record a lot of personal information about your users.",
                 "You want to help them store it securely, but continue improving your models without leaking their data."
             ],
             image: "/ai_wearable.png"
@@ -53,9 +53,9 @@ export default function PrivateBeta() {
     return (
         <div className="my-12 mx-auto max-w-5xl">
             <h2 className='text-center mb-4 w-[calc(100%-2rem)] mx-4'>
-                <span className='text-green-700 dark:text-green-400 text-3xl md:text-4xl lg:text-5xl font-semibold'>user context across LLMs</span>
+                <span className='text-green-700 dark:text-green-400 text-3xl md:text-4xl lg:text-5xl font-semibold'>share user context across LLMs</span>
             </h2>
-            <p className='text-green-700 dark:text-green-400 text-lg text-center mb-8 px-4 sm:px-8 md:px-12 lg:px-16'>If you're building with the following technologies, chat with us for an early partnership. We want to build with you.</p>
+            <p className='text-green-700 dark:text-green-400 text-lg text-center mb-8 px-4 sm:px-8 md:px-12 lg:px-16'>Are you working with these technologies? We're building early with teams like yours.</p>
 
             <VerticalTabs
                 tabs={betaTechnologies}
