@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { NavBar, Footer } from '@/components/NavFooter';
 import JoinDiscord from '@/components/JoinDiscord';
 import GiantCard from '@/components/GiantCard';
+import Banner from '@/components/Banner';
 
 const heroCardElements = {
     image: '/events-hero.webp',
@@ -33,6 +34,7 @@ export default function Events() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <section className="bg-green-100 dark:bg-black w-full min-h-screen flex flex-col">
+                <Banner />
                 <NavBar />
                 <div className="w-full h-[60vh] landscape:h-[80vh] md:landscape:h-[60vh]">
                     <GiantCard {...heroCardElements} />
