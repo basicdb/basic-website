@@ -4,7 +4,7 @@ import { FaDiscord } from 'react-icons/fa';
 
 const heroCardElements = {
     image: '/landing-image.webp',
-    pillText: '100+ apps built on Basic',
+    pillText: '700+ apps built on Basic',
     title: 'the memory layer for AI',
     titleStyle: 'text-5xl md:text-6xl',
     titleColor: 'text-green-100 dark:text-black',
