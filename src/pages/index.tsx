@@ -10,6 +10,7 @@ import MediumCard from '@/components/MediumCard'
 import PrivateBeta from '@/components/PrivateBeta'
 import Banner from '@/components/Banner'
 import Benefits from '@/components/Benefits'
+import Credentials from '@/components/Credentials'
 import moreBenefits from '@/utils/moreBenefits'
 const mediumCardElements = {
   title: 'the Basic protocol',
@@ -45,6 +46,7 @@ export default function Home() {
           <Banner />
           <NavBar />
           <Hero />
+          <Credentials />
           <PrivateBeta />
           <MediumCard {...mediumCardElements} />
           <JoinDiscord />
