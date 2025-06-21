@@ -8,10 +8,7 @@ import JoinDiscord from '@/components/JoinDiscord'
 import { NavBar, Footer } from '@/components/NavFooter'
 import MediumCard from '@/components/MediumCard'
 import PrivateBeta from '@/components/PrivateBeta'
-import Banner from '@/components/Banner'
-import Benefits from '@/components/Benefits'
 import Credentials from '@/components/Credentials'
-import moreBenefits from '@/utils/moreBenefits'
 const mediumCardElements = {
   title: 'the Basic protocol',
   titleColor: 'text-pink-800 dark:text-pink',
@@ -43,7 +40,6 @@ export default function Home() {
       <Script strategy="afterInteractive" data-domain="basic.tech" src="https://plausible.io/js/script.js" />
       <main className="flex flex-col items-center bg-green-100 dark:bg-black min-h-screen overflow-x-hidden">
         <div className="w-full">
-          <Banner />
           <NavBar />
           <Hero />
           <Credentials />
