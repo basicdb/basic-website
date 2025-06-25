@@ -5,7 +5,7 @@ import { FaDiscord } from 'react-icons/fa';
 const heroCardElements = {
     image: '/landing-image.webp',
     pillText: '1,000+ apps built on Basic',
-    title: 'the memory layer for AI',
+    title: 'universal context for LLMs',
     titleStyle: 'text-5xl md:text-6xl',
     titleColor: 'text-green-100 dark:text-black',
     subtitle: 'Basic is the primary datastore for AI apps. Auth and storage are scoped to each user by default so they can share context across apps.',
