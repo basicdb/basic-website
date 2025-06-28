@@ -53,9 +53,9 @@ export default function PrivateBeta() {
     return (
         <div className="my-12 mx-auto max-w-5xl">
             <h2 className='text-center mb-4 w-[calc(100%-2rem)] mx-4'>
-                <span className='text-green-700 dark:text-green-400 text-3xl md:text-4xl lg:text-5xl font-semibold'>share user context across LLMs</span>
+                <span className='text-green-700 dark:text-green-400 text-3xl md:text-4xl lg:text-5xl font-semibold'>access user-context across apps</span>
             </h2>
-            <p className='text-green-700 dark:text-green-400 text-lg text-center mb-8 px-4 sm:px-8 md:px-12 lg:px-16'>Are you working with these technologies? We're building early with teams like yours.</p>
+            <p className='text-green-700 dark:text-green-400 text-lg text-center mb-8 px-4 sm:px-8 md:px-12 lg:px-16'>we want to prioritize you if you're building any of the following tools</p>
 
             <VerticalTabs
                 tabs={betaTechnologies}

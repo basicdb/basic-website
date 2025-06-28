@@ -4,11 +4,12 @@ import { FaDiscord } from 'react-icons/fa';
 
 const heroCardElements = {
     image: '/landing-image.webp',
-    pillText: '1,000+ apps built on Basic',
+    pillText: '1000+ apps built on Basic',
     title: 'universal context for LLMs',
     titleStyle: 'text-5xl md:text-6xl',
     titleColor: 'text-green-100 dark:text-black',
-    subtitle: 'Basic is the primary datastore for AI apps. Auth and storage are scoped to each user by default so they can share context across apps.',
+    subtitle: 'Store data easily with a no-DB, no-auth design. Access user-context across apps using their Personal Data Stores.',
+    subtitleStyle: 'text-indigo-900',
     backgroundEffect: 'brightness-95',
     buttonText: 'join private beta',
     buttonURL: 'https://discord.gg/M57gcazvYk',

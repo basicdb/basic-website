@@ -5,6 +5,7 @@ interface GiantCardProps {
     title?: string;
     titleStyle?: string;
     subtitle?: string;
+    subtitleStyle?: string,
     blurb?: string;
     blurb2?: string;
     pillText?: string;
@@ -18,7 +19,7 @@ interface GiantCardProps {
     video?: string | string[];
 }
 
-export default function GiantCard({ image, title, titleStyle, subtitle, blurb, blurb2, pillText, buttonText, buttonURL, buttonTarget, buttonBorderColor, buttonIcon, buttonColor, backgroundEffect, video }: GiantCardProps) {
+export default function GiantCard({ image, title, titleStyle, subtitle, subtitleStyle, blurb, blurb2, pillText, buttonText, buttonURL, buttonTarget, buttonBorderColor, buttonIcon, buttonColor, backgroundEffect, video }: GiantCardProps) {
     // Randomly select a video if multiple are provided
     const selectedVideo = React.useMemo(() => {
         if (!video) return undefined;
@@ -59,7 +60,7 @@ export default function GiantCard({ image, title, titleStyle, subtitle, blurb, b
                         </div>
                     )}
                     <h1 className={`text-green-100 ${titleStyle} lg:mt-0 font-bold drop-shadow-lg`}>{title}</h1>
-                    {subtitle && <p className='text-green-900 font-medium text-lg mt-4 text-shadow-lg/90 drop-shadow-lg/90'>{subtitle}</p>}
+                    {subtitle && <p className={`text-green-100 ${subtitleStyle} font-medium text-xl mt-4 text-shadow-lg/90 drop-shadow-lg/90`}>{subtitle}</p>}
                     {blurb && <p className='text-green-100 text-xl sm:text-2xl font-semibold drop-shadow-lg mt-8'>{blurb}</p>}
                     {blurb2 && <p className='text-green-100 text-xl sm:text-2xl font-semibold drop-shadow-lg mt-4'>{blurb2}</p>}
                     {buttonText && (

@@ -6,7 +6,7 @@ const Credentials = () => {
     const logos = [
         { id: 1, name: 'Cornell', image: '/cornell.png' },
         { id: 2, name: 'YC', image: '/yc.png' },
-        { id: 3, name: 'Browserbase', image: '/browserbase.png' },
+        { id: 3, name: 'Browserbase', image: '/browserbase.webp' },
         { id: 4, name: 'Lemniscap', image: '/lemniscap.png', lemnis: true },
         { id: 5, name: 'EYP', image: '/eyp.webp', eyp: true },
     ];
