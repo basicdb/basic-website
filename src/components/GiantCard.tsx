@@ -59,7 +59,7 @@ export default function GiantCard({ image, title, titleStyle, subtitle, blurb, b
                         </div>
                     )}
                     <h1 className={`text-green-100 ${titleStyle} lg:mt-0 font-bold drop-shadow-lg`}>{title}</h1>
-                    {subtitle && <p className='text-green-100 text-lg drop-shadow-lg mt-4'>{subtitle}</p>}
+                    {subtitle && <p className='text-green-900 font-medium text-lg mt-4 text-shadow-lg/90 drop-shadow-lg/90'>{subtitle}</p>}
                     {blurb && <p className='text-green-100 text-xl sm:text-2xl font-semibold drop-shadow-lg mt-8'>{blurb}</p>}
                     {blurb2 && <p className='text-green-100 text-xl sm:text-2xl font-semibold drop-shadow-lg mt-4'>{blurb2}</p>}
                     {buttonText && (
