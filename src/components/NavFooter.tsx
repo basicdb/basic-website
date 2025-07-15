@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { TwitterIcon } from 'lucide-react'
+import { TwitterIcon, Github } from 'lucide-react'
 import { RiBlueskyLine } from "react-icons/ri"
 import { FaDiscord } from "react-icons/fa"
 
@@ -33,6 +33,7 @@ export const NavBar = () => {
                         <li className="hidden sm:block"><a className="px-3 py-2" href="https://bsky.app/profile/basic.tech" target="_blank" rel="noreferrer">
                             <RiBlueskyLine className="w-5 h-5" />
                         </a></li>
+                        <li className="hidden sm:block"><a className="px-3 py-2" href="https://github.com/basicdb" target="_blank" rel="noreferrer"><Github className="w-5 h-5" /></a></li>
                         <li className="hidden sm:block"><a className="px-3 py-2" href="https://twitter.com/basic_db" target="_blank" rel="noreferrer"><TwitterIcon className="w-5 h-5" /></a></li>
                         <li><a className="btn btn-ghost" href="https://docs.basic.tech/" target="_blank" rel="noreferrer">docs</a></li>
                     </ul>
