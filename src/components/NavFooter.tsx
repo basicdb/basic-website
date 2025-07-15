@@ -1,60 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
-import { TwitterIcon, Star } from 'lucide-react'
+import { TwitterIcon } from 'lucide-react'
 import { RiBlueskyLine } from "react-icons/ri"
 import { FaDiscord } from "react-icons/fa"
-
-const GitHubStarCounter = () => {
-    const [starCount, setStarCount] = useState<number | null>(null);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const fetchStarCount = async () => {
-            try {
-                const response = await fetch('https://api.github.com/repos/basicdb/client-ts');
-                if (response.ok) {
-                    const data = await response.json();
-                    setStarCount(data.stargazers_count);
-                }
-            } catch (error) {
-                console.error('Failed to fetch star count:', error);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchStarCount();
-    }, []);
-
-    if (loading) {
-        return (
-            <li className="hidden sm:block">
-                <div className="px-3 py-2 flex items-center gap-1">
-                    <Star className="w-4 h-4" />
-                    <span className="text-xs">...</span>
-                </div>
-            </li>
-        );
-    }
-
-    if (starCount === null) {
-        return null;
-    }
-
-    return (
-        <li className="hidden sm:block">
-            <a
-                className="px-3 py-2 flex items-center gap-1 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-all duration-200"
-                href="https://github.com/basicdb/client-ts"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <Star className="w-5 h-5" />
-                <span className="text-xs font-medium">{starCount.toLocaleString()}</span>
-            </a>
-        </li>
-    );
-};
 
 export const NavBar = () => {
     return (
@@ -86,7 +34,6 @@ export const NavBar = () => {
                             <RiBlueskyLine className="w-5 h-5" />
                         </a></li>
                         <li className="hidden sm:block"><a className="px-3 py-2" href="https://twitter.com/basic_db" target="_blank" rel="noreferrer"><TwitterIcon className="w-5 h-5" /></a></li>
-                        <GitHubStarCounter />
                         <li><a className="btn btn-ghost" href="https://docs.basic.tech/" target="_blank" rel="noreferrer">docs</a></li>
                     </ul>
                 </div>
