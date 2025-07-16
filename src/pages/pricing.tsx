@@ -209,7 +209,7 @@ export default function Pricing() {
                                             <td className="py-3 px-6 font-semibold text-black dark:text-white w-1/3" colSpan={4}>LLM context</td>
                                         </tr>
                                         <tr>
-                                            <td className="py-3 px-6 text-green-700 dark:text-green-200 w-1/3" colSpan={4} style={{ textAlign: 'center' }}>coming soon</td>
+                                            <td className="py-3 px-6 text-green-700 dark:text-green-200 w-1/3 italic" colSpan={4} style={{ textAlign: 'center' }}>coming soon</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -225,7 +225,7 @@ export default function Pricing() {
                                             <td className="py-3 px-6 font-semibold text-black dark:text-white w-1/3" colSpan={4}>blob storage</td>
                                         </tr>
                                         <tr>
-                                            <td className="py-3 px-6 text-green-700 dark:text-green-200 w-1/3" colSpan={4} style={{ textAlign: 'center' }}>coming soon</td>
+                                            <td className="py-3 px-6 text-green-700 dark:text-green-200 w-1/3 italic" colSpan={4} style={{ textAlign: 'center' }}>coming soon</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -241,7 +241,7 @@ export default function Pricing() {
                                             <td className="py-3 px-6 font-semibold text-black dark:text-white w-1/3" colSpan={4}>multiplayer</td>
                                         </tr>
                                         <tr>
-                                            <td className="py-3 px-6 text-green-700 dark:text-green-200 w-1/3" colSpan={4} style={{ textAlign: 'center' }}>coming soon</td>
+                                            <td className="py-3 px-6 text-green-700 dark:text-green-200 w-1/3 italic" colSpan={4} style={{ textAlign: 'center' }}>coming soon</td>
                                         </tr>
                                     </tbody>
                                 </table>
