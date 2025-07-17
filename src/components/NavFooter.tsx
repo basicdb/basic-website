@@ -7,22 +7,15 @@ import { FaDiscord } from "react-icons/fa"
 export const NavBar = () => {
     return (
         <div className="navbar bg-opacity-20 absolute z-50 top-5 left-0 right-0 py-4 px-8">
-            <div className="w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] mx-2 sm:mx-4 my-1 sm:my-2 flex justify-between items-center text-green-100 dark:text-black px-1 sm:px-2">
+            <div className="w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] mx-2 sm:mx-4 my-1 sm:my-2 flex justify-between items-center text-indigo-900 px-1 sm:px-2">
                 <div className="flex-1 flex items-center">
                     <a className="btn btn-ghost normal-case text-xl flex items-center" href="/">
                         <Image
                             alt="logo"
                             width={32}
                             height={32}
-                            src="/logo_light.webp"
-                            className="mr-2 block dark:hidden"
-                        />
-                        <Image
-                            alt="logo"
-                            width={32}
-                            height={32}
                             src="/logo_dark.webp"
-                            className="mr-2 hidden dark:block"
+                            className="mr-2"
                         />
                         <span className='font-bold'>Basic</span>
                         <h4 className="ml-2 text-xs italic font-light bg-indigo-800 text-green-200 px-2 py-0.5 rounded-full ">beta</h4>
