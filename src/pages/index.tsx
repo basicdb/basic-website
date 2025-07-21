@@ -8,7 +8,9 @@ import Hero from '@/components/Hero'
 import Haiku from '@/components/Haiku'
 import JoinDiscord from '@/components/JoinDiscord'
 import RootedInUsers from '@/components/RootedInUsers'
+import MadeFor from '@/components/Playground'
 import Toolkit from '@/components/Toolkit'
+import StepIntoCommunity from '@/components/StepIntoCommunity'
 import { NavBar, Footer } from '@/components/NavFooter'
 
 export default function Home() {
@@ -28,7 +30,9 @@ export default function Home() {
           <Hero />
           <Haiku />
           <RootedInUsers />
+          <MadeFor />
           <Toolkit />
+          <StepIntoCommunity />
           <JoinDiscord />
           <Footer />
         </div>

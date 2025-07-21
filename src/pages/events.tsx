@@ -13,7 +13,7 @@ const heroCardElements = {
 const eventData = {
     video: {
         url: "https://basicwebsitecontent.s3.us-east-2.amazonaws.com/Event+Recap_v3.mp4",
-        poster: "/event-poster.webp"
+        poster: "/event1.webp"
     },
     memories: [
         { src: "/event4.webp", alt: "Networking at lofihack" },

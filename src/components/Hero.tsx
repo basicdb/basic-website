@@ -5,10 +5,10 @@ import { FaDiscord } from 'react-icons/fa';
 
 const heroCardElements = {
     image: '/landing-image.webp',
-    title: 'build with Basic,',
-    title2: 'grow on the open web',
-    titleStyle: 'text-2xl md:text-5xl lg:text-6xl xl:text-7xl text-indigo-900 mt-0 lg:mt-12',
-    subtitle: 'effortless, open-source backends',
+    title: 'give every user',
+    title2: 'a memory palace',
+    titleStyle: 'text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-indigo-900 mt-0 lg:mt-12',
+    subtitle: 'on the open web',
     subtitleStyle: 'text-indigo-900 italic font-semibold text-xl md:text-3xl',
     backgroundEffect: '',
     backgroundPosition: 'bottom',

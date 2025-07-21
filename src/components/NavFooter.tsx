@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import { TwitterIcon, Github } from 'lucide-react'
-import { RiBlueskyLine } from "react-icons/ri"
 import { FaDiscord } from "react-icons/fa"
 
 export const NavBar = () => {
@@ -15,7 +14,7 @@ export const NavBar = () => {
                             width={32}
                             height={32}
                             src="/logo_dark.webp"
-                            className="mr-2"
+                            className="mr-2 w-auto h-auto"
                         />
                         <span className='font-bold'>Basic</span>
                         <h4 className="ml-2 text-xs italic font-light bg-indigo-800 text-green-200 px-2 py-0.5 rounded-full ">beta</h4>
@@ -23,9 +22,6 @@ export const NavBar = () => {
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal px-1 flex items-center">
-                        <li className="hidden sm:block"><a className="px-3 py-2" href="https://bsky.app/profile/basic.tech" target="_blank" rel="noreferrer">
-                            <RiBlueskyLine className="w-5 h-5" />
-                        </a></li>
                         <li className="hidden sm:block"><a className="px-3 py-2" href="https://github.com/basicdb" target="_blank" rel="noreferrer"><Github className="w-5 h-5" /></a></li>
                         <li className="hidden sm:block"><a className="px-3 py-2" href="https://twitter.com/basic_db" target="_blank" rel="noreferrer"><TwitterIcon className="w-5 h-5" /></a></li>
                         <li><a className="btn btn-ghost" href="https://docs.basic.tech/" target="_blank" rel="noreferrer">docs</a></li>
@@ -47,14 +43,14 @@ export const Footer = () => {
                             width={50}
                             height={50}
                             src="/logo_dark.webp"
-                            className="block dark:hidden"
+                            className="block dark:hidden w-auto h-auto"
                         />
                         <Image
                             alt="logo"
                             width={50}
                             height={50}
                             src="/logo_light.webp"
-                            className="hidden dark:block"
+                            className="hidden dark:block w-auto h-auto"
                         />
                     </div>
                     <p>
