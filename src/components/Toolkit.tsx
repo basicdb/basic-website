@@ -47,11 +47,11 @@ export default function Toolkit() {
                 <div className="border-b border-gray-300 dark:border-gray-600 py-4 relative">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
                         <div
-                            className="md:pb-0 cursor-pointer transition-transform duration-100 hover:scale-[1.01] relative h-[60vh] bg-[url('/sync_light.png')] dark:bg-[url('/sync_dark.png')] bg-cover bg-no-repeat bg-left bg-[length:500px_500px]"
+                            className="md:pb-0 cursor-pointer transition-transform duration-100 hover:scale-[1.01] relative h-[60vh] bg-[url('/sync.svg')] dark:bg-[url('/sync.svg')] bg-cover bg-no-repeat bg-left bg-[length:500px_500px]"
                             onClick={() => handleSectionClick('https://docs.basic.tech/readings/local-first-sync')}
                         >
                             {/* Gradient overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-b from-green-100/80 via-green-100/90 to-green-100/100 dark:from-black/100 dark:via-black/90 dark:to-black/80 bg-blend-multiply pointer-events-none"></div>
+                            <div className="absolute inset-0 bg-gradient-to-b from-green-100/100 via-green-100/90 to-green-100/95 dark:from-black/100 dark:via-black/90 dark:to-black/80 bg-blend-multiply pointer-events-none"></div>
                             <div className="relative">
                                 <h3 className="text-lg md:text-2xl text-green-800 dark:text-green-100">
                                     sync

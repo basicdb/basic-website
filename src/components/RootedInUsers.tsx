@@ -22,7 +22,7 @@ export default function RootedInUsers() {
                 <div className='px-4'>
                     <div className='px-2 md:px-8'>
                         <h2 className='text-3xl md:text-5xl lg:text-6xl text-indigo-900 dark:text-green-100 font-bold'>rooted in users</h2>
-                        <p className='text-green-700 dark:text-green-400 text-lg lg:text-2xl font-thin mt-2.5'>write data to users, not a database</p>
+                        <p className='text-green-700 dark:text-green-400 text-lg lg:text-2xl font-thin mt-2.5'>store memory with users, not a database</p>
                     </div>
                 </div>
             </div>

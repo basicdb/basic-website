@@ -9,7 +9,7 @@ const heroCardElements = {
     title2: 'a memory palace',
     titleStyle: 'text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-indigo-900 mt-0 lg:mt-12',
     subtitle: 'on the open web',
-    subtitleStyle: 'text-indigo-900 italic font-semibold text-xl md:text-3xl',
+    subtitleStyle: 'text-indigo-900 italic font-semibold text-xl md:text-4xl xl:text-5xl',
     backgroundEffect: '',
     backgroundPosition: 'bottom',
     buttonText: 'join private beta',

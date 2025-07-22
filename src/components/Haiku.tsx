@@ -11,7 +11,7 @@ export default function Haiku() {
                     for the most powerful apps,
                 </div>
                 <div className="md:text-lg lg:text-xl ml-48 md:ml-56 lg:ml-80">
-                    DB, Sync, Context.
+                    Storage, Sync, Context.
                 </div>
             </div>
         </div>

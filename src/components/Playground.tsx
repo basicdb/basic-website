@@ -20,7 +20,7 @@ export default function Playground() {
                     />
                 </picture>
                 {/* Gradient overlay */}
-                <div className='absolute inset-0 bg-gradient-to-r from-green-100/70 to-green-100/20'></div>
+                <div className='absolute inset-0 bg-gradient-to-r from-green-100/70 to-green-100/20 dark:from-black/80 dark:to-black/0'></div>
             </div>
             <div className='w-[calc(100%-2rem)] mx-4 mb-32'>
                 <div className='px-4'>
