@@ -22,7 +22,7 @@ export default function Toolkit() {
             {/* First Section - Full Width */}
             <div className="w-full px-10 md:px-16">
                 <div
-                    className="border-t border-b border-gray-300 dark:border-gray-600 pt-2 h-[75vh] cursor-pointer transition-transform duration-100 hover:scale-[1.01] relative bg-[url('/context_light.svg')] dark:bg-[url('/context_dark.svg')] bg-cover bg-no-repeat bg-center bg-[length:cover] bg-[position:50%_calc(50%)] lg:bg-[position:50%_calc(50%-150px)]"
+                    className="border-t border-b border-gray-300 dark:border-gray-600 pt-2 h-[90vh] cursor-pointer transition-transform duration-100 hover:scale-[1.01] relative bg-[url('/context_light.svg')] dark:bg-[url('/context_dark.svg')] bg-cover bg-no-repeat bg-center bg-[length:cover] bg-[position:50%_calc(50%)] lg:bg-[position:50%_calc(50%-150px)]"
                     onClick={() => handleSectionClick('https://docs.basic.tech/readings/interop')}
                 >
                     {/* Gradient overlay */}
@@ -47,7 +47,7 @@ export default function Toolkit() {
                 <div className="border-b border-gray-300 dark:border-gray-600 py-4 relative">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
                         <div
-                            className="md:pb-0 cursor-pointer transition-transform duration-100 hover:scale-[1.01] relative h-[60vh] bg-[url('/sync.svg')] dark:bg-[url('/sync.svg')] bg-cover bg-no-repeat bg-left bg-[length:500px_500px]"
+                            className="md:pb-0 cursor-pointer transition-transform duration-100 hover:scale-[1.01] relative h-[60vh] md:h-[75vh] bg-[url('/sync.svg')] dark:bg-[url('/sync.svg')] bg-cover bg-no-repeat bg-left bg-[length:500px_500px]"
                             onClick={() => handleSectionClick('https://docs.basic.tech/readings/local-first-sync')}
                         >
                             {/* Gradient overlay */}
@@ -65,7 +65,7 @@ export default function Toolkit() {
                             </div>
                         </div>
                         <div
-                            className="cursor-pointer transition-transform duration-100 hover:scale-[1.01] pb-8 relative h-[60vh] bg-[url('/storage_light.svg')] dark:bg-[url('/storage_dark.svg')] bg-cover bg-no-repeat bg-right"
+                            className="cursor-pointer transition-transform duration-100 hover:scale-[1.01] pb-8 relative h-[60vh] md:h-[75vh] bg-[url('/storage_light.svg')] dark:bg-[url('/storage_dark.svg')] bg-cover bg-no-repeat bg-right"
                             onClick={() => handleSectionClick('https://docs.basic.tech/basic-react/basic-react-sdk#adding-auth')}
                         >
                             {/* Gradient overlay */}
