@@ -1,0 +1,12 @@
+<svg width="348" height="383" viewBox="0 0 348 383" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.595238" y="1.31692" width="346.81" height="106.81" rx="11.3095" stroke="#061C37" stroke-width="1.19048"/>
+<rect x="0.595238" y="138.317" width="346.81" height="106.81" rx="11.3095" stroke="#061C37" stroke-width="1.19048"/>
+<rect x="0.595238" y="274.317" width="346.81" height="107.81" rx="11.3095" stroke="#061C37" stroke-width="1.19048"/>
+<rect x="278.35" y="318.857" width="19.5381" height="19.5381" rx="9.76905" stroke="#061C37" stroke-width="0.7"/>
+<rect x="278.35" y="181.953" width="19.5381" height="19.5381" rx="9.76905" stroke="#061C37" stroke-width="0.7"/>
+<rect x="278.35" y="45.0478" width="19.5381" height="19.5381" rx="9.76905" stroke="#061C37" stroke-width="0.7"/>
+<line x1="55.3613" y1="192.115" x2="223.361" y2="192.115" stroke="#061C37" stroke-width="0.5" stroke-dasharray="5.95 5.95"/>
+<line x1="55.3613" y1="328.115" x2="243.361" y2="328.115" stroke="#061C37" stroke-width="0.5" stroke-dasharray="5.95 5.95"/>
+<line x1="55.3613" y1="55.1152" x2="207.361" y2="55.1152" stroke="#061C37" stroke-width="0.5" stroke-dasharray="5.95 5.95"/>
+<path d="M90 208.117L195.292 33L158.717 173.758H223L123.25 351.092L158.717 208.117H90Z" stroke="#061C37" stroke-width="3"/>
+</svg>

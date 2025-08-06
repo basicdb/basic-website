@@ -1,0 +1,20 @@
+[[redirects]]
+  from = "/faq"
+  to = "https://razberry.notion.site/Basic-Product-Market-10e3b0ea3ad74366ae094e5904815bd8"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/memo"
+  to = "https://razberry.notion.site/Basic-Product-Market-10e3b0ea3ad74366ae094e5904815bd8"
+  status = 302
+  force = true
+
+  
+[[redirects]]
+  from = "/careers"
+  to = "https://razberry.notion.site/Work-at-Basic-Founding-Engineer-bec34ab27ae649269cd702e5887440ce"
+  status = 302
+  force = true
+
+  
