@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import { TwitterIcon, Github } from 'lucide-react'
-import { FaDiscord } from "react-icons/fa"
 
 export const NavBar = () => {
     return (

@@ -134,10 +134,10 @@ function DynamicFooter() {
                             {/* Social Icons */}
                             <div className="flex gap-2">
                                 <a href="https://x.com/basic_db" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                                    <RiTwitterXLine className="w-6 h-6" />
+                                    {React.createElement(RiTwitterXLine as any, { className: "w-6 h-6" })}
                                 </a>
                                 <a href="https://discord.gg/M57gcazvYk" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                                    <FaDiscord className="w-6 h-6" />
+                                    {React.createElement(FaDiscord as any, { className: "w-6 h-6" })}
                                 </a>
                             </div>
 

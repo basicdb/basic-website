@@ -56,7 +56,7 @@ export default function Hero({
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 text-indigo-800 underline hover:no-underline transition-all duration-200 text-lg md:text-xl cursor-pointer"
                         >
-                            <FaDiscord className="w-6 h-6" />
+                            {React.createElement(FaDiscord as any, { className: "w-6 h-6" })}
                             join 1,000+ apps
                         </a>
                     </div>

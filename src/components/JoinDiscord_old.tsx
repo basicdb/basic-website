@@ -1,3 +1,4 @@
+import React from 'react';
 import GiantCard from '@/components/archive/GiantCard';
 import { FaDiscord } from 'react-icons/fa';
 
@@ -12,7 +13,7 @@ const heroCardElements = {
     buttonURL: 'https://discord.gg/M57gcazvYk',
     buttonTarget: '_blank',
     buttonBorderColor: 'border-pink-700 text-green-100 mt-8',
-    buttonIcon: <FaDiscord className='w-5 h-5' />,
+    buttonIcon: React.createElement(FaDiscord as any, { className: 'w-5 h-5' }),
     buttonColor: 'bg-pink-700/80'
 }
 

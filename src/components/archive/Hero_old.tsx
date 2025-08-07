@@ -3,6 +3,8 @@ import { } from 'lucide-react';
 import GiantCard from './GiantCard';
 import { FaDiscord } from 'react-icons/fa';
 
+const DiscordIcon = () => React.createElement(FaDiscord as any, { className: 'w-5 h-5' });
+
 const heroCardElements = {
     image: '/landing-image.webp',
     title: 'Basic is the simplest backend',
@@ -16,7 +18,7 @@ const heroCardElements = {
     buttonURL: 'https://discord.gg/M57gcazvYk',
     buttonTarget: '_blank',
     buttonBorderColor: 'border-transparent mt-4 text-indigo-900 lg:text-green-100 md:text-xl lg:mt-24 px-0',
-    buttonIcon: React.createElement(FaDiscord, { className: 'w-5 h-5' }),
+    buttonIcon: DiscordIcon(),
     buttonColor: '',
 }
 
