@@ -18,7 +18,7 @@ export default function AutocreatePDS() {
                 <div className="flex justify-center">
                     <div className="relative w-full">
                         <Image
-                            src="/autocreatePDS.png"
+                            src="/autocreatePDS.svg"
                             alt="Auto-create PDS architecture diagram showing AI app accessing user data through Basic's infrastructure"
                             width={800}
                             height={800}
