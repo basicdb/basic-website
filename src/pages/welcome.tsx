@@ -4,12 +4,12 @@ import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 import Hero from '@/components/Hero'
-import Products from '@/components/Products'
-import JoinDiscord from '@/components/JoinDiscord'
+import Products from '@/components/archive/Products'
+import JoinDiscord from '@/components/JoinDiscord_old'
 import { NavBar, Footer } from '@/components/NavFooter'
-import GiantCard from '@/components/GiantCard'
+import GiantCard from '@/components/archive/GiantCard'
 import { StarIcon, XIcon, ArrowRight } from 'lucide-react'
-import { RiTwitterXLine, RiBlueskyLine } from "react-icons/ri"
+import { RiTwitterXLine } from "react-icons/ri"
 import { FaDiscord } from "react-icons/fa"
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -134,13 +134,10 @@ function DynamicFooter() {
                             {/* Social Icons */}
                             <div className="flex gap-2">
                                 <a href="https://x.com/basic_db" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                                    <RiTwitterXLine className="w-6 h-6" />
-                                </a>
-                                <a href="https://bsky.app/profile/basic.tech" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                                    <RiBlueskyLine className="w-6 h-6" />
+                                    {React.createElement(RiTwitterXLine as any, { className: "w-6 h-6" })}
                                 </a>
                                 <a href="https://discord.gg/M57gcazvYk" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                                    <FaDiscord className="w-6 h-6" />
+                                    {React.createElement(FaDiscord as any, { className: "w-6 h-6" })}
                                 </a>
                             </div>
 

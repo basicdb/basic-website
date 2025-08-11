@@ -28,7 +28,7 @@ const Credentials = () => {
                                 alt={logo.name}
                                 width={96}
                                 height={48}
-                                className="max-w-full max-h-full object-contain grayscale"
+                                className="max-w-full max-h-full object-contain grayscale w-auto h-auto"
                             />
                         </div>
                     ))}

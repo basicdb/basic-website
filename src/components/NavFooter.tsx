@@ -1,28 +1,19 @@
 import React from 'react'
 import Image from 'next/image'
 import { TwitterIcon, Github } from 'lucide-react'
-import { RiBlueskyLine } from "react-icons/ri"
-import { FaDiscord } from "react-icons/fa"
 
 export const NavBar = () => {
     return (
         <div className="navbar bg-opacity-20 absolute z-50 top-5 left-0 right-0 py-4 px-8">
-            <div className="w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] mx-2 sm:mx-4 my-1 sm:my-2 flex justify-between items-center text-green-100 dark:text-black px-1 sm:px-2">
+            <div className="w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] mx-2 sm:mx-4 my-1 sm:my-2 flex justify-between items-center text-indigo-900 px-1 sm:px-2">
                 <div className="flex-1 flex items-center">
                     <a className="btn btn-ghost normal-case text-xl flex items-center" href="/">
                         <Image
                             alt="logo"
                             width={32}
                             height={32}
-                            src="/logo_light.webp"
-                            className="mr-2 block dark:hidden"
-                        />
-                        <Image
-                            alt="logo"
-                            width={32}
-                            height={32}
                             src="/logo_dark.webp"
-                            className="mr-2 hidden dark:block"
+                            className="mr-2 w-auto h-auto"
                         />
                         <span className='font-bold'>Basic</span>
                         <h4 className="ml-2 text-xs italic font-light bg-indigo-800 text-green-200 px-2 py-0.5 rounded-full ">beta</h4>
@@ -30,9 +21,6 @@ export const NavBar = () => {
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal px-1 flex items-center">
-                        <li className="hidden sm:block"><a className="px-3 py-2" href="https://bsky.app/profile/basic.tech" target="_blank" rel="noreferrer">
-                            <RiBlueskyLine className="w-5 h-5" />
-                        </a></li>
                         <li className="hidden sm:block"><a className="px-3 py-2" href="https://github.com/basicdb" target="_blank" rel="noreferrer"><Github className="w-5 h-5" /></a></li>
                         <li className="hidden sm:block"><a className="px-3 py-2" href="https://twitter.com/basic_db" target="_blank" rel="noreferrer"><TwitterIcon className="w-5 h-5" /></a></li>
                         <li><a className="btn btn-ghost" href="https://docs.basic.tech/" target="_blank" rel="noreferrer">docs</a></li>
@@ -45,23 +33,16 @@ export const NavBar = () => {
 
 export const Footer = () => {
     return (
-        <footer className="footer sm:footer-horizontal text-base-content p-10 border-t border-black dark:border-white">
+        <footer className="footer sm:footer-horizontal text-base-content p-10 border-t border-black">
             <aside className="flex items-center gap-4 lg:mt-10">
-                <a href="/" className="rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200 flex items-center gap-4 p-2">
+                <a href="/" className="rounded-lg hover:bg-black/5 transition-all duration-200 flex items-center gap-4 p-2">
                     <div>
                         <Image
                             alt="logo"
                             width={50}
                             height={50}
                             src="/logo_dark.webp"
-                            className="block dark:hidden"
-                        />
-                        <Image
-                            alt="logo"
-                            width={50}
-                            height={50}
-                            src="/logo_light.webp"
-                            className="hidden dark:block"
+                            className="w-auto h-auto"
                         />
                     </div>
                     <p>

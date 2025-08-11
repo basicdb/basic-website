@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { NavBar, Footer } from '@/components/NavFooter';
-import JoinDiscord from '@/components/JoinDiscord';
-import GiantCard from '@/components/GiantCard';
+import JoinDiscord from '@/components/JoinDiscord_old';
+import GiantCard from '@/components/archive/GiantCard';
 
 const heroCardElements = {
     image: '/events-hero.webp',
@@ -13,7 +13,7 @@ const heroCardElements = {
 const eventData = {
     video: {
         url: "https://basicwebsitecontent.s3.us-east-2.amazonaws.com/Event+Recap_v3.mp4",
-        poster: "/event-poster.webp"
+        poster: "/event1.webp"
     },
     memories: [
         { src: "/event4.webp", alt: "Networking at lofihack" },
@@ -32,7 +32,7 @@ export default function Events() {
                 <meta name="description" content="Join our community at events!" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
-            <section className="bg-green-100 dark:bg-black w-full min-h-screen flex flex-col">
+            <section className="bg-green-100 w-full min-h-screen flex flex-col">
                 <NavBar />
                 <div className="w-full h-[60vh] landscape:h-[80vh] md:landscape:h-[60vh]">
                     <GiantCard {...heroCardElements} />

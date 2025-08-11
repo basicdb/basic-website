@@ -1,29 +1,67 @@
-import { } from 'lucide-react';
-import GiantCard from './GiantCard';
+import React from 'react';
+import { NavBar } from './NavFooter';
 import { FaDiscord } from 'react-icons/fa';
 
-const heroCardElements = {
-    image: '/landing-image.webp',
-    pillText: '1000+ apps built on Basic',
-    title: 'universal context for LLMs',
-    titleStyle: 'text-5xl md:text-6xl',
-    titleColor: 'text-green-100 dark:text-black',
-    subtitle: 'Store data easily with a no-DB, no-auth design. Access user-context across apps using their Personal Data Stores.',
-    subtitleStyle: 'text-indigo-900',
-    backgroundEffect: 'brightness-95',
-    buttonText: 'join private beta',
-    buttonURL: 'https://discord.gg/M57gcazvYk',
-    buttonTarget: '_blank',
-    buttonBorderColor: 'border-indigo-700/80 dark:border-indigo-700/70',
-    buttonIcon: <FaDiscord className='w-5 h-5' />,
-    buttonColor: 'bg-gradient-to-r from-green-700/80 to-indigo-700/80 dark:from-green-700/70 dark:to-indigo-700/70',
-    video: 'https://basicwebsitecontent.s3.us-east-2.amazonaws.com/post-swm.m4v'
+interface HeroProps {
+    variant?: 'default' | 'giant';
+    title?: string;
+    subtitle?: string;
+    ctaText?: string;
+    ctaIcon?: React.ReactNode;
+    background?: string;
+    children?: React.ReactNode;
 }
 
-export default function Hero() {
+export default function Hero({
+    variant = 'default',
+    title,
+    subtitle,
+    ctaText,
+    ctaIcon,
+    background,
+    children
+}: HeroProps) {
+    if (variant === 'giant') {
+        return (
+            <div className={`w-full min-h-screen ${background || 'bg-gradient-to-b from-pink to-green-100'} flex flex-col`}>
+                {children}
+            </div>
+        );
+    }
+
     return (
-        <div className='w-full min-h-[90vh] lg:h-[90vh]'>
-            <GiantCard {...heroCardElements} />
+        <div className="w-full min-h-screen bg-gradient-to-b from-pink to-green-100 flex flex-col">
+            {/* Main Content */}
+            <div className="flex-1 flex flex-col items-center justify-center px-4 py-8">
+                <div className="text-center max-w-4xl mx-auto">
+                    {/* Main Headline */}
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl leading-relaxed text-indigo-900 mb-4">
+                        <span className="font-heading mb-8 block">build human-centric AI</span>
+                        <span className="font-heading text-4xl md:text-6xl lg:text-7xl">with </span>
+                        <span className="font-script text-4xl md:text-6xl lg:text-7xl">Personal Data Stores</span>
+                    </h1>
+
+                    {/* Tagline */}
+                    <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-thin text-green-600 italic mb-12 max-w-3xl mx-auto leading-relaxed">
+                        keep consumers safe with federated DB + Auth backends,
+                        <br />
+                        scale to millions without overhead
+                    </p>
+
+                    {/* Call to Action */}
+                    <div className="flex items-center justify-center">
+                        <a
+                            href="https://discord.gg/S4DmEhuk"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-3 text-indigo-800 underline hover:no-underline transition-all duration-200 text-lg md:text-xl cursor-pointer"
+                        >
+                            {React.createElement(FaDiscord as any, { className: "w-6 h-6" })}
+                            join 1,000+ apps
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    )
-}
+    );
+} 

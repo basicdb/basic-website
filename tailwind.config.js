@@ -8,6 +8,7 @@ module.exports = {
 			fontFamily: {
 				sans: ['Overpass', 'sans-serif'],
 				heading: ['Overpass', 'sans-serif'],
+				script: ['Bad Script', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

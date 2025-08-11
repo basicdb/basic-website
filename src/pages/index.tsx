@@ -4,28 +4,13 @@ import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 import Hero from '@/components/Hero'
+import UserOwned from '@/components/UserOwned'
+import AutocreatePDS from '@/components/AutocreatePDS'
 import JoinDiscord from '@/components/JoinDiscord'
+import Toolkit from '@/components/Toolkit'
+import UniversalContext from '@/components/UniversalContext'
+import UseBasicFor from '@/components/useBasicFor'
 import { NavBar, Footer } from '@/components/NavFooter'
-import MediumCard from '@/components/MediumCard'
-import PrivateBeta from '@/components/PrivateBeta'
-import Credentials from '@/components/Credentials'
-const mediumCardElements = {
-  title: 'the Basic protocol',
-  titleColor: 'text-pink-800 dark:text-pink',
-  cardColor: 'bg-pink dark:bg-pink-800',
-  subtitleColor: 'text-pink-700 dark:text-pink-400',
-  textColor: 'text-pink-600 dark:text-pink-500',
-  content: [
-    {
-      text: 'We\'re on a mission to build the collaborative and frictionless web.',
-      text3: 'We\'ve designed the Basic protocol to be an open, federated layer which powers our data stores. Data is ever-lasting and portable.',
-      text4: 'We also understand that the future of the internet is only as powerful as its adoption - therefore, we currently invite developers to contribute to and partake in the Basic protocol.',
-      url: 'https://github.com/basicdb',
-      urlText: 'View Basic codebase',
-    },
-  ],
-  video: '/network-animation.mp4',
-}
 
 export default function Home() {
   return (
@@ -38,13 +23,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Script strategy="afterInteractive" data-domain="basic.tech" src="https://plausible.io/js/script.js" />
-      <main className="flex flex-col items-center bg-green-100 dark:bg-black min-h-screen overflow-x-hidden">
+      <main className="flex flex-col items-center min-h-screen overflow-x-hidden bg-pink-100">
         <div className="w-full">
           <NavBar />
           <Hero />
-          <Credentials />
-          <PrivateBeta />
-          <MediumCard {...mediumCardElements} />
+          <UserOwned />
+          <AutocreatePDS />
+          <Toolkit />
+          <UniversalContext />
+          <UseBasicFor />
           <JoinDiscord />
           <Footer />
         </div>

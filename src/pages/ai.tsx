@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import { NavBar, Footer } from '@/components/NavFooter';
-import JoinDiscord from '@/components/JoinDiscord';
-import SolutionsComparison from '@/components/SolutionsComparison';
-import GiantCard from '@/components/GiantCard';
+import JoinDiscord from '@/components/JoinDiscord_old';
+import SolutionsComparison from '@/components/archive/SolutionsComparison';
+import GiantCard from '@/components/archive/GiantCard';
 
 const heroCardElements = {
     image: '/ai-hero.webp',
@@ -68,7 +68,7 @@ export default function AI() {
                 <meta name="description" content="Learn how Basic Database enables AI-powered applications with user-owned data" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
-            <section className="bg-green-100 dark:bg-black w-full min-h-screen flex flex-col">
+            <section className="bg-green-100 w-full min-h-screen flex flex-col">
                 <NavBar />
                 <div className="w-full h-[50vh] landscape:h-[70vh] md:landscape:h-[50vh]">
                     <GiantCard {...heroCardElements} />
