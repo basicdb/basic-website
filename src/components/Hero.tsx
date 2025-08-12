@@ -43,7 +43,7 @@ export default function Hero({
 
                     {/* Tagline */}
                     <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-thin text-green-600 italic mb-12 max-w-3xl mx-auto leading-relaxed">
-                        keep consumers safe with federated DB + Auth backends,
+                        keep consumers safe with "DB + Auth per user" infrastructure,
                         <br />
                         scale to millions without overhead
                     </p>

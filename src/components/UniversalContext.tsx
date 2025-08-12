@@ -37,7 +37,7 @@ export default function UniversalContext() {
                     {/* Main headline */}
                     <h1 className="text-4xl md:text-5xl lg:text-7xl text-black leading-tight mb-12" style={{ lineHeight: '1.2' }}>
                         program with universal<br />
-                        context of your users
+                        user contexts
                     </h1>
 
                     {/* Features grid */}
