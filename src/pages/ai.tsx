@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { NavBar, Footer } from '@/components/NavFooter';
-import JoinDiscord from '@/components/JoinDiscord_old';
+import JoinDiscord from '@/components/archive/JoinDiscord_old';
 import SolutionsComparison from '@/components/archive/SolutionsComparison';
 import GiantCard from '@/components/archive/GiantCard';
 

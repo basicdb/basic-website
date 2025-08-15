@@ -27,12 +27,17 @@ export default function UserOwned() {
 
                     {/* First paragraph */}
                     <p className="md:text-lg font-light text-gray-800 mb-6 leading-relaxed max-w-lg">
-                        The future belongs to AI that understands and evolves. But traditional data systems limit us from getting a full picture of our users across their different apps.
+                        We designed Personal Data Stores (PDS) for developers to build deeply personalized tech, and users to accumulate their data across apps.
                     </p>
 
                     {/* Second paragraph */}
+                    <p className="md:text-lg font-light text-gray-800 mb-6 leading-relaxed max-w-lg">
+                        Each PDS is a “single-tenant” DB + Auth that belongs to your users. We provide infrastructure to help you scale your AI software to millions of users without any overhead.
+                    </p>
+
+                    {/* Third paragraph */}
                     <p className="md:text-lg font-light text-gray-800 leading-relaxed max-w-lg">
-                        We designed Personal Data Stores (PDS) so that users can accumulate their data across apps, and developers can build deeply personalized technologies for their users without any overhead.
+                        Build AI that grows and evolves with each user.
                     </p>
                 </div>
 
