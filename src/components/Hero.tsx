@@ -35,17 +35,17 @@ export default function Hero({
             <div className="flex-1 flex flex-col items-center justify-center px-4 py-8">
                 <div className="text-center max-w-4xl mx-auto">
                     {/* Main Headline */}
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl leading-relaxed text-indigo-900 mb-4">
-                        <span className="font-heading mb-8 block">build consumer AI</span>
-                        <span className="font-heading text-4xl md:text-6xl lg:text-7xl">that's truly </span>
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl leading-relaxed text-indigo-900 mb-6">
+                        <span className="font-heading mb-4 md:mb-8 block">build consumer AI</span>
+                        <span className="font-heading text-4xl md:text-6xl lg:text-7xl">that feels like </span>
                         <span className="font-script text-4xl md:text-6xl lg:text-7xl">theirs</span>
                     </h1>
 
                     {/* Tagline */}
                     <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-thin text-green-600 italic mb-12 max-w-3xl mx-auto leading-relaxed">
-                        deploy personalized DB + Auth with Personal Data Stores,
+                        deploy per-user DB + Auth with Personal Data Stores,
                         <br />
-                        scale to millions without overhead
+                        scale to millions of users without overhead
                     </p>
 
                     {/* Call to Action */}
