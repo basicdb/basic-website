@@ -32,7 +32,7 @@ export default function Hero({
     return (
         <div className="w-full min-h-screen bg-gradient-to-b from-pink to-green-100 flex flex-col">
             {/* Main Content */}
-            <div className="flex-1 flex flex-col items-center justify-center px-4 py-8">
+            <div className="flex-1 flex flex-col items-center justify-center px-2 py-8 sm:px-4">
                 <div className="text-center max-w-4xl mx-auto">
                     {/* Main Headline */}
                     <h1 className="text-4xl md:text-6xl lg:text-7xl leading-relaxed text-indigo-900 mb-6">

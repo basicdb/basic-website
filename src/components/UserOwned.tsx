@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function UserOwned() {
     return (
-        <div className="relative w-[calc(100%-2rem)] h-full m-4">
+        <div className="relative w-[calc(100%-1rem)] h-full m-2">
             {/* Background image layer */}
             <div
                 className="absolute inset-0 rounded-3xl bg-cover bg-no-repeat"
@@ -17,7 +17,7 @@ export default function UserOwned() {
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-pink-100/100 via-pink-100/70 to-green-100/0" />
 
             {/* Content layer */}
-            <div className="relative w-full h-full flex flex-col lg:flex-row px-4">
+            <div className="relative w-full h-full flex flex-col lg:flex-row px-2 sm:px-4">
                 <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-start p-10 py-16">
                     {/* Main headline */}
                     <h1 className="text-4xl md:text-4xl lg:text-5xl text-gray-900 mb-6">

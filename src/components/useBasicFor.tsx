@@ -24,8 +24,8 @@ const useCaseData: UseCase[] = [
 
 // Styling classes - easily customizable
 const styles = {
-    container: "w-full min-h-screen flex items-center justify-center py-24 bg-gradient-to-b from-blue-50 to-gray-100 px-8",
-    wrapper: "w-full px-10",
+    container: "w-full min-h-screen flex items-center justify-center py-24 bg-gradient-to-b from-blue-50 to-gray-100 px-2 sm:px-8",
+    wrapper: "w-full px-4 sm:px-10",
     title: "text-4xl md:text-5xl lg:text-6xl text-black mb-16 font-sans",
     grid: "grid grid-cols-1 md:grid-cols-3 gap-16",
     imageCard: "flex flex-col items-start w-full",

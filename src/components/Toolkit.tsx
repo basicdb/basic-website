@@ -44,8 +44,8 @@ const toolkitData: ToolkitItem[] = [
 
 // Styling classes - easily customizable
 const styles = {
-    container: "w-full min-h-screen flex items-center justify-center py-24 bg-gradient-to-b from-green-200 to-pink-100 px-8",
-    wrapper: "w-full px-10",
+    container: "w-full min-h-screen flex items-center justify-center py-24 bg-gradient-to-b from-green-200 to-pink-100 px-2 sm:px-8",
+    wrapper: "w-full px-4 sm:px-10",
     title: "text-4xl md:text-5xl lg:text-6xl text-black mb-16",
     grid: "grid grid-cols-1 md:grid-cols-3 gap-8",
     card: "border border-green-400 p-6 transition-all duration-150 rounded-sm",

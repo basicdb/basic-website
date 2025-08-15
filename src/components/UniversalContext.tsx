@@ -18,7 +18,7 @@ export default function UniversalContext() {
     ];
 
     return (
-        <div className="relative w-[calc(100%-2rem)] h-full m-4">
+        <div className="relative w-[calc(100%-1rem)] h-full m-2">
             {/* Background image layer */}
             <div
                 className="absolute inset-0 rounded-3xl bg-cover bg-no-repeat"
@@ -32,7 +32,7 @@ export default function UniversalContext() {
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-green-100/0 via-green-100/80 to-pink-100/100" />
 
             {/* Content layer */}
-            <div className="relative w-full h-full flex flex-col px-4">
+            <div className="relative w-full h-full flex flex-col px-2 sm:px-4">
                 <div className="w-full h-full flex flex-col justify-center items-start p-10 py-24">
                     {/* Main headline */}
                     <h1 className="text-4xl md:text-5xl lg:text-7xl text-black leading-tight mb-12" style={{ lineHeight: '1.2' }}>

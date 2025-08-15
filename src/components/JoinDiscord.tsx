@@ -2,7 +2,7 @@ import React from 'react';
 
 const JoinDiscord: React.FC = () => {
     return (
-        <section className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-b from-green-200 via-pink-100 to-green-200">
+        <section className="min-h-screen flex items-center justify-center px-2 sm:px-4 bg-gradient-to-b from-green-200 via-pink-100 to-green-200">
             <div className="max-w-4xl mx-auto text-center">
                 {/* Main Headline */}
                 <h2 className="text-4xl md:text-5xl lg:text-7xl text-indigo-900 mb-8" style={{ lineHeight: '1.5' }}>
