@@ -52,7 +52,7 @@ export default function VerticalTabs({
                                 ) : tab.image ? (
                                     <div className="w-full h-full rounded-lg bg-transparent dark:bg-green-600 flex items-center justify-center relative">
                                         <Image
-                                            src={tab.image || '/superagents.png'}
+                                            src={tab.image || '/placeholder.jpg'}
                                             alt={tab.title}
                                             fill
                                             className="w-full h-full rounded-lg object-contain p-2"
@@ -100,11 +100,11 @@ export default function VerticalTabs({
                         ) : tabs[activeTab].image ? (
                             <div className="w-full h-full rounded-lg bg-transparent dark:bg-green-600 flex items-center justify-center">
                                 <Image
-                                    src={tabs[activeTab].image || '/superagents.png'}
+                                    src={tabs[activeTab].image || '/placeholder.jpg'}
                                     alt={tabs[activeTab].title}
                                     width={600}
                                     height={400}
-                                    className="w-full h-full rounded-lg object-contain p-4 w-auto h-auto"
+                                    className="w-full h-full rounded-lg object-contain p-4"
                                 />
                             </div>
                         ) : null}

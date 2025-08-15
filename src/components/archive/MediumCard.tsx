@@ -34,7 +34,7 @@ export default function MediumCard({ title, titleColor, cardColor, subtitleColor
             </div>
             {image ? (
                 <div className="w-full lg:w-1/2 xl:p-4">
-                    <Image src={image} alt={title} width={500} height={500} className="w-full h-auto" />
+                    <Image src={image} alt={title} width={500} height={500} className="w-full" />
                 </div>
             ) : video ? (
                 <div className="w-full lg:w-1/3 xl:p-4">
