@@ -33,8 +33,8 @@ export const NavBar = () => {
 
 export const Footer = () => {
     return (
-        <footer className="footer sm:footer-horizontal text-base-content p-10 border-t border-black">
-            <aside className="flex items-center gap-4 lg:mt-10">
+        <footer className="footer grid grid-cols-2 gap-12 md:footer-horizontal md:grid-cols-none md:gap-0 text-base-content p-10 border-t border-black">
+            <aside className="col-span-2 flex items-center gap-4 lg:mt-10 lg:items-center">
                 <a href="/" className="rounded-lg hover:bg-black/5 transition-all duration-200 flex items-center gap-4 p-2">
                     <div>
                         <Image
