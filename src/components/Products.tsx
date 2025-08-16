@@ -1,7 +1,7 @@
-import MediumCard from '@/components/MediumCard';
+import MediumCard from '@/components/archive/MediumCard';
 import moreBenefits from '@/utils/moreBenefits';
-import Benefits from '@/components/Benefits';
-import { MarqueeDemo } from '@/components/Marquee';
+import Benefits from '@/components/archive/Benefits';
+import { MarqueeDemo } from '@/components/archive/Marquee';
 
 type MediumCardProps = {
     title: string;
