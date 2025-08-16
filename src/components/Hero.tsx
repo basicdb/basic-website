@@ -37,7 +37,7 @@ export default function Hero({
                     {/* Main Headline */}
                     <h1 className="text-4xl md:text-6xl lg:text-7xl leading-relaxed text-indigo-900 mb-6">
                         <span className="font-heading mb-4 md:mb-8 block">build consumer AI</span>
-                        <span className="font-heading text-4xl md:text-6xl lg:text-7xl">that feels like </span>
+                        <span className="font-heading text-4xl md:text-6xl lg:text-7xl">that feels uniquely </span>
                         <span className="font-script text-4xl md:text-6xl lg:text-7xl">theirs</span>
                     </h1>
 
