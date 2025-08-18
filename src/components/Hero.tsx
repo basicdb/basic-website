@@ -43,7 +43,7 @@ export default function Hero({
 
                     {/* Tagline */}
                     <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-thin text-green-600 italic mb-12 max-w-3xl mx-auto leading-relaxed">
-                        deploy per-user DB + Auth with Personal Data Stores,
+                        deploy per-user DB + Auth with Personal Data Stores, <span className="hidden md:inline">&nbsp;</span>
                         <br className="hidden md:block" />
                         scale to millions of users without overhead
                     </p>
