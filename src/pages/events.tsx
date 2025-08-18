@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { NavBar, Footer } from '@/components/NavFooter';
-import JoinDiscord from '@/components/archive/JoinDiscord_old';
-import GiantCard from '@/components/archive/GiantCard';
+import JoinDiscord from '@/components/JoinDiscord_old';
+import GiantCard from '@/components/GiantCard';
 
 const heroCardElements = {
     image: '/events-hero.webp',

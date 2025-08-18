@@ -5,9 +5,9 @@ import Head from 'next/head'
 import Script from 'next/script'
 import Hero from '@/components/Hero'
 import Products from '@/components/archive/Products'
-import JoinDiscord from '@/components/archive/JoinDiscord_old'
+import JoinDiscord from '@/components/JoinDiscord_old'
 import { NavBar, Footer } from '@/components/NavFooter'
-import GiantCard from '@/components/archive/GiantCard'
+import GiantCard from '@/components/GiantCard'
 import { StarIcon, XIcon, ArrowRight } from 'lucide-react'
 import { RiTwitterXLine } from "react-icons/ri"
 import { FaDiscord } from "react-icons/fa"

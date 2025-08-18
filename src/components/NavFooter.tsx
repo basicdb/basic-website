@@ -46,32 +46,32 @@ export const Footer = () => {
                         />
                     </div>
                     <p>
-                        <span className="text-xl font-semibold block">Basic</span>
+                        <span className="text-xl font-semibold block text-green-700">Basic</span>
                         Made with love by our team ❤️
                     </p>
                 </a>
             </aside>
             <nav>
-                <h6 className="footer-title">Get started</h6>
-                <a href="https://discord.gg/M57gcazvYk" target="_blank" rel="noreferrer" className="link link-hover">Discord</a>
-                <a href="https://docs.basic.tech/basic-react/create-lofi-app" target="_blank" rel="noreferrer" className="link link-hover">Quickstart</a>
+                <h6 className="footer-title text-green-600">Get started</h6>
+                <a href="https://discord.gg/M57gcazvYk" target="_blank" rel="noreferrer" className="link link-hover text-green-800">Discord</a>
+                <a href="https://docs.basic.tech/basic-react/create-lofi-app" target="_blank" rel="noreferrer" className="link link-hover text-green-800">Quickstart</a>
             </nav>
             <nav>
-                <h6 className="footer-title">Dev platform</h6>
-                <a href="https://app.basic.tech" target="_blank" rel="noreferrer" className="link link-hover">Admin Panel</a>
-                <a href="https://docs.basic.tech" target="_blank" rel="noreferrer" className="link link-hover">Docs</a>
+                <h6 className="footer-title text-green-600">Dev platform</h6>
+                <a href="https://app.basic.tech" target="_blank" rel="noreferrer" className="link link-hover text-green-800">Admin Panel</a>
+                <a href="https://docs.basic.tech" target="_blank" rel="noreferrer" className="link link-hover text-green-800">Docs</a>
             </nav>
             <nav>
-                <h6 className="footer-title">Company</h6>
-                <a href="/about" className="link link-hover">About us</a>
-                <a href="/pricing" className="link link-hover">Pricing</a>
-                <a href="/events" className="link link-hover">Events</a>
+                <h6 className="footer-title text-green-600">Company</h6>
+                <a href="/about" className="link link-hover text-green-800">About us</a>
+                <a href="/pricing" className="link link-hover text-green-800">Pricing</a>
+                <a href="/events" className="link link-hover text-green-800">Events</a>
             </nav>
             <nav>
-                <h6 className="footer-title">Socials</h6>
-                <a href="https://github.com/basicdb/" target="_blank" rel="noreferrer" className="link link-hover">Github</a>
-                <a href="https://twitter.com/basic_db" target="_blank" rel="noreferrer" className="link link-hover">Twitter</a>
-                <a href="https://bsky.app/profile/basic.tech" target="_blank" rel="noreferrer" className="link link-hover">Bluesky</a>
+                <h6 className="footer-title text-green-600">Socials</h6>
+                <a href="https://github.com/basicdb/" target="_blank" rel="noreferrer" className="link link-hover text-green-800">Github</a>
+                <a href="https://twitter.com/basic_db" target="_blank" rel="noreferrer" className="link link-hover text-green-800">Twitter</a>
+                <a href="https://bsky.app/profile/basic.tech" target="_blank" rel="noreferrer" className="link link-hover text-green-800">Bluesky</a>
             </nav>
         </footer>
     )

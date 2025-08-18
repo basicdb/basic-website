@@ -1,6 +1,6 @@
 import React from 'react';
 import { } from 'lucide-react';
-import GiantCard from './GiantCard';
+import GiantCard from '../GiantCard';
 import { FaDiscord } from 'react-icons/fa';
 
 const DiscordIcon = () => React.createElement(FaDiscord as any, { className: 'w-5 h-5' });

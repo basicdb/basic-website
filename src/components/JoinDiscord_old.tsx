@@ -1,5 +1,5 @@
 import React from 'react';
-import GiantCard from '@/components/archive/GiantCard';
+import GiantCard from '@/components/GiantCard';
 import { FaDiscord } from 'react-icons/fa';
 
 const heroCardElements = {

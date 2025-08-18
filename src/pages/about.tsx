@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import GiantCard from '@/components/archive/GiantCard';
-import JoinDiscord from '@/components/archive/JoinDiscord_old';
+import GiantCard from '@/components/GiantCard';
+import JoinDiscord from '@/components/JoinDiscord_old';
 import { NavBar, Footer } from '@/components/NavFooter';
 
 const heroCardElements = {
