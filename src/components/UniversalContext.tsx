@@ -33,7 +33,7 @@ export default function UniversalContext() {
 
             {/* Content layer */}
             <div className="relative w-full h-full flex flex-col px-2 sm:px-4">
-                <div className="w-full h-full flex flex-col justify-center items-start p-10 py-24">
+                <div className="w-full h-full flex flex-col justify-center items-start p-2 md:p-10 py-24">
                     {/* Main headline */}
                     <h1 className="text-4xl md:text-5xl lg:text-7xl text-black leading-tight mb-12" style={{ lineHeight: '1.2' }}>
                         program with universal<br />
@@ -47,7 +47,7 @@ export default function UniversalContext() {
                                 <h3 className="text-2xl text-gray-900 mb-1">
                                     {feature.title}
                                 </h3>
-                                <p className="text-lg text-gray-700 leading-relaxed">
+                                <p className="md:text-lg text-gray-700 leading-relaxed">
                                     {feature.description}
                                 </p>
                             </div>

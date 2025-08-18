@@ -18,7 +18,7 @@ export default function UserOwned() {
 
             {/* Content layer */}
             <div className="relative w-full h-full flex flex-col lg:flex-row px-2 sm:px-4">
-                <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-start p-10 py-16">
+                <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-start p-2 md:p-10 py-16">
                     {/* Main headline */}
                     <h1 className="text-4xl md:text-4xl lg:text-5xl text-gray-900 mb-6">
                         <div className="font-script italic leading-tight mb-2">user-owned data,</div>
