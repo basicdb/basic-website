@@ -37,14 +37,14 @@ export default function Hero({
                     {/* Main Headline */}
                     <h1 className="text-4xl md:text-6xl lg:text-7xl leading-relaxed text-indigo-900 mb-6">
                         <span className="font-heading mb-4 md:mb-8 block">build consumer AI</span>
-                        <span className="font-heading text-4xl md:text-6xl lg:text-7xl">that feels uniquely </span>
+                        <span className="font-heading text-4xl md:text-6xl lg:text-7xl">that's uniquely </span>
                         <span className="font-script text-4xl md:text-6xl lg:text-7xl">theirs</span>
                     </h1>
 
                     {/* Tagline */}
                     <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-thin text-green-600 italic mb-12 max-w-3xl mx-auto leading-relaxed">
                         deploy per-user DB + Auth with Personal Data Stores,
-                        <br />
+                        <br className="hidden md:block" />
                         scale to millions of users without overhead
                     </p>
 
