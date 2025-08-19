@@ -31,9 +31,10 @@ export default function Hero({
                 <div className="text-center max-w-4xl mx-auto">
                     {/* Main Headline */}
                     <h1 className="text-4xl md:text-6xl lg:text-7xl leading-relaxed text-indigo-900 mb-6">
-                        <span className="font-heading mb-4 md:mb-8 block">build AI using</span>
-                        <span className="font-heading">user-centric </span>
-                        <span className="font-script">backends</span>
+                        <span className="font-heading mb-4 md:mb-8 block">build AI with</span>
+                        <span className="font-script">user-centric </span>
+                        <span className="font-heading">backends</span>
+                        {/* <span className="font-script">backends</span> */}
                     </h1>
 
                     {/* Tagline */}
