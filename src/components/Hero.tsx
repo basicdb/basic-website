@@ -36,14 +36,14 @@ export default function Hero({
                 <div className="text-center max-w-4xl mx-auto">
                     {/* Main Headline */}
                     <h1 className="text-4xl md:text-6xl lg:text-7xl leading-relaxed text-indigo-900 mb-6">
-                        <span className="font-heading mb-4 md:mb-8 block">build consumer AI</span>
-                        <span className="font-heading text-4xl md:text-6xl lg:text-7xl">that's uniquely </span>
-                        <span className="font-script text-4xl md:text-6xl lg:text-7xl">theirs</span>
+                        <span className="font-heading mb-4 md:mb-8 block">build trustworthy,</span>
+                        <span className="font-heading text-4xl md:text-6xl lg:text-7xl">user-centric </span>
+                        <span className="font-script text-4xl md:text-6xl lg:text-7xl">AI</span>
                     </h1>
 
                     {/* Tagline */}
                     <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-thin text-green-600 italic mb-12 max-w-3xl mx-auto leading-relaxed">
-                        deploy per-user DB + Auth with Personal Data Stores, <span className="hidden md:inline">&nbsp;</span>
+                        deploy with Personal Data Store backends, <span className="hidden md:inline">&nbsp;</span>
                         <br className="hidden md:block" />
                         scale to millions of users without overhead
                     </p>
