@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavBar } from './NavFooter';
 import { FaDiscord } from 'react-icons/fa';
 
 interface HeroProps {
@@ -14,10 +13,6 @@ interface HeroProps {
 
 export default function Hero({
     variant = 'default',
-    title,
-    subtitle,
-    ctaText,
-    ctaIcon,
     background,
     children
 }: HeroProps) {
@@ -36,16 +31,16 @@ export default function Hero({
                 <div className="text-center max-w-4xl mx-auto">
                     {/* Main Headline */}
                     <h1 className="text-4xl md:text-6xl lg:text-7xl leading-relaxed text-indigo-900 mb-6">
-                        <span className="font-heading mb-4 md:mb-8 block">build trustworthy,</span>
-                        <span className="font-heading text-4xl md:text-6xl lg:text-7xl">user-centric </span>
-                        <span className="font-script text-4xl md:text-6xl lg:text-7xl">AI</span>
+                        <span className="font-heading mb-4 md:mb-8 block">build AI using</span>
+                        <span className="font-heading">user-centric </span>
+                        <span className="font-script">backends</span>
                     </h1>
 
                     {/* Tagline */}
-                    <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-thin text-green-600 italic mb-12 max-w-3xl mx-auto leading-relaxed">
-                        deploy with Personal Data Store backends, <span className="hidden md:inline">&nbsp;</span>
-                        <br className="hidden md:block" />
-                        scale to millions of users without overhead
+                    <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-thin text-green-700 italic mb-12 max-w-3xl mx-auto leading-relaxed">
+                        free Auth for your first 1M users <span className="hidden md:inline">&nbsp;</span>
+                        <br />
+                        with Personal Data Stores (PDS)
                     </p>
 
                     {/* Call to Action */}
@@ -54,7 +49,7 @@ export default function Hero({
                             href="https://discord.gg/S4DmEhuk"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-3 text-indigo-800 underline hover:no-underline transition-all duration-200 text-lg md:text-xl cursor-pointer"
+                            className="flex items-center gap-3 text-indigo-800 underline hover:no-underline transition-all duration-200 text-lg md:text-xl cursor-pointer -mb-4"
                         >
                             {React.createElement(FaDiscord as any, { className: "w-6 h-6" })}
                             join 1,000+ apps

@@ -17,18 +17,18 @@ const Credentials = () => {
                 <p className="text-center text-green-400 text-sm mb-2 opacity-40">
                     built and supported by teams from
                 </p>
-                <div className="flex flex-wrap justify-center items-center gap-8 opacity-50">
+                <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 opacity-50">
                     {logos.map((logo) => (
                         <div
                             key={logo.id}
-                            className={`w-24 h-12 flex items-center justify-center${logo.eyp ? ' pb-3' : ''}${logo.lemnis ? ' pt-1' : ''}`}
+                            className={`w-12 h-8 md:w-24 md:h-12 flex items-center justify-center${logo.eyp ? ' pb-3' : ''}${logo.lemnis ? 'md:pt-1' : ''}`}
                         >
                             <Image
                                 src={logo.image}
                                 alt={logo.name}
                                 width={96}
                                 height={48}
-                                className="max-w-full max-h-full object-contain grayscale w-auto h-auto"
+                                className="max-w-full max-h-full object-contain grayscale w-16 h-8 md:w-24 md:h-12"
                             />
                         </div>
                     ))}
