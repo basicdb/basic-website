@@ -38,10 +38,10 @@ export default function Hero({
                     </h1>
 
                     {/* Tagline */}
-                    <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-thin text-green-700 italic mb-12 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-lg md:text-xl leading-relaxed font-thin text-green-700 italic mb-12 max-w-3xl mx-auto leading-relaxed">
                         free Auth for your first 1M users <span className="hidden md:inline">&nbsp;</span>
                         <br />
-                        with Personal Data Stores (PDS)
+                        with Personal Data Stores
                     </p>
 
                     {/* Call to Action */}
