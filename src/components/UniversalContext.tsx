@@ -35,16 +35,15 @@ export default function UniversalContext() {
             <div className="relative w-full h-full flex flex-col px-2 sm:px-4">
                 <div className="w-full h-full flex flex-col justify-center items-start p-2 md:p-10 py-24">
                     {/* Main headline */}
-                    <h1 className="text-4xl md:text-5xl lg:text-7xl text-black leading-tight mb-12" style={{ lineHeight: '1.2' }}>
-                        program with universal<br />
-                        user contexts
+                    <h1 className="text-4xl lg:text-5xl text-black leading-tight mb-12" style={{ lineHeight: '1.2' }}>
+                        program with universal user contexts
                     </h1>
 
                     {/* Features grid */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-16 w-full max-w-6xl">
                         {features.map((feature, index) => (
                             <div key={index} className="">
-                                <h3 className="text-2xl text-gray-900 mb-1">
+                                <h3 className="text-xl text-gray-900 mb-1">
                                     {feature.title}
                                 </h3>
                                 <p className="md:text-lg text-gray-700 leading-relaxed">
