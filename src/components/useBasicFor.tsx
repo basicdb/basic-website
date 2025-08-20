@@ -30,7 +30,7 @@ const styles = {
     grid: "grid grid-cols-1 md:grid-cols-3 gap-16",
     imageCard: "flex flex-col items-start w-full",
     image: "w-full aspect-square object-cover rounded-lg shadow-lg",
-    label: "text-lg xl:text-2xl font-sans text-black mt-4 text-center w-full"
+    label: "text-2xl font-sans text-black mt-4 text-center w-full"
 };
 
 // Individual use case card component
