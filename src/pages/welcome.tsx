@@ -74,7 +74,7 @@ function DynamicFooter() {
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     >
                         <div className="text-white space-y-4 px-4 py-8">
-                            <h1 className="text-xl font-bold">Universal API for user data</h1>
+                            <h1 className="text-xl font-bold">Basic is a platform for personal software</h1>
                             <p className="text-sm">
                                 The next 1 billion apps will be different. They will be built at exponentially faster rates using newer tools, and by a broader range of people.
                             </p>
