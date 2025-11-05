@@ -1,11 +1,13 @@
 import * as React from 'react';
 
+type IconComponent = (props: React.SVGProps<SVGSVGElement>) => React.JSX.Element | null;
+
 declare module 'react-icons/ri' {
-  export const RiTwitterXLine: React.FC<React.SVGProps<SVGSVGElement>>;
-  export const RiBlueskyLine: React.FC<React.SVGProps<SVGSVGElement>>;
+  export const RiTwitterXLine: IconComponent;
+  export const RiBlueskyLine: IconComponent;
 }
 
 declare module 'react-icons/fa' {
-  export const FaDiscord: React.FC<React.SVGProps<SVGSVGElement>>;
+  export const FaDiscord: IconComponent;
 }
 
