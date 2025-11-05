@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-type IconComponent = (props: React.SVGProps<SVGSVGElement>) => React.JSX.Element | null;
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 declare module 'react-icons/ri' {
   export const RiTwitterXLine: IconComponent;
