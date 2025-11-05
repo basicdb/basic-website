@@ -21,7 +21,7 @@ function DynamicFooter() {
 
   return (
     <motion.div
-      className={`w-full md:w-full md:max-w-xl bg-opacity-60 bg-black mb-0 md:mb-16 mx-auto backdrop-blur-md flex flex-col gap-0 shadow-lg rounded-xl px-4 md:px-0`}
+      className={`w-full md:w-full md:max-w-xl bg-opacity-60 bg-black mb-0 md:mb-16 mx-auto backdrop-blur-md flex flex-col gap-0 shadow-lg rounded-xl md:px-0`}
       layout
       transition={{ type: "spring", stiffness: 30, damping: 30 }}
     >
@@ -69,7 +69,7 @@ function DynamicFooter() {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             <div className="text-white space-y-4 px-4 py-8">
-              <h1 className="text-2xl font-bold">Universal API for user data</h1>
+              <h1 className="text-2xl font-bold">Basic is the platform for personal software</h1>
               <p className="text-sm">
                 The next 1 billion apps will be different.
                 They will be built at exponentially faster rates using newer tools, and by a broader range of people.
@@ -180,10 +180,10 @@ export default function Home() {
       <main className="min-h-[100dvh] overflow-x-hidden">
         <div className="w-full h-[100dvh] flex flex-col bg-black overflow-hidden">
           <div
-            className="flex-1 m-4 rounded-xl justify-between"
+            className="flex-1 m-0 md:m-4 rounded-none md:rounded-xl justify-between"
             style={{ backgroundImage: `url(${heroCardElements.image})`, backgroundSize: 'cover', backgroundPosition: 'bottom' }}
           >
-            <div className="mt-14 px-4 md:px-0">
+            <div className="mt-14 mx-2 md:mx-0 md:px-0">
               <DynamicFooter />
             </div>
           </div>
