@@ -4,9 +4,8 @@ import React from 'react'
 import Head from 'next/head'
 
 import { ArrowRight } from 'lucide-react'
-import { RiTwitterXLine, RiBlueskyLine } from "react-icons/ri"
-import { FaDiscord } from "react-icons/fa"
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 
 const heroCardElements = {
   image: '/landing-image.webp',
@@ -124,13 +123,7 @@ function DynamicFooter() {
               {/* Social Icons */}
               <div className="flex gap-2">
                 <a href="https://x.com/basic_db" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                  <RiTwitterXLine className="w-6 h-6" />
-                </a>
-                <a href="https://bsky.app/profile/basic.tech" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                  <RiBlueskyLine className="w-6 h-6" />
-                </a>
-                <a href="https://discord.gg/M57gcazvYk" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                  <FaDiscord className="w-6 h-6" />
+                  <Image src="/x-logo.webp" alt="X (Twitter)" width={24} height={24} className="w-6 h-6" />
                 </a>
               </div>
 
