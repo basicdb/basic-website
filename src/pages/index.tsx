@@ -68,7 +68,7 @@ function DynamicFooter() {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             <div className="text-white space-y-4 px-4 py-8">
-              <h1 className="text-2xl font-bold">Basic is the platform for personal software</h1>
+              <h1 className="text-2xl font-bold">Basic is the platform for personal computing</h1>
               <p className="text-sm">
                 The next 1 billion apps will be different.
                 They will be built at exponentially faster rates using newer tools, and by a broader range of people.
@@ -80,7 +80,7 @@ function DynamicFooter() {
                 However, the future of the web can't be built on the platforms of the past - on walled gardens, centralized clouds, and rigid structures that own your data.
               </p>
 
-              <p className="text-sm italic">
+              <p className="text-md italic">
                 Basic is built on three core principles:
               </p>
 
@@ -108,7 +108,7 @@ function DynamicFooter() {
               <h2 className="text-lg font-bold">…and more!</h2>
               <p className="text-sm">
                 Basic is built on these principles to help create a new kind of internet - one where users own their data, apps are personal, and collaboration is seamless.
-                We love gathering like-minded builders who care about the open web and personal computing.
+                But most important, the future of the web will be created by <em>you</em> : like-minded builders who care about the open web and personal computing.
               </p>
 
               <p className="text-sm">
