@@ -77,27 +77,38 @@ function DynamicFooter() {
 
 
               <p className="text-sm">
-                At Basic, we believe it's time to raise the bar for infrastructure to usher in this new internet.
+                However, the future of the web can't be built on the platforms of the past - on walled gardens, centralized clouds, and rigid structures that own your data.
               </p>
 
-              <h2 className="text-lg font-bold">AI will be hyper-personalized</h2>
-              <p className="text-sm">
-                Context becomes gold, instead of data, in a post-AI world where apps and agents will be as powerful as the context they have. Developers will focus on function instead of having to connect the spread of data across a user's apps.
+              <p className="text-sm italic">
+                Basic is built on three core principles:
               </p>
 
-              <h2 className="text-lg font-bold">Collaboration will be real-time</h2>
+              <h2 className="text-lg font-bold">Personal Software & AI</h2>
               <p className="text-sm">
-                The lack of collaboration in real-time causes information to exist in multiple places with the chance of inconsistencies. Tech like Google Drive, Figma, and CRDTs have made huge strides in this — real-time collaboration will become the default for every app.
+                The next generation of software won't be about centralizing data, but about utilizing users' own context & memory to build apps and agents that understand them.
+                Developers shouldn't have to stitch data together across a dozen platforms - they should just build great experiences that plug right into the user's world.
               </p>
 
-              <h2 className="text-lg font-bold">Data will be user-owned</h2>
+              <h2 className="text-lg font-bold">User-owned Data</h2>
               <p className="text-sm">
-                Developers will build lean apps that read data directly from their users. We will iterate and ship faster without worrying about compliance and security. AI / ML models will improve securely without any leakage of sensitive information.
+                Your data should live with you, not be rented out to someone else's cloud.
+                When users own their data, apps become portable, personal, and actually interoperable.
+                Instead of platforms competing for lock-in, they compete on experience — and that's how software should be.
               </p>
+
+              <h2 className="text-lg font-bold">Realtime & Multiplayer</h2>
+              <p className="text-sm">
+                Software is better when it's shared.
+                Whether it's humans or AI agents, everyone should be able to collaborate in real time on the same source of truth - without conflicts, lag, or version hell.
+                Realtime sync turns static apps into living systems, where data, people, and context all work together.
+              </p>
+
 
               <h2 className="text-lg font-bold">…and more!</h2>
               <p className="text-sm">
-                We, at Basic, are dedicated to further the rate of innovation for infrastructure alongside the developments in AI and app creation. Meanwhile, we love to gather like-minded people interested in building the open web.
+                Basic is built on these principles to help create a new kind of internet - one where users own their data, apps are personal, and collaboration is seamless.
+                We love gathering like-minded builders who care about the open web and personal computing.
               </p>
 
               <p className="text-sm">
