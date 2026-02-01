@@ -73,7 +73,9 @@ export default function BasicIdPage() {
       .font-hero { font-family: 'Space Grotesk', sans-serif; }
     `;
     document.head.appendChild(style);
-    return () => document.head.removeChild(style);
+    return () => {
+      document.head.removeChild(style);
+    };
   }, []);
 
   return (
