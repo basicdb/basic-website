@@ -1,82 +1,204 @@
+import React, { useEffect } from 'react';
+import Link from 'next/link';
 import Head from 'next/head';
-import GiantCard from '@/components/GiantCard';
-import JoinDiscord from '@/components/JoinDiscord_old';
-import { NavBar, Footer } from '@/components/NavFooter';
 
-const heroCardElements = {
-    image: '/aboutus-hero.webp',
-    title: 'magic with just a few lines of code.',
-    titleStyle: 'text-4xl md:text-6xl sm:text-5xl',
-    backgroundEffect: 'brightness-50'
+const customStyles = {
+  clipNotch: {
+    clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%)'
+  },
+  gridBg: {
+    backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px)',
+    backgroundSize: '40px 40px'
+  }
+};
+
+const Navigation = () => {
+  return (
+    <nav className="w-full flex justify-between items-center p-6 z-10 relative">
+      <Link href="/" className="flex items-center gap-3 group">
+        <div 
+          className="w-10 h-10 bg-black text-white flex items-center justify-center font-bold text-2xl font-display group-hover:bg-[#FF4400] transition-colors duration-300"
+          style={customStyles.clipNotch}
+        >
+          b
+        </div>
+        <span className="font-bold text-sm tracking-tight">basic</span>
+      </Link>
+
+      <div className="flex items-center gap-8">
+        <a href="https://docs.basic.tech" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">Docs</a>
+        <Link href="/about" className="text-sm font-medium text-black transition-colors">About</Link>
+        <a href="https://discord.gg/PuWD3zhsCk" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-4 py-2 text-sm font-medium hover:bg-[#FF4400] transition-colors">
+          Join Discord
+        </a>
+      </div>
+    </nav>
+  );
+};
+
+const AboutPage = () => {
+  return (
+    <div className="w-full min-h-screen flex flex-col">
+      <div className="absolute inset-0 pointer-events-none z-0 fixed" style={customStyles.gridBg}></div>
+
+      <Navigation />
+
+      <main className="w-full flex-grow flex flex-col z-10">
+        <section className="w-full relative px-6 pt-16 pb-24 md:px-12 md:pt-24 lg:px-24">
+          <div className="relative max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="mb-16">
+              <span className="font-mono text-xs text-gray-400 uppercase tracking-wider">//about</span>
+              <h1 className="text-5xl md:text-7xl font-black tracking-tighter font-hero lowercase text-black mt-2">
+                Basic is the platform for personal computing
+              </h1>
+            </div>
+
+            {/* Intro */}
+            <div className="space-y-6 mb-16">
+              <p className="text-xl text-gray-600 leading-relaxed">
+                The next 1 billion apps will be different. They will be built at exponentially faster rates using newer tools, and by a broader range of people. Yet one thing will remain the same — the best of them will still feel like magic.
+              </p>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                However, the future of the web can&apos;t be built on the platforms of the past - on walled gardens, centralized clouds, and rigid structures that own your data.
+              </p>
+            </div>
+
+            {/* Principles Header */}
+            <div className="border-t-2 border-black pt-8 mb-12">
+              <p className="font-mono text-sm text-gray-500 italic">
+                Basic is built on three core principles:
+              </p>
+            </div>
+
+            {/* Principles */}
+            <div className="space-y-12 mb-16">
+              {/* Principle 1 */}
+              <div className="group">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="font-mono text-xs text-gray-400">01</span>
+                  <h2 className="text-2xl font-black tracking-tight">Personal Software & AI</h2>
+                </div>
+                <p className="text-gray-600 leading-relaxed pl-10">
+                  The next generation of software won&apos;t be about centralizing data, but about utilizing users&apos; own context & memory to build apps and agents that understand them. Developers shouldn&apos;t have to stitch data together across a dozen platforms - they should just build great experiences that plug right into the user&apos;s world.
+                </p>
+              </div>
+
+              {/* Principle 2 */}
+              <div className="group">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="font-mono text-xs text-gray-400">02</span>
+                  <h2 className="text-2xl font-black tracking-tight">User-owned Data</h2>
+                </div>
+                <p className="text-gray-600 leading-relaxed pl-10">
+                  Your data should live with you, not be rented out to someone else&apos;s cloud. When users own their data, apps become portable, personal, and actually interoperable. Instead of platforms competing for lock-in, they compete on experience — and that&apos;s how software should be.
+                </p>
+              </div>
+
+              {/* Principle 3 */}
+              <div className="group">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="font-mono text-xs text-gray-400">03</span>
+                  <h2 className="text-2xl font-black tracking-tight">Realtime & Multiplayer</h2>
+                </div>
+                <p className="text-gray-600 leading-relaxed pl-10">
+                  Software is better when it&apos;s shared. Whether it&apos;s humans or AI agents, everyone should be able to collaborate in real time on the same source of truth - without conflicts, lag, or version hell. Realtime sync turns static apps into living systems, where data, people, and context all work together.
+                </p>
+              </div>
+            </div>
+
+            {/* Closing */}
+            <div className="border-t border-gray-200 pt-12 space-y-6">
+              <h2 className="text-2xl font-black tracking-tight">…and more!</h2>
+              <p className="text-gray-600 leading-relaxed">
+                Basic is built on these principles to help create a new kind of internet - one where users own their data, apps are personal, and collaboration is seamless. But most important, the future of the web will be created by <em>you</em>: like-minded builders who care about the open web and personal computing.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                If you&apos;d like to chat about building on Basic or working with us, join our Discord!
+              </p>
+
+              {/* CTA */}
+              <div className="pt-8">
+                <a 
+                  href="https://discord.gg/M57gcazvYk" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 font-mono text-sm font-bold hover:bg-[#FF4400] transition-colors"
+                >
+                  Join the Discord
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="w-full bg-[#111] text-white py-12 px-6 md:px-12 lg:px-24 mt-auto">
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center text-gray-500 font-mono text-xs">
+            <div className="flex gap-8 mb-4 md:mb-0">
+              <span>© Basic Studio Inc.</span>
+              <span>Copyright 2026</span>
+            </div>
+            <div className="flex gap-4">
+              <a href="#" className="hover:text-white transition-colors">TERMS</a>
+              <a href="#" className="hover:text-white transition-colors">PRIVACY</a>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  );
 };
 
 export default function About() {
-    return (
-        <>
-            <Head>
-                <title>About Us - Basic</title>
-                <meta name="description" content="Learn about Basic Database - our mission, team, and vision for the future of data" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-            </Head>
-            <section className="bg-green-100 w-full min-h-screen flex flex-col">
-                <NavBar />
-                <div className="w-full h-[40vh] landscape:h-[70vh] md:landscape:h-[40vh]">
-                    <GiantCard {...heroCardElements} />
-                </div>
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;600;800;900&display=swap');
+      
+      body {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      .font-display {
+        font-family: 'Inter', sans-serif;
+      }
+      .font-hero {
+        font-family: 'Audiowide', sans-serif;
+      }
+    `;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, []);
 
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 w-full relative">
-                    <div className="mx-auto mt-16 max-w-3xl">
-                        <div className="space-y-6">
-                            <div>
-                                <p className="text-gray-600">The next 1 billion apps will be different. They will be built at exponentially faster rates using newer tools, and by a broader range of people.</p>
-                            </div>
-                            <div>
-                                <p className="text-gray-600">Yet one thing will remain the same — the best of them will still feel like magic.</p>
-                            </div>
-                            <div>
-                                <p className="text-gray-600">We remember experiencing it many times, from the real-time collaboration in Figma, and the open ecosystem of Raycast, to the potential for creativity with genAI. Building apps like these isn’t easy because it requires complex code, despite a lot of the architecture already having been solved for. It ought to be made accessible so that we can focus on creating new types of magic.</p>
-                            </div>
-                            <div>
-                                <p className="text-gray-600">At Basic, we believe it's time to raise the bar for infrastructure to usher in this new internet. </p>
-                            </div>
-
-                            <div>
-                                <h2 className="text-3xl font-bold text-black">AI will be hyper-personalized</h2>
-                            </div>
-                            <div>
-                                <p className="text-gray-600">Data remains gold even in a post-AI world where apps and agents will be as powerful as the context they have. Developers will focus on function instead of having to connect the spread of data across a user's apps. We will build on top of the "infinite context" of our users where their digital interactions even outside our own apps will improve all aspects of personalization for them.</p>
-                            </div>
-
-                            <div>
-                                <h2 className="text-3xl font-bold text-black">Collaboration will be real-time</h2>
-                            </div>
-                            <div>
-                                <p className="text-gray-600">The lack of collaboration in real-time causes information to exist in multiple places with the chance of inconsistencies. Tech like Google Drive, Figma, and CRDTs have made huge strides in this — real-time collaboration will become the default for every app.</p>
-                            </div>
-
-                            <div>
-                                <h2 className="text-3xl font-bold text-black">Data will be user-owned</h2>
-                            </div>
-                            <div>
-                                <p className="text-gray-600">Developers will build lean apps that read data directly from their users. We will iterate and ship faster without worrying about compliance and security. Onboarding users will become instant as every app will start with existing context (e.g., a new user on a new social media platform will bring over all their existing followers and relevant posts). AI / ML models will improve securely without any leakage of sensitive information.</p>
-                            </div>
-
-                            <div>
-                                <h2 className="text-3xl font-bold text-black">… and more!</h2>
-                            </div>
-                            <div>
-                                <p className="text-gray-600">At Basic, we are dedicated to further the rate of innovation for infrastructure alongside the developments in AI. Meanwhile, we love to gather like-minded people because empowering creators allows for transformational change. And we love having a lot of fun along the way!</p>
-                            </div>
-                            <div>
-                                <p className="text-gray-600">If you&apos;d like to chat about building on Basic or work with us, <a href="#discord" className="text-indigo-500 underline">join our Discord</a>!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <JoinDiscord />
-                <Footer />
-            </section>
-        </>
-    );
-} 
+  return (
+    <>
+      <Head>
+        <title>About | Basic</title>
+        <meta name="description" content="Basic is the platform for personal computing" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="About | Basic" />
+        <meta property="og:description" content="Basic is the platform for personal computing" />
+        <meta property="og:image" content="https://basic.tech/landing-image.webp" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About | Basic" />
+        <meta name="twitter:description" content="Basic is the platform for personal computing" />
+        <meta name="twitter:image" content="https://basic.tech/landing-image.webp" />
+      </Head>
+      <div className="bg-[#e6e6e6] text-black w-full min-h-screen flex flex-col relative overflow-x-hidden">
+        <AboutPage />
+      </div>
+    </>
+  );
+}
